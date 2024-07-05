@@ -1,5 +1,5 @@
 <template>
-  <div class="about-page">
+  <div class="about-page bg-gray-100">
     <!-- Главная секция -->
     <section class="main-section">
       <h1>О нашей автошколе</h1>

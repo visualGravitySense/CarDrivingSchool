@@ -4,11 +4,11 @@
     <form @submit.prevent="generateCertificate">
       <div>
         <label for="amount">Сумма oт 140 дo 1050 euro:</label>
-        <input v-model="amount" id="amount" type="number" required>
-      </div>
+        <input class="bg-gray-100" v-model="amount" id="amount" type="number" required>
+      </div> 
       <div>
-        <label for="friendName">Имя друга:</label>
-        <input v-model="friendName" id="friendName" type="text" required>
+        <label for="friendName">Имя друга:</label><br>
+        <input class="bg-gray-100" v-model="friendName" id="friendName" type="text" required>
       </div>
       <button type="submit">Создать сертификат</button>
     </form>
@@ -18,6 +18,11 @@
       <p>Для: {{ certificate.friendName }}</p>
       <p>Код: {{ certificate.code }}</p>
     </div>
+
+    <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
+      To get started, remove <code class="bg-gray-100 text-sm p-1 rounded border">components/Tutorial.vue</code> and start coding in <code class="bg-gray-100 text-sm p-1 rounded border">pages/index.vue</code>. Have fun!
+    </p>
+
   </div>
 </template>
 
