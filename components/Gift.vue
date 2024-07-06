@@ -4,13 +4,16 @@
     <form @submit.prevent="generateCertificate">
       <div>
         <label for="amount">Сумма oт 140 дo 1050 euro:</label>
-        <input class="bg-gray-100" v-model="amount" id="amount" type="number" required>
-      </div> 
+        <AppInput class="bg-gray-100" v-model="amount" id="amount" type="number" required> </AppInput>
+      </div>
       <div>
         <label for="friendName">Имя друга:</label><br>
-        <input class="bg-gray-100" v-model="friendName" id="friendName" type="text" required>
+        <AppInput class="bg-gray-100" v-model="friendName" id="friendName" type="text" required> </AppInput>
       </div>
-      <button type="submit">Создать сертификат</button>
+      <AppButton type="submit">Создать сертификат</AppButton>
+      <!-- Message -->
+
+      <Message v-if="message" :message="message" />
     </form>
     <div v-if="certificate">
       <h3>Ваш сертификат</h3>
@@ -27,9 +30,14 @@
 </template>
 
 <script>
+import AppButton from '@/components/UI/Controls/Button.vue';
+import AppInput from '@/components/UI/Controls/Input.vue';
+import Message from '@/components/UI/Message.vue';
 export default {
+  components: { AppButton, AppInput, Message },
   data() {
     return {
+      message: null,
       amount: null,
       friendName: '',
       certificate: null
@@ -44,6 +52,7 @@ export default {
         friendName: this.friendName,
         code: uniqueCode
       };
+      this.message = 'Submitted!'
     }
   }
 };

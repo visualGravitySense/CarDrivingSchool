@@ -1,29 +1,42 @@
 <template>
-  <form @submit.prevent="submitForm">
-    <div>
+  <form @submit.prevent="onSubmit" class="contact-form">
+    <div class="container">
+      <h3 class="mt-3 text-2xl leading-7 font-semibold">
+        Регистрация на курс
+      </h3>
       <label for="name">Имя:</label>
-      <input type="text" id="name" v-model="form.name" required />
+      <AppInput type="text" id="name" v-model="form.name" required > </AppInput>
     </div>
-    <div>
+    <div class="container">
       <label for="email">Электронная почта:</label>
-      <input type="email" id="email" v-model="form.email" required />
+      <AppInput type="email" id="email" v-model="form.email" required > </AppInput>
     </div>
-    <div>
+    <div class="container">
       <label for="phone">Телефон:</label>
-      <input type="tel" id="phone" v-model="form.phone" required />
+      <AppInput type="tel" id="phone" v-model="form.phone" required > </AppInput>
     </div>
-    <div>
+    <div class="container">
       <label for="dob">Дата рождения:</label>
-      <input type="date" id="dob" v-model="form.dob" required />
+      <AppInput type="date" id="dob" v-model="form.dob" required > </AppInput>
     </div>
-    <button type="submit">Регистрация</button>
+    <div class="container">
+      <AppButton> Регистрация </AppButton>
+
+      <!-- Message -->
+
+      <Message v-if="message" :message="message" />
+    </div>
   </form>
 </template>
 
 <script>
+import AppButton from '@/components/UI/Controls/Button.vue';
+import Message from '@/components/UI/Message.vue';
+import AppInput from '@/components/UI/Controls/Input.vue';
 export default {
   data() {
     return {
+      message: null,
       form: {
         name: '',
         email: '',
@@ -32,16 +45,25 @@ export default {
       }
     };
   },
+  components: {
+    AppButton, AppInput, Message
+},
   methods: {
-    submitForm() {
+    onSubmit() {
       // Здесь вы можете добавить логику отправки данных на сервер
       console.log(this.form);
+      this.message = 'Submitted!'
+      // Reset
+      this.form.name = ''
+      this.form.email = ''
+      this.form.phone = ''
+      this.form.dob = ''
     }
   }
 };
 </script>
 
-<style scoped>
+<style >
 form {
   display: flex;
   flex-direction: column;
@@ -49,7 +71,7 @@ form {
   margin: auto;
 }
 div {
-  margin-bottom: 1em;
+
 }
 label {
   margin-bottom: 0.5em;
@@ -74,4 +96,7 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+
+
 </style>

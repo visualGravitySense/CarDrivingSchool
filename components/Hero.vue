@@ -83,7 +83,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   color: #333;
-  /* height: 100%;  */
+  
 }
 
 .card-image {

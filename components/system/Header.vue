@@ -54,7 +54,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 .navbar {
   background-color: #f8f9fa;
   border-bottom: 1px solid #e9ecef;
@@ -135,7 +135,7 @@ export default {
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 0.25rem;
-  margin-left: 1rem;
+
   transition: background-color 0.3s;
 }
 

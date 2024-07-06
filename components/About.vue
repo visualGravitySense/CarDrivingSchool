@@ -10,6 +10,9 @@
 
         <Gift/><br>
 
+        
+        <Register/>
+
       </div>
 
     </div>
@@ -18,6 +21,7 @@
 
 <script>
 import Gift from '~/components/Gift.vue';
+import Register from '~/components/Register.vue';
 import Intro from '~/components/UI/Intro.vue';
 export default {
 components: {
