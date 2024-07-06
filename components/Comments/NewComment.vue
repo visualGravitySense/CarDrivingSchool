@@ -16,7 +16,7 @@
                 Комментарий
               </h3>
               <label for="name">Имя:</label>
-              <input type="text" id="name" v-model="comment.name" required />
+              <Appinput type="text" id="name" v-model="comment.name" required > </AppInput>
             </div>
             <div class="container">
               <label for="content">Комментарий:</label>
@@ -25,15 +25,16 @@
 
 
             <div class="container">
+              <!-- Message -->
+
+              <Message v-if="message" :message="message" />
+
               <AppButton class="signin-button" type="submit">Отправить</AppButton>
 
             </div>
 
           </form>
 
-          <!-- Message -->
-
-          <Message v-if="message" :message="message" />
 
       </div>
 
@@ -42,12 +43,9 @@
 </template>
 
 <script>
-import AppButton from '@/components/UI/Controls/Button.vue';
-import AppInput from '@/components/UI/Controls/Input.vue';
-import AppTextArea from '@/components/UI/Controls/TextArea.vue';
-import Message from '@/components/UI/Message.vue';
+
 export default {
-  components: { AppButton, AppTextArea, AppInput, Message },
+
   data() {
     return {
       message: null,

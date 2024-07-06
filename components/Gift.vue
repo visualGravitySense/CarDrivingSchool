@@ -30,11 +30,9 @@
 </template>
 
 <script>
-import AppButton from '@/components/UI/Controls/Button.vue';
-import AppInput from '@/components/UI/Controls/Input.vue';
-import Message from '@/components/UI/Message.vue';
+
 export default {
-  components: { AppButton, AppInput, Message },
+  components: {  },
   data() {
     return {
       message: null,

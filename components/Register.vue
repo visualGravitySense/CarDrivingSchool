@@ -30,9 +30,7 @@
 </template>
 
 <script>
-import AppButton from '@/components/UI/Controls/Button.vue';
-import Message from '@/components/UI/Message.vue';
-import AppInput from '@/components/UI/Controls/Input.vue';
+
 export default {
   data() {
     return {
@@ -46,7 +44,7 @@ export default {
     };
   },
   components: {
-    AppButton, AppInput, Message
+    
 },
   methods: {
     onSubmit() {

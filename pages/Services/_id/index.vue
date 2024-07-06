@@ -34,11 +34,11 @@ export default {
           { name: 'Alex', text: 'Комментарий к Категория A'},
           { name: 'Nikolai', text: 'Комментарий к Категория Б'}
         ]
-    } 
+    }
   },
   components: {
     Category, NewComment, Comments
 },
-  name: 'Category Index'
+  name: 'CategoryIndex'
 }
 </script>

@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import Promo from '~/components/Promo.vue';
-import CategoriesList from '~/components/Categories/CategoriesList.vue';
+
+
 
 export default {
   components: {
-    Promo, CategoriesList
+
   },
   name: 'Viktoria',
   data() {
@@ -83,7 +83,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   color: #333;
-  
+
 }
 
 .card-image {
