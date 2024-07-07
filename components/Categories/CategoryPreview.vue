@@ -1,6 +1,6 @@
 <template>
 
-  <nuxt-link :to="/services/+card.id" class="card">
+  <nuxt-link :to="getLink" class="card">
     <div class="bg-white overflow-hidden shadow p-4">
       <h3 class="leading-7 font-semibold">
         {{ card.title }}
@@ -26,17 +26,21 @@ export default {
     card: {
       type: Object,
       required: true
+    },
+    admin: {
+      type: Boolean,
+      default: false
     }
   },
-  components: {
 
+  computed: {
+    getLink() {
+      return this.admin ? `/admin/${this.card.id}` : `/blog/${this.card.id}`;
+    }
   },
-  name: 'Categories',
-  data() {
-    return {
 
 
-    };
-  }
+  name: 'CategoriesPreview',
+
 };
 </script>

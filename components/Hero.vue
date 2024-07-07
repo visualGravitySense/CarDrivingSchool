@@ -6,7 +6,7 @@
 
       <Promo/>
 
-      <CategoriesList :cards="cards"/>
+      <CategoriesList :admin=true :cards="cards"/>
 
     </div>
   </div>
@@ -14,7 +14,7 @@
 
 <script>
 
-
+ 
 
 export default {
   components: {

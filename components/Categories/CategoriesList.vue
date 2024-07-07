@@ -4,6 +4,7 @@
 <div class="mt-10 cards">
   <CategoryPreview
     v-for="card in cards" :key="card.id"
+    :admin="admin"
     :card="card"
       />
 </div>
@@ -17,6 +18,10 @@ export default {
     cards: {
       type: Array,
       required: true
+    },
+    admin: {
+      type: Boolean,
+      default: false
     }
   },
   components: {
