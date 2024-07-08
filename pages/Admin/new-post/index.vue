@@ -8,8 +8,10 @@ export default {
   layout: 'admin',
   methods: {
     onSubmit (category) {
-      console.log('Post added!')
-      console.log(category)
+      this.$store.dispatch('editPost', category)
+        .then(()=>{
+          this.$router.push('/admin')
+        })
     }
   },
   components: { newPostForm }

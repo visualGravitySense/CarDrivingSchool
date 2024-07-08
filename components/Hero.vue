@@ -6,7 +6,7 @@
 
       <Promo/>
 
-      <CategoriesList :admin=true :cards="cards"/>
+      <CategoriesList :admin=true :cards="postsLoaded"/>
 
     </div>
   </div>
@@ -14,11 +14,16 @@
 
 <script>
 
- 
+
 
 export default {
   components: {
 
+  },
+  computed: {
+    postsLoaded () {
+    return this.$store.getters.getPostsLoaded
+    }
   },
   name: 'Viktoria',
   data() {
@@ -28,30 +33,12 @@ export default {
       subtitle: 'Профессиональные инструктора и гибкий график занятий',
       ctaText: 'Зарегистрируйтесь сегодня и начните свой путь к безопасному вождению',
       ctaButtonText: 'Зарегистрироваться',
-      cards: [
-        {
-          id: 1,
-          title: 'Категория A',
-          description: 'Описание категории A...',
-          image: require('@/assets/img/car1.jpg') // Adjust this path as necessary
-        },
-        {
-          id: 2,
-          title: 'Категория B',
-          description: 'Описание категории B...',
-          image: require('@/assets/img/car1.jpg') // Adjust this path as necessary
-        },
-        {
-          id: 3,
-          title: 'Категория AM',
-          description: 'Описание категории AM...',
-          image: require('@/assets/img/car1.jpg') // Adjust this path as necessary
-        }
-      ]
+
 
     };
+
   }
-};
+}
 </script>
 
 <style>
