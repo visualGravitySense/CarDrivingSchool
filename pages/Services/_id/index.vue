@@ -5,7 +5,9 @@
 
     <category :category="category"/>
 
-    <comments :comments="comments"/>
+    <comments :comments="comments" />
+
+
 
     <newComment/>
 
@@ -14,31 +16,30 @@
 </template>
 
 <script>
+import axios from 'axios'
 
-import NewComment from '@/components/Comments/NewComment.vue';
-import Comments from '@/components/Comments/Comments.vue';
-import Category from '@/components/Categories/Category.vue';
+import newComment from '@/components/Comments/NewComment.vue';
+import comments from '@/components/Comments/Comments.vue';
+import category from '@/components/Categories/Category.vue';
+
 export default {
-  data () {
-    return {
-      category:
-        {
-            id: 1,
-            title: 'Категория A',
-            description: 'Описание категории A...',
-            image: require('@/assets/img/car1.jpg'), // Adjust this path as necessary
-            intro: 'This is the test intro ...',
-            content: 'We recommend you take a look at the ...',
-        },
-        comments: [
-          { name: 'Alex', text: 'Комментарий к Категория A'},
-          { name: 'Nikolai', text: 'Комментарий к Категория Б'}
-        ]
-    }
-  },
   components: {
-    Category, NewComment, Comments
+    category, newComment, comments
 },
+
+
+async asyncData (context) {
+  let [category, comments] = await Promise.all([
+    axios.get(`https://viktoria-f5e86-default-rtdb.europe-west1.firebasedatabase.app/categories/${context.params.id}.json`),
+    axios.get(`https://viktoria-f5e86-default-rtdb.europe-west1.firebasedatabase.app/comments.json`)
+  ])
+
+  return {
+    category: category.data,
+    comments: comments.data
+  }
+},
+
   name: 'CategoryIndex'
 }
 </script>

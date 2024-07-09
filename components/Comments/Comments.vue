@@ -1,19 +1,23 @@
 <template>
-  <section v-if="comments" class="max-w-4xl mx-auto sm:px-6 lg:px-8">
+  <section v-if="comments" class="comments max-w-4xl mx-auto sm:px-6 lg:px-8">
+    <div class="">
+      <h2 class="mt-3 text-4xl leading-7 font-bold">
+        Комментарии
+      </h2>
+      <p v-if="comments.length == 0"> Comments: 0 </p>
 
-    <h1 class="mt-3 text-4xl leading-7 font-bold">
-      Комментарии
-    </h1>
 
-    <div class="comment" v-for="comment in comments" :key="comment.name">
 
-      <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
 
-          <p class="name">{{ comment.name }}</p>
-          <p class="text">{{ comment.text }}</p>
 
+        <div v-for="comment in comments" :key="comment.name" class="comment mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
+
+            <p class="name">{{ comment }}</p>
+          
+
+        </div>
       </div>
-    </div>
+
 
   </section>
 </template>

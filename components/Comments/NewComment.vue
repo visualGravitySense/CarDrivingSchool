@@ -1,7 +1,3 @@
-
-
-
-<!-- Краткое описание автошколы -->
 <template>
   <div class="relative flex items-top justify-center sm:items-center sm:pt-0">
 
@@ -16,11 +12,11 @@
                 Комментарий
               </h3>
               <label for="name">Имя:</label>
-              <Appinput type="text" id="name" v-model="comment.name" required > </AppInput>
+              <AppInput type="text" id="name" v-model="comment.name" required > </AppInput>
             </div>
             <div class="container">
               <label for="content">Комментарий:</label>
-              <AppTextArea id="content" v-model="comment.content" required ></AppTextArea>
+              <AppInput id="content" v-model="comment.content" required ></AppInput>
             </div>
 
 
@@ -43,7 +39,6 @@
 </template>
 
 <script>
-
 export default {
 
   data() {
@@ -57,13 +52,19 @@ export default {
     };
   },
   methods: {
-    onSubmit() {
-      // Здесь вы можете добавить логику отправки данных на сервер
-      console.log(this.comment);
-      this.message = 'Submitted!'
-      // Reset
-      this.comment.name = ''
-      this.comment.content = ''
+    onSubmit () {
+      this.$store.dispatch('addComment', {
+        postId: this.postId,
+        publish: false,
+        ...this.comment
+      })
+        .then(()=>{
+          this.message = "Submited!"
+          // Reset
+          this.comment.name = ''
+          this.comment.content = ''
+        })
+        .catch(e=>{console.log(e)})
     }
   }
 };
