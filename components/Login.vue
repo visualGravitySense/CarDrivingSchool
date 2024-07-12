@@ -2,26 +2,19 @@
   <form @submit.prevent class="contact-form">
     <div class="container">
       <h3 class="mt-3 text-2xl leading-7 font-semibold">
-        Регистрация на курс
+        Log in
       </h3>
-      <label for="name">Имя:</label>
-      <AppInput type="text" id="name" v-model="user.name" required > </AppInput>
-    </div>
-    <div class="container">
-      <label for="email">Электронная почта:</label>
+      <label for="name">Email aadress:</label>
       <AppInput type="email" id="email" v-model="user.email" required > </AppInput>
     </div>
     <div class="container">
-      <label for="phone">Телефон:</label>
-      <AppInput type="tel" id="phone" v-model="user.phone" required > </AppInput>
+      <label for="email">Password:</label>
+      <AppInput type="password" id="password" v-model="user.pass" required > </AppInput>
     </div>
-    <div class="container">
-      <label for="dob">Дата рождения:</label>
-      <AppInput type="date" id="dob" v-model="user.dob" required > </AppInput>
-    </div>
+
     <div class="container">
 
-      <AppButton @click="onSubmit"> Регистрация </AppButton>
+      <AppButton @click="onSubmit"> Log in </AppButton>
 
       <!-- Message -->
 

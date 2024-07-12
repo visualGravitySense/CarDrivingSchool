@@ -31,11 +31,10 @@
     <!-- Информация о преподавателях -->
     <section class="instructors">
       <h2>Наши преподаватели</h2>
-      <div v-for="instructor in instructors" :key="instructor.id">
-        <h3>{{ instructor.name }}</h3>
-        <p>{{ instructor.bio }}</p>
-      </div>
+
+      <instructorsList :instructors="instructors" /><br>
     </section>
+
 
 
 
@@ -70,8 +69,13 @@
 </template>
 
 <script>
+import instructorsList from '~/components/Instructors/InstructorsList.vue';
+
 export default {
+  components: { instructorsList },
+
   data() {
+
     return {
       categories: [
         { id: 'A', title: 'Категория A', description: 'Описание категории A...' },
@@ -83,10 +87,6 @@ export default {
       reviews: [
         { id: 1, text: 'Отзыв 1', author: 'Автор 1' },
         { id: 2, text: 'Отзыв 2', author: 'Автор 2' }
-      ],
-      certificates: [
-        { id: 1, image: 'path/to/certificate1.jpg', title: 'Сертификат 1' },
-        { id: 2, image: 'path/to/certificate2.jpg', title: 'Сертификат 2' }
       ],
       gallery: [
         { id: 1, src: 'path/to/photo1.jpg', alt: 'Фото 1' },

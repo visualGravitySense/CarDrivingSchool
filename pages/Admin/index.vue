@@ -4,9 +4,19 @@
     <Hero/>
     <About/>
 
+    <!-- Gifts List -->
+    <section class="gifts">
+      <h2>Gifts List:</h2>
+      <giftsList :certificates="certificates" /><br>
+    </section>
 
-    <!-- Преимущества обучения -->
+
+    <!-- Users List -->
     <section class="advantages">
+
+      <h2>Users List:</h2>
+      <usersList :users="users" /><br>
+
       <h2>Преимущества обучения у нас</h2>
       <ul>
         <li>Опытные инструкторы</li>
@@ -24,16 +34,6 @@
       <div class="testimonial" v-for="review in reviews" :key="review.id">
         <p>{{ review.text }}</p>
         <p><strong>- {{ review.author }}</strong></p>
-      </div>
-    </section>
-
-
-    <!-- Информация о преподавателях -->
-    <section class="instructors">
-      <h2>Наши преподаватели</h2>
-      <div v-for="instructor in instructors" :key="instructor.id">
-        <h3>{{ instructor.name }}</h3>
-        <p>{{ instructor.bio }}</p>
       </div>
     </section>
 
@@ -70,24 +70,27 @@
 </template>
 
 <script>
+import usersList from '~/components/Users/UsersList.vue';
+
 export default {
   layout: 'admin',
+  components: { usersList },
   data() {
     return {
-      categories: [
-        { id: 'A', title: 'Категория A', description: 'Описание категории A...' },
-        { id: 'A1', title: 'Категория A1', description: 'Описание категории A1...' },
-        { id: 'A2', title: 'Категория A2', description: 'Описание категории A2...' },
-        { id: 'AM', title: 'Категория AM', description: 'Описание категории AM...' },
-        { id: 'B', title: 'Категория B', description: 'Описание категории B...' }
+      users: [
+        { id: '1', cat: 'Категория A', name: 'NAME 1' },
+        { id: '2', cat: 'Категория A1', name: 'NAME 2' },
+        { id: '3', cat: 'Категория A2', name: 'NAME 3' },
+        { id: '4', cat: 'Категория AM', name: 'NAME 4' },
+        { id: '5', cat: 'Категория B', name: 'NAME 5' }
       ],
       reviews: [
         { id: 1, text: 'Отзыв 1', author: 'Автор 1' },
         { id: 2, text: 'Отзыв 2', author: 'Автор 2' }
       ],
       certificates: [
-        { id: 1, image: 'path/to/certificate1.jpg', title: 'Сертификат 1' },
-        { id: 2, image: 'path/to/certificate2.jpg', title: 'Сертификат 2' }
+        { id: 1, code: '4567654', name: 'Gift for user 1' },
+        { id: 2, code: '4567111', name: 'Gift for user 2' }
       ],
       gallery: [
         { id: 1, src: 'path/to/photo1.jpg', alt: 'Фото 1' },

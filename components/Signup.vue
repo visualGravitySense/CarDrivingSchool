@@ -49,7 +49,7 @@ export default {
 },
   methods: {
     onSubmit() {
-
+      
       console.log(user)
       console.log('registerForm')
 

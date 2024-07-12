@@ -8,7 +8,7 @@
 
           <h1>Post editing, new post</h1>
 
-          <form @submit.prevent class="contact-form">
+          <form @submit.prevent="onSubmit" class="contact-form">
             <AppInput v-model="category.title"> Title </AppInput>
             <AppInput v-model="category.description"> Descr </AppInput>
             <AppInput v-model="category.image"> Img link </AppInput>

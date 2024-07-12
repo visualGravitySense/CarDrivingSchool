@@ -15,8 +15,8 @@
               </li>
             </ul>
             <div class="cta-buttons">
-              <nuxt-link to="/signup" class="signup-button">Signup</nuxt-link>
-              <nuxt-link to="/signin" class="signin-button">Sign In</nuxt-link>
+              <nuxt-link to="/signin" class="signin-button">Log in</nuxt-link>
+              <nuxt-link to="/signup" class="signup-button">Sign up</nuxt-link>
             </div>
           </div>
           <div class="burger-menu" @click="toggleMenu">
@@ -125,12 +125,13 @@ export default {
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 0.25rem;
-  margin-left: 1rem;
+
   transition: background-color 0.3s;
 }
 
 .signup-button {
   background-color: #41de73;
+  margin-left: 1rem;
   color: #fff;
   padding: 0.5rem 1rem;
   text-decoration: none;

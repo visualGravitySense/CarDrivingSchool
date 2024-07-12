@@ -10,8 +10,10 @@
 
         <Gift/><br>
 
-        
-        <Register/>
+
+        <login @submit="onSubmt" />
+        <signup @submit="onSubmt" />
+
 
       </div>
 
@@ -21,12 +23,31 @@
 
 <script>
 import Gift from '~/components/Gift.vue';
-import Register from '~/components/Register.vue';
+import login from '~/components/Login.vue';
+import signup from '~/components/Signup.vue';
 import Intro from '~/components/UI/Intro.vue';
 export default {
-components: {
-  Gift, Intro
-},
-  name: 'About'
-}
+  components: {
+    Gift, Intro, login, signup
+  },
+  methods: {
+    onSubmit (user) {
+      console.log('User added!')
+
+    }
+  },
+    name: 'About'
+  }
 </script>
+
+
+<style>
+
+hstack {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+
+</style>

@@ -38,6 +38,11 @@ export const actions = {
       })
       .catch(e => console.log(e))
   },
+
+  addUser ({commit}, user) {
+    
+  },
+
   addPost ({commit}, category) {
     // console.log(category)
     return axios.post('https://viktoria-f5e86-default-rtdb.europe-west1.firebasedatabase.app/categories.json', category)

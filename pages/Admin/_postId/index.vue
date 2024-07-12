@@ -5,26 +5,26 @@
 </template>
 
 <script>
-import axios from 'axios'
 import newPostForm from '@/components/Admin/NewPostForm'
 export default {
   layout: 'admin',
-  asyncData (contex) {
-    return axios.get(`https://viktoria-f5e86-default-rtdb.europe-west1.firebasedatabase.app/categories/${contex.params.postId}.json`)
-      .then(res => {
-        return {
-          category: { ...res.data, id: contex.params.postId }
+  data () {
+    return {
+      category:
+        {
+            id: 1,
+            title: 'Категория A',
+            description: 'Описание категории A...',
+            image: require('@/assets/img/car1.jpg'), // Adjust this path as necessary
+            intro: 'This is the test intro ...',
+            content: 'We recommend you take a look at the ...',
         }
-      })
-      .catch(e => contex.error(e))
+    }
   },
   methods: {
     onSubmit (category) {
-      console.log('Post Editing!')
-      this.$store.dispatch('editPost', category)
-        .then(()=>{
-          this.$router.push('/admin')
-        })
+      console.log('Post edited!')
+      console.log(category)
     }
   },
   components: { newPostForm }
