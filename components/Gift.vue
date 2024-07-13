@@ -3,16 +3,16 @@
     <h2>Создать подарочный сертификат</h2>
     <form @submit.prevent="generateCertificate">
       <div>
-        <label for="amount">Сумма oт 140 дo 1050 euro:</label>
-        <AppInput class="bg-gray-100" v-model="amount" id="amount" type="number" required> </AppInput>
+        <!-- <label for="amount">Сумма:</label> -->
+        <AppInput class="bg-gray-100" v-model="amount" id="amount" type="number" required> Сумма: </AppInput>
       </div>
       <div>
-        <label for="friendName">Имя друга:</label><br>
-        <AppInput class="bg-gray-100" v-model="friendName" id="friendName" type="text" required> </AppInput>
-      </div>
-      <AppButton type="submit">Создать сертификат</AppButton>
-      <!-- Message -->
 
+        <AppInput class="bg-gray-100" v-model="friendName" type="email" id="email" required> Имя друга: </AppInput>
+      </div>
+      <AppButton2 type="submit">Создать сертификат</AppButton2>
+
+      <!-- Message -->
       <Message v-if="message" :message="message" />
     </form>
     <div v-if="certificate">
@@ -30,9 +30,9 @@
 </template>
 
 <script>
-
+import AppButton2 from '@/components/UI/Controls/Button2.vue'
 export default {
-  components: {  },
+  components: { AppButton2 },
   data() {
     return {
       message: null,
@@ -56,7 +56,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 .gift-certificate {
   max-width: 400px;
   margin: auto;
@@ -66,20 +66,24 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+form button:hover {
+  background-color: #41de73;
+}
+
 form div {
   margin-bottom: 10px;
 }
 
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
+.sp-btn {
+  background-color: #11b445;
+  margin-left: 1rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
+
 </style>

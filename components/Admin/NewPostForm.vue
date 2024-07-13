@@ -6,17 +6,18 @@
 
       <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
 
-          <h1>Post editing, new post</h1>
+          <h1>Post!!! editing, new post</h1>
 
-          <form @submit.prevent="onSubmit" class="contact-form">
+          <form @submit.prevent class="contact-form">
             <AppInput v-model="category.title"> Title </AppInput>
             <AppInput v-model="category.description"> Descr </AppInput>
             <AppInput v-model="category.image"> Img link </AppInput>
-            <AppInput v-model="category.content"> Contnet </AppInput>
+            <AppInput v-model="category.content"> Content </AppInput>
             <div class="controls">
               <AppButton class="cancel-button" @click="cancel"> Cancel </AppButton>
               <AppButton @click="onSubmit"> Save </AppButton>
-
+              <!-- Message -->
+              <Message v-if="message" :message="message" />
             </div>
 
           </form>
@@ -40,6 +41,7 @@ export default {
 
   data () {
     return {
+      message: null,
       category: this.categoryEdit ? { ...this.categoryEdit } : {
         title: '',
         description: '',
@@ -51,6 +53,7 @@ export default {
 
   methods: {
     onSubmit () {
+      this.message = 'Submitted!'
       this.$emit('submit', this.category)
     },
     cancel () {

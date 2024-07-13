@@ -1,4 +1,4 @@
-<!-- Краткое описание автошколы -->
+
 <template>
   <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
 
@@ -11,8 +11,8 @@
         <Gift/><br>
 
 
-        <login @submit="onSubmt" />
-        <signup @submit="onSubmt" />
+
+        <register @submit="onSubmt" />
 
 
       </div>
@@ -23,12 +23,11 @@
 
 <script>
 import Gift from '~/components/Gift.vue';
-import login from '~/components/Login.vue';
-import signup from '~/components/Signup.vue';
+import register from '~/components/Register.vue';
 import Intro from '~/components/UI/Intro.vue';
 export default {
   components: {
-    Gift, Intro, login, signup
+    Gift, Intro, register
   },
   methods: {
     onSubmit (user) {

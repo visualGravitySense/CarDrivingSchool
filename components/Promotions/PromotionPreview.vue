@@ -1,11 +1,11 @@
 <template>
 
-    <nuxt-link :to="/instructors/+instructor.id" class="bg-white overflow-hidden shadow p-4">
+    <nuxt-link :to="/promotions/+promotion.id" class="bg-white overflow-hidden shadow p-4">
       <h3 class="leading-7 font-semibold">
-        {{ instructor.name }}
+        {{ promotion.title }}
       </h3>
       <p class="text-gray-600">
-        {{ instructor.bio }}
+        {{ promotion.content }}
       </p>
 
     </nuxt-link>
@@ -18,7 +18,7 @@
 export default {
 
   props: {
-    instructor: {
+    promotion: {
       type: Object,
       required: true
     },
@@ -28,7 +28,7 @@ export default {
     }
   },
 
-  name: 'InstructorPreview',
+  name: 'PromotionPreview',
 
 };
 </script>

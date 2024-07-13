@@ -44,7 +44,7 @@ export default {
     onSubmit() {
 
       console.log(user)
-      console.log('registerForm')
+      
 
 
 

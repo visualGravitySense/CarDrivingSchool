@@ -6,15 +6,14 @@
       </h2>
       <p v-if="comments.length == 0"> Comments: 0 </p>
 
-
-
-
-
         <div v-for="comment in comments" :key="comment.name" class="comment mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
 
-            <p class="name">{{ comment }}</p>
-          
+            <p class="name">{{ comment.name }}</p>
 
+            <p class="name">{{ comment.content }}</p>
+
+            <img :src="comment.image" :alt="comment.image">
+            
         </div>
       </div>
 

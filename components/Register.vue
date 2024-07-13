@@ -19,7 +19,7 @@
       <label for="dob">Дата рождения:</label>
       <AppInput type="date" id="dob" v-model="user.dob" required > </AppInput>
     </div>
-    <div class="container">
+    <div class="controls">
 
       <AppButton @click="onSubmit"> Регистрация </AppButton>
 
@@ -49,12 +49,8 @@ export default {
 },
   methods: {
     onSubmit() {
-
-      console.log(user)
-      console.log('registerForm')
-
-
-
+      console.log(this.user)
+      this.message = 'Submitted!'
     }
   }
 };

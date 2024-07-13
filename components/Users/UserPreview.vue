@@ -1,6 +1,6 @@
 <template>
 
-    <div class="bg-white overflow-hidden shadow p-4">
+    <nuxt-link :to="/users/+user.id" class="bg-white overflow-hidden shadow p-4">
       <h3 class="leading-7 font-semibold">
         {{ user.name }}
       </h3>
@@ -8,7 +8,7 @@
         {{ user.cat }}
       </p>
 
-    </div>
+    </nuxt-link>
 
 
 </template>

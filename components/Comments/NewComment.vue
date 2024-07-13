@@ -25,7 +25,7 @@
 
               <Message v-if="message" :message="message" />
 
-              <AppButton class="signin-button" type="submit">Отправить</AppButton>
+              <AppButton type="submit">Отправить</AppButton>
 
             </div>
 

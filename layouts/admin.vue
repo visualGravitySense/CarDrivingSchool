@@ -7,6 +7,9 @@
         <nuxt-link to="/admin" class="link linkWhite"> Admin </nuxt-link>
         <nuxt-link to="/admin/new-post" class="link linkWhite"> New Post </nuxt-link>
         <nuxt-link to="/admin/comments" class="link linkWhite"> Comments </nuxt-link>
+        <nuxt-link to="/admin/new-promo" class="link linkWhite"> Promo </nuxt-link>
+        <nuxt-link to="/admin/new-instructor" class="link linkWhite"> Instructors </nuxt-link>
+        <nuxt-link to="/admin/new-user" class="link linkWhite"> Users </nuxt-link>
 
       <nuxt />
     </div>

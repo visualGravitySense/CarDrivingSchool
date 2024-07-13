@@ -2,7 +2,7 @@
 
   <div class="control">
     <label> <slot /> </label>
-    <textArea
+    <textarea
       :value="value"
       @input="$emit('input', $event.target.value)"
     >

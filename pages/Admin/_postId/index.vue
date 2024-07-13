@@ -12,7 +12,7 @@ export default {
     return {
       category:
         {
-            id: 1,
+            id: 1,  
             title: 'Категория A',
             description: 'Описание категории A...',
             image: require('@/assets/img/car1.jpg'), // Adjust this path as necessary

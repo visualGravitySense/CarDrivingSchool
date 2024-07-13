@@ -4,6 +4,8 @@
     <Hero/>
     <About/>
 
+    <promotionsList :promotions="promotions" />
+
 
     <!-- Преимущества обучения -->
     <section class="advantages">
@@ -70,9 +72,10 @@
 
 <script>
 import instructorsList from '~/components/Instructors/InstructorsList.vue';
+import promotionsList from '~/components/Promotions/PromotionsList.vue';
 
 export default {
-  components: { instructorsList },
+  components: { instructorsList, promotionsList },
 
   data() {
 
@@ -100,7 +103,7 @@ export default {
         { id: 1, name: 'Инструктор 1', bio: 'Биография инструктора 1' },
         { id: 2, name: 'Инструктор 2', bio: 'Биография инструктора 2' }
       ],
-      newsUpdates: [
+      promotions: [
         { id: 1, title: 'Новость 1', content: 'Содержание новости 1' },
         { id: 2, title: 'Новость 2', content: 'Содержание новости 2' }
       ],
@@ -213,7 +216,5 @@ form button {
   cursor: pointer;
 }
 
-form button:hover {
-  background-color: #0056b3;
-}
+
 </style>
