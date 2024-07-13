@@ -1,6 +1,6 @@
-<template>
+<template> 
   <newPostForm
-    :categoryEdit="category"
+    :category="category"
     @submit="onSubmit" />
 </template>
 
@@ -12,8 +12,8 @@ export default {
     return {
       category:
         {
-            id: 1,  
-            title: 'Категория A',
+            id: 1,
+            title: 'Категория AA',
             description: 'Описание категории A...',
             image: require('@/assets/img/car1.jpg'), // Adjust this path as necessary
             intro: 'This is the test intro ...',

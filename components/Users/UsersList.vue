@@ -23,7 +23,7 @@ components: {
       type: Boolean,
       default: false
     }
-  },
+  }, 
 
   name: 'UsersLists',
   data() {

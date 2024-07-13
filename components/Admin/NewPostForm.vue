@@ -42,7 +42,7 @@ export default {
   data () {
     return {
       message: null,
-      category: this.categoryEdit ? { ...this.categoryEdit } : {
+      category: {
         title: '',
         description: '',
         image: '',

@@ -4,26 +4,7 @@
 
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 
-      <img :src="promotion.img" :alt="promotion.title" />
-
-      <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
-
-        <h2 class="text-2xl leading-7 font-semibold">
-          {{ promotion.title }}
-        </h2>
-
-        <p class="mt-3 text-gray-600">
-          {{ promotion.descr }} <br>
-        </p></br>
-
-        <p class="mt-3 text-gray-600">
-          {{ promotion.content }} <br>
-        </p></br>
-
-        <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
-          Copyright link <code class="bg-gray-100 text-sm p-1 rounded border"> {{ promotion.copylink }}</code> Reeglid ja tingimused link <code class="bg-gray-100 text-sm p-1 rounded border">Reeglid ja tingimused</code>. Have fun!
-        </p>
-      </div>
+      <promotion :promotion="promotion" />
       <div class="flex justify-center pt-4 space-x-2">
 
       </div>
@@ -32,8 +13,7 @@
 </template>
 
 <script>
-import Gift from '~/components/Gift.vue';
-import Register from '~/components/Register.vue';
+import promotion from '~/components/Promotions/Promotion.vue'
 export default {
   data () {
     return {
@@ -48,7 +28,7 @@ export default {
     }
   },
   components: {
-
+    promotion
   },
     name: 'LandingPage'
   }

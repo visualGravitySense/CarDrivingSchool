@@ -70,20 +70,14 @@
 </template>
 
 <script>
-import usersList from '~/components/Users/UsersList.vue';
+
 
 export default {
   layout: 'admin',
-  components: { usersList },
+  components: {  },
   data() {
     return {
-      users: [
-        { id: '1', cat: 'Категория A', name: 'NAME 1' },
-        { id: '2', cat: 'Категория A1', name: 'NAME 2' },
-        { id: '3', cat: 'Категория A2', name: 'NAME 3' },
-        { id: '4', cat: 'Категория AM', name: 'NAME 4' },
-        { id: '5', cat: 'Категория B', name: 'NAME 5' }
-      ],
+
       reviews: [
         { id: 1, text: 'Отзыв 1', author: 'Автор 1' },
         { id: 2, text: 'Отзыв 2', author: 'Автор 2' }

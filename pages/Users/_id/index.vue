@@ -4,26 +4,13 @@
 
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 
-      <img :src="user.img" :alt="user.title" />
 
-      <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
 
-        <h2 class="text-2xl leading-7 font-semibold">
-          {{ user.title }}
-        </h2>
 
-        <p class="mt-3 text-gray-600">
-          {{ user.descr }} <br>
-        </p></br>
+        <user :user="user" />
 
-        <p class="mt-3 text-gray-600">
-          {{ user.content }} <br>
-        </p></br>
 
-        <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
-          Copyright link <code class="bg-gray-100 text-sm p-1 rounded border"> {{ user.copylink }}</code> Reeglid ja tingimused link <code class="bg-gray-100 text-sm p-1 rounded border">Reeglid ja tingimused</code>. Have fun!
-        </p>
-      </div>
+
       <div class="flex justify-center pt-4 space-x-2">
 
         <newComment />
@@ -38,6 +25,7 @@
 <script>
 import newComment from '~/components/Comments/NewComment.vue';
 import comments from '~/components/Comments/Comments.vue';
+import user from '~/components/Users/User.vue';
 export default {
   data () {
     return {
@@ -64,7 +52,7 @@ export default {
     }
   },
   components: {
-    newComment, comments
+    newComment, comments, user
   },
     name: 'UserProfile'
   }

@@ -1,4 +1,4 @@
-<template>
+<template> 
   <newPostForm @submit="onSubmit" />
 </template>
 

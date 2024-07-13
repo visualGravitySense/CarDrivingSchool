@@ -1,4 +1,4 @@
-<template>
+<template> 
 
   <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
 
@@ -6,7 +6,7 @@
 
       <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
 
-          <h1>Instructor !!! adding and editing</h1>
+          <h1>Instructor adding and editing</h1>
 
           <form @submit.prevent class="contact-form">
             <AppInput v-model="instructor.title"> Title </AppInput>
