@@ -5,7 +5,7 @@
         {{ promotion.title }}
       </h3>
       <p class="text-gray-600">
-        {{ promotion.content }}
+        {{ promotion.description }}
       </p>
 
     </nuxt-link>

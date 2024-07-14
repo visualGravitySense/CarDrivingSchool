@@ -3,7 +3,7 @@
 <!-- Перечень Promotions -->
 <div class="mt-10 cards">
 
-    {{ promotions }}
+    
     <promotionPreview v-for="promotion in promotions" :key="promotion.id" :promotion="promotion" />
 </div>
 

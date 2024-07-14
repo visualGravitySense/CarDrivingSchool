@@ -4,7 +4,7 @@
     <Hero/>
     <About/>
 
-    <promotionsList :promotions="promotions" />
+    <promotionsList :promotions="postsLoaded" />
 
 
     <!-- Преимущества обучения -->
@@ -103,10 +103,7 @@ export default {
         { id: 1, name: 'Инструктор 1', bio: 'Биография инструктора 1' },
         { id: 2, name: 'Инструктор 2', bio: 'Биография инструктора 2' }
       ],
-      promotions: [
-        { id: 1, title: 'Новость 1', content: 'Содержание новости 1' },
-        { id: 2, title: 'Новость 2', content: 'Содержание новости 2' }
-      ],
+
       socialMedia: [
         { platform: 'Facebook', link: 'https://facebook.com' },
         { platform: 'Instagram', link: 'https://instagram.com' }
@@ -120,8 +117,13 @@ export default {
       alert(`Подписка на новости с email: ${this.newsletterEmail}`);
       this.newsletterEmail = '';
     }
+  },
+  computed: {
+    postsLoaded () {
+      return this.$store.getters.getPostsLoaded
+    }
   }
-};
+}
 </script>
 
 <style>

@@ -1,14 +1,15 @@
 <template>
 
-    <div class="bg-white overflow-hidden shadow p-4">
+
+    <nuxt-link :to="/certificates/+certificate.id" class="bg-white overflow-hidden shadow p-4">
       <h3 class="leading-7 font-semibold">
-        {{ certificate.name }}
+        {{ certificate.isTrusted }}
       </h3>
       <p class="text-gray-600">
         {{ certificate.cat }}
       </p>
 
-    </div>
+    </nuxt-link>
 
 
 </template>

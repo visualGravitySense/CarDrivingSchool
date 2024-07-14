@@ -1,4 +1,3 @@
-<!-- Please remove this file from your project -->
 <template>
   <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
 
@@ -13,23 +12,20 @@
 </template>
 
 <script>
+import axios from 'axios'
 import promotion from '~/components/Promotions/Promotion.vue'
-export default {
-  data () {
-    return {
-      promotion: {
-        id: 1,
-        title: 'Promotion Title 1',
-        descr: 'Promotion Description small tekst ',
-        content: 'Promotion CONTENT, need chande to Markdown or HTML. Promotion CONTENT, need chande to Markdown or HTML',
-        img: require('@/assets/img/car1.jpg'),
 
-      }
+export default {
+  components: { promotion },
+  async asyncData (context) {
+    let [ promotion ] = await Promise.all([
+      axios.get(`https://viktoria-f5e86-default-rtdb.europe-west1.firebasedatabase.app/promotions/${context.params.id}.json`),
+    ])
+    return {
+      promotion: promotion.data
     }
   },
-  components: {
-    promotion
-  },
+
     name: 'LandingPage'
   }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="gift-certificate">
     <h2>Создать подарочный сертификат</h2>
-    <form @submit.prevent="generateCertificate">
+    <form @submit.prevent>
       <div>
         <!-- <label for="amount">Сумма:</label> -->
         <AppInput class="bg-gray-100" v-model="amount" id="amount" type="number" required> Сумма: </AppInput>
@@ -10,7 +10,7 @@
 
         <AppInput class="bg-gray-100" v-model="friendName" type="email" id="email" required> Имя друга: </AppInput>
       </div>
-      <AppButton2 type="submit">Создать сертификат</AppButton2>
+      <AppButton2 @click="onSubmit">Создать сертификат</AppButton2>
 
       <!-- Message -->
       <Message v-if="message" :message="message" />
@@ -36,13 +36,19 @@ export default {
   data() {
     return {
       message: null,
-      amount: null,
-      friendName: '',
+      certificate: {
+        amount: null,
+        friendName: '',
+      },
       certificate: null
     };
   },
   methods: {
-    generateCertificate() {
+    onSubmit (certificate) {
+    this.$store.dispatch('addGift', certificate)
+      .then(()=>{
+        this.$router.push('/admin')
+      })
       // Генерация уникального кода сертификата
       const uniqueCode = Math.random().toString(36).substr(2, 9).toUpperCase();
       this.certificate = {

@@ -3,7 +3,7 @@
 <!-- Перечень gifts -->
 <div class="mt-10 cards">
   <giftPreview v-for="certificate in certificates" :key="certificate.id" :certificate="certificate" />
-  {{ certificates }} <br>
+   <br>
 
 </div>
 

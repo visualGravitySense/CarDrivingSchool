@@ -4,10 +4,14 @@
     <Hero/>
     <About/>
 
+    <promotionsList :promotions="postsLoaded" />
+
+
     <!-- Gifts List -->
     <section class="gifts">
       <h2>Gifts List:</h2>
-      <giftsList :certificates="certificates" /><br>
+      
+      <giftsList :certificates="certificatesLoaded" /><br>
     </section>
 
 
@@ -84,10 +88,7 @@ export default {
         { id: 1, text: 'Отзыв 1', author: 'Автор 1' },
         { id: 2, text: 'Отзыв 2', author: 'Автор 2' }
       ],
-      certificates: [
-        { id: 1, code: '4567654', name: 'Gift for user 1' },
-        { id: 2, code: '4567111', name: 'Gift for user 2' }
-      ],
+
       gallery: [
         { id: 1, src: 'path/to/photo1.jpg', alt: 'Фото 1' },
         { id: 2, src: 'path/to/photo2.jpg', alt: 'Фото 2' }
@@ -117,8 +118,16 @@ export default {
       alert(`Подписка на новости с email: ${this.newsletterEmail}`);
       this.newsletterEmail = '';
     }
+  },
+  computed: {
+    postsLoaded () {
+      return this.$store.getters.getPostsLoaded
+    },
+    certificatesLoaded () {
+      return this.$store.getters.getCertificatesLoaded
+    },
   }
-};
+}
 </script>
 
 <style>
