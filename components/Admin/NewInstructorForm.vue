@@ -1,4 +1,4 @@
-<template> 
+<template>
 
   <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
 
@@ -33,7 +33,7 @@
 <script>
 export default {
   props: {
-    instructor: {
+    instructorEdit: {
       type: Object,
       required: false
     }
@@ -42,7 +42,7 @@ export default {
   data () {
     return {
       message: null,
-      instructor: {
+      instructor: this.instructorEdit ? { ...this.instructorEdit} : {
         title: '',
         description: '',
         image: '',

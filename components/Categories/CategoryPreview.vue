@@ -1,6 +1,6 @@
 <template>
 
-  <nuxt-link :to="/services/+card.id" class="card">
+  <nuxt-link :to="getLink" class="card">
     <div class="bg-white overflow-hidden shadow p-4">
       <h3 class="leading-7 font-semibold">
         {{ card.title }}
@@ -35,9 +35,10 @@ export default {
 
   computed: {
     getLink() {
-      return this.admin ? `/admin/${this.card.id}` :`/services/${this.card.id}`;
+      return this.admin ? `/admin/${this.card.id}` : `/services/${this.card.id}`;
     }
   },
+
 
 
   name: 'CategoriesPreview',

@@ -1,6 +1,6 @@
 <template>
 
-    <nuxt-link :to="/instructors/+instructor.id" class="bg-white overflow-hidden shadow p-4">
+    <nuxt-link :to="getLink" class="bg-white overflow-hidden shadow p-4">
       <h3 class="leading-7 font-semibold">
         {{ instructor.name }}
       </h3>
@@ -25,6 +25,11 @@ export default {
     admin: {
       type: Boolean,
       default: false
+    }
+  },
+  computed: {
+    getLink () {
+      return this.admin ? `/admin/${this.instructor.id}` : `/instructors/${this.instructor.id}`
     }
   },
 

@@ -11,12 +11,12 @@
               <h3 class="mt-3 text-2xl leading-7 font-semibold">
                 Комментарий
               </h3>
-              <label for="name">Имя:</label>
-              <AppInput type="text" id="name" v-model="comment.name" required > </AppInput>
+              
+              <AppInput type="text" id="name" v-model="comment.name" required > Имя </AppInput>
             </div>
             <div class="container">
-              <label for="content">Комментарий:</label>
-              <AppInput id="content" v-model="comment.content" required ></AppInput>
+
+              <AppInput id="content" v-model="comment.content" required > Комментарий </AppInput>
             </div>
 
 

@@ -1,6 +1,6 @@
-<template> 
+<template>
   <newPostForm
-    :category="category"
+    :categoryEdit="category"
     @submit="onSubmit" />
 </template>
 

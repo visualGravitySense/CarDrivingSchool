@@ -13,7 +13,7 @@
             <p class="name">{{ comment.content }}</p>
 
             <img :src="comment.image" :alt="comment.image">
-            
+
         </div>
       </div>
 
@@ -38,7 +38,7 @@ export default {
 
   margin-bottom: 20px;
   .name {
-    font-size: 24px;
+    
 
   }
 }

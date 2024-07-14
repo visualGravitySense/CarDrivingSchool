@@ -5,11 +5,13 @@
 
     <category :category="category"/>
 
+    <newComment/>
+
     <comments :comments="comments" />
 
 
 
-    <newComment/>
+
 
   </div>
 
@@ -36,8 +38,21 @@ export default {
           description: 'Описание категории A...',
           image: require('@/assets/img/car1.jpg'), // Adjust this path as necessary
           intro: 'This is the test intro ...',
-          content: 'We recommend you take a look at the ...' }
-      
+          content: 'We recommend you take a look at the ...' },
+      comments: [
+        {
+          name: 'Commentor Name 1',
+          content: 'Instructor CONTENT, need chande to Markdown or HTML. Promotion CONTENT, need chande to Markdown or HTML',
+          img: 'https://play.google.com/store/apps/details?id=com.SGS.DrivingSchoolGames.RealCarParkingSimulator&hl=en_US'
+          },
+        {
+          name: 'Commentor Name 2',
+          content: 'Instructor CONTENT, need chande to Markdown or HTML. Promotion CONTENT, need chande to Markdown or HTML',
+          img: 'https://play.google.com/store/apps/details?id=com.SGS.DrivingSchoolGames.RealCarParkingSimulator&hl=en_US'
+        }
+
+      ]
+
     }
   },
 

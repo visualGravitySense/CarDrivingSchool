@@ -2,8 +2,10 @@
 
 <!-- Перечень Instructors -->
 <div class="mt-10 cards">
-  
-  <instructorPreview v-for="instructor in instructors" :key="instructor.id" :instructor="instructor" />
+
+  <instructorPreview v-for="instructor in instructors" :key="instructor.id"
+    :admin="admin"
+    :instructor="instructor" />
 </div>
 
 </template>

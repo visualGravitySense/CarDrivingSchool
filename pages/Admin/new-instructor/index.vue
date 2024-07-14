@@ -14,4 +14,5 @@ export default {
   },
   components: { newInstructorForm }
 }
-</script> 
+</script>
+ 

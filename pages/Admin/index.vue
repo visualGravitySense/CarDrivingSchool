@@ -23,6 +23,8 @@
         <li>Современные автомобили</li>
         <li>Гибкий график занятий</li>
       </ul>
+
+      <instructorsList :admin=true :instructors="instructors" />
     </section>
 
 

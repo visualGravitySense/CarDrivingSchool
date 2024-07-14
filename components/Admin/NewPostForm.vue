@@ -42,7 +42,8 @@ export default {
   data () {
     return {
       message: null,
-      category: {
+
+      category: this.categoryEdit ? { ...this.ctegoryEdit } : {
         title: '',
         description: '',
         image: '',

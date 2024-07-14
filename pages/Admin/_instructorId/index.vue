@@ -1,6 +1,6 @@
 <template>
   <newInstructorForm
-    :instructor="instructor"
+    :instructorEdit="instructor"
     @submit="onSubmit" />
 </template>
 
@@ -13,7 +13,7 @@ export default {
       instructor:
         {
             id: 1,
-            title: 'Категория A',
+            title: 'Instructor A2 A1',
             description: 'Описание категории A...',
             image: require('@/assets/img/car1.jpg'), // Adjust this path as necessary
             intro: 'This is the test intro ...',
