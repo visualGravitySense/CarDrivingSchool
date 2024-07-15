@@ -14,7 +14,7 @@
         <a href="" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>
       </p>
 
-    
+
 
     </div>
 <!--  <div>
@@ -52,8 +52,6 @@ data () {
 
   padding: 3rem 2rem;
   text-align: center;
-
-
 
 }
 

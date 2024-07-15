@@ -2,51 +2,24 @@
   <div class="home-page">
 
     <Hero/>
+
     <About/>
 
-    <promotionsList :promotions="postsLoaded" />
-
-
     <!-- Преимущества обучения -->
-    <section class="advantages">
-      <h2>Преимущества обучения у нас</h2>
-      <ul>
-        <li>Опытные инструкторы</li>
-        <li>Современные автомобили</li>
-        <li>Гибкий график занятий</li>
-      </ul>
-    </section>
+    <Benefits/>
 
 
+    <gallery/>
 
-
-    <!-- Отзывы учеников -->
+    <!-- Отзывы учеников
     <section class="testimonials">
       <h2>Отзывы учеников</h2>
       <div class="testimonial" v-for="review in reviews" :key="review.id">
         <p>{{ review.text }}</p>
         <p><strong>- {{ review.author }}</strong></p>
       </div>
-    </section>
+    </section> -->
 
-
-    <!-- Информация о преподавателях -->
-    <section class="instructors">
-      <h2>Наши преподаватели</h2>
-
-      <instructorsList :instructors="instructors" /><br>
-    </section>
-
-
-
-
-    <!-- Фотогалерея -->
-    <section class="photo-gallery">
-      <h2>Фотогалерея</h2>
-      <div class="gallery">
-        <img v-for="photo in gallery" :src="photo.src" :alt="photo.alt" :key="photo.id" />
-      </div>
-    </section>
 
 
 
@@ -72,10 +45,10 @@
 
 <script>
 import instructorsList from '~/components/Instructors/InstructorsList.vue';
-import promotionsList from '~/components/Promotions/PromotionsList.vue';
+
 
 export default {
-  components: { instructorsList, promotionsList },
+  components: { instructorsList,  },
 
   data() {
 
@@ -91,10 +64,7 @@ export default {
         { id: 1, text: 'Отзыв 1', author: 'Автор 1' },
         { id: 2, text: 'Отзыв 2', author: 'Автор 2' }
       ],
-      gallery: [
-        { id: 1, src: 'path/to/photo1.jpg', alt: 'Фото 1' },
-        { id: 2, src: 'path/to/photo2.jpg', alt: 'Фото 2' }
-      ],
+
       videos: [
         { id: 1, src: 'path/to/video1.mp4' },
         { id: 2, src: 'path/to/video2.mp4' }

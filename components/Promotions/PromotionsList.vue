@@ -1,12 +1,11 @@
 <template>
-
-<!-- Перечень Promotions -->
-<div class="mt-10 cards">
-
-    
-    <promotionPreview v-for="promotion in promotions" :key="promotion.id" :promotion="promotion" />
-</div>
-
+  <!-- Promotions List -->
+  <div class="mt-10 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-6">Boonused ja Kampaaniad</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <promotion-preview v-for="promotion in promotions" :key="promotion.id" :promotion="promotion" /><br>
+    </div>
+  </div>
 </template>
 
 <script>

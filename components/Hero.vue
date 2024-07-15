@@ -1,7 +1,7 @@
 <!-- Hero Block for Main Page -->
 <template>
 
-  <div class="relative flex items-center justify-center min-h-screen bg-cover bg-center">
+  <div class="relativeBg flex items-center justify-center min-h-screen bg-cover bg-center">
 
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 
@@ -60,7 +60,7 @@ export default {
 
 <style>
 
-.relative {
+.relativeBg {
   background-image: url('@/assets/img/hero-bg-2.jpg'); /* Укажите путь к вашему изображению */
   background-size: cover;
   background-position: center;

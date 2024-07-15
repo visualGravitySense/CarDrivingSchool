@@ -1,5 +1,7 @@
 
 <template>
+
+
   <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
 
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
@@ -8,14 +10,14 @@
 
         <Intro title="О нашей автошколе" topic="Intro for paragraph" paragraph="Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text"/><br>
 
-        <Gift/><br>
+        <!-- <Gift/><br> -->
 
-
-
-        <register @submit="onSubmt" />
+        <!-- <register @submit="onSubmt" />-->
 
 
       </div>
+
+      <promotionsList :promotions="postsLoaded" />
 
     </div>
   </div>
@@ -25,14 +27,20 @@
 import Gift from '~/components/Gift.vue';
 import register from '~/components/Register.vue';
 import Intro from '~/components/UI/Intro.vue';
+import promotionsList from '~/components/Promotions/PromotionsList.vue';
 export default {
   components: {
-    Gift, Intro, register
+    Gift, Intro, register, promotionsList
   },
   methods: {
     onSubmit (user) {
       console.log('User added!')
 
+    }
+  },
+  computed: {
+    postsLoaded () {
+      return this.$store.getters.getPostsLoaded
     }
   },
     name: 'About'
@@ -41,6 +49,10 @@ export default {
 
 
 <style>
+
+
+
+
 
 hstack {
   display: flex;

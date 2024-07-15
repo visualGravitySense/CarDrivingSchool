@@ -13,10 +13,10 @@
     <section class="team-section">
       <h2>Наша команда</h2>
       <div class="instructors">
-        <div v-for="instructor in instructors" :key="instructor.id">
-          <h3>{{ instructor.name }}</h3>
-          <p>{{ instructor.bio }}</p>
-        </div>
+      <!-- Информация о преподавателях -->
+
+        <instructorsList :instructors="instructors" /><br>
+
       </div>
       <div class="interviews">
         <h2>Интервью с инструкторами</h2>
@@ -82,7 +82,10 @@
 </template>
 
 <script>
+import instructorsList from '~/components/Instructors/InstructorsList.vue';
+
 export default {
+components: { instructorsList},
   data() {
     return {
       history: 'Краткая история автошколы...',
