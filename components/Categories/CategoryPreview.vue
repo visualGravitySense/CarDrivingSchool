@@ -1,11 +1,11 @@
 <template>
 
-  <nuxt-link :to="getLink" class="card">
-    <div class="bg-white overflow-hidden shadow p-4">
-      <h3 class="leading-7 font-semibold">
+  <nuxt-link :to="/services/+card.id" class="card">
+    <div class="overflow-hidden shadow p-4">
+      <h3 class="text-white leading-7 font-semibold">
         {{ card.title }}
       </h3>
-      <p class="text-gray-600">
+      <p class="text-white-600">
         {{ card.description }}
       </p>
       <a href="/courses">Узнать больше</a>

@@ -1,11 +1,11 @@
 <!-- Hero Block for Main Page -->
 <template>
-  <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+
+  <div class="relative flex items-center justify-center min-h-screen bg-cover bg-center">
 
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 
       <Promo/>
-
       <CategoriesList :admin=true :cards="cards"/>
 
     </div>
@@ -43,6 +43,11 @@ export default {
         title: 'Категория B',
         description: 'Описание категории A...',
         image: require('@/assets/img/car1.jpg')
+        },
+        { id: 3,
+        title: 'Категория B',
+        description: 'Описание категории A...',
+        image: require('@/assets/img/car1.jpg')
         }
       ]
 
@@ -55,6 +60,15 @@ export default {
 
 <style>
 
+.relative {
+  background-image: url('@/assets/img/hero-bg-2.jpg'); /* Укажите путь к вашему изображению */
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
 .cards {
   display: flex;
   gap: 20px 10px;
@@ -66,9 +80,11 @@ export default {
 .card {
   display: flex;
   flex-direction: row;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   width: 250px;
   height: auto;
   overflow: hidden;
@@ -110,13 +126,13 @@ export default {
 
 .card p {
   font-size: 14px;
-  color: #666;
+  color: #e1e5ec;
   margin-bottom: 20px;
 }
 
 .card a {
   font-size: 13px;
-  color: #ff4500;
+  color: #00ff00;
   text-decoration: none;
   font-weight: bold;
 }
