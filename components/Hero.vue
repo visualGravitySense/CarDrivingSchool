@@ -37,17 +37,17 @@ export default {
         { id: 1,
         title: 'Категория A',
         description: 'Описание категории A...',
-        image: require('@/assets/img/car1.jpg')
+        image: require('@/assets/img/category_a.png')
         },
         { id: 2,
         title: 'Категория B',
         description: 'Описание категории A...',
-        image: require('@/assets/img/car1.jpg')
+        image: require('@/assets/img/automat_pic.png')
         },
         { id: 3,
         title: 'Категория B',
         description: 'Описание категории A...',
-        image: require('@/assets/img/car1.jpg')
+        image: require('@/assets/img/category_aa.png')
         }
       ]
 
@@ -61,7 +61,7 @@ export default {
 <style>
 
 .relativeBg {
-  background-image: url('@/assets/img/hero-bg-2.jpg'); /* Укажите путь к вашему изображению */
+  background-image: url('@/assets/img/default_bg.png'); /* Укажите путь к вашему изображению */
   background-size: cover;
   background-position: center;
 }

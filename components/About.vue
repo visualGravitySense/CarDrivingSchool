@@ -8,8 +8,8 @@
 
       <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
 
-        <Intro title="О нашей автошколе" topic="Intro for paragraph" paragraph="Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text"/><br>
 
+      <Intro title="О нашей автошколе" topic="Ведущая автошкола в Таллине с 18-летним опытом работы" paragraph="Мы гордимся высоким уровнем обучения, который обеспечивается опытными и квалифицированными инструкторами. Наша автошкола предлагает современные методы обучения, включая теоретические занятия и практическое вождение, чтобы подготовить студентов к безопасному и уверенному управлению автомобилем. Присоединяйтесь к нам и получите водительские права!"/><br>
         <!-- <Gift/><br> -->
 
         <!-- <register @submit="onSubmt" />-->
