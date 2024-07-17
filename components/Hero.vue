@@ -13,12 +13,12 @@
 </template>
 
 <script>
-
-
+import promo from "~/components/Promo.vue";
+import categoriesList from "~/components/Categories/CategoriesList.vue";
 
 export default {
   components: {
-
+    promo, categoriesList
   },
   computed: {
 //    postsLoaded () {

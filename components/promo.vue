@@ -1,0 +1,124 @@
+<template>
+
+  <div class="relativeBg flex items-center justify-center min-h-80vh bg-cover bg-center">
+
+    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
+
+
+
+      <div class="hero-section">
+
+          <p class="welcome-text">
+            <code>Добро пожаловать в автошколу Виктория</code>
+          </p>
+
+          <h1 class="hero-title">
+            Научитесь водить с
+            <span class="confidence">уверенностью</span>
+          </h1>
+          <p class="description">
+            Профессиональные инструктора и гибкий график занятий.
+            <a href="" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>
+          </p>
+
+
+
+        </div>
+
+
+    </div>
+  </div>
+</template>
+
+<script>
+
+
+
+export default {
+  components: {
+
+  },
+  computed: {
+//    postsLoaded () {
+//    return this.$store.getters.getPostsLoaded
+//    }
+  },
+  name: 'Viktoria',
+  data() {
+    return {
+      welcomeMessage: 'Добро пожаловать в нашу автошколу!',
+      mainTitle: 'Научитесь водить с уверенностью',
+      subtitle: 'Профессиональные инструктора и гибкий график занятий',
+      ctaText: 'Зарегистрируйтесь сегодня и начните свой путь к безопасному вождению',
+      ctaButtonText: 'Зарегистрироваться',
+
+    };
+
+  }
+}
+</script>
+
+<style>
+
+.relativeBg {
+  background-image: url('@/assets/img/default_bg.png'); /* Укажите путь к вашему изображению */
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.hero-section {
+
+  padding: 3rem 2rem;
+  text-align: center;
+
+}
+
+
+.welcome-text {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.welcome-text code {
+  background-color: #fff3cd;
+  color: #856404;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ffeeba;
+}
+
+.hero-title {
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #e1e5ec;
+}
+
+.hero-title .confidence {
+  text-decoration: underline;
+  color: #3182ce;
+}
+
+.description {
+  margin-top: 2rem;
+  color: #d4d4d4;
+  font-size: 1.125rem;
+}
+
+.register-link {
+  color: #ffff00;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+  color: #2f855a;
+}
+
+</style>

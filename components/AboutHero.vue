@@ -1,30 +1,26 @@
 <!-- Hero Block for Main Page -->
 <template>
-
   <div class="relativeBg flex items-center justify-center min-h-80vh bg-cover bg-center">
-
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
-
-      <AboutPromo/>
-
-
+      <div class="hero-section">
+        <p class="welcome-text">
+          <code>Добро пожаловать в автошколу Виктория</code>
+        </p>
+        <h1 class="hero-title">
+          Научитесь водить с
+          <span class="confidence">уверенностью</span>
+        </h1>
+        <p class="description">
+          Профессиональные инструктора и гибкий график занятий.
+          <a href="" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>
+        </p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-
-
-
 export default {
-  components: {
-
-  },
-  computed: {
-//    postsLoaded () {
-//    return this.$store.getters.getPostsLoaded
-//    }
-  },
   name: 'Viktoria',
   data() {
     return {
@@ -34,31 +30,19 @@ export default {
       ctaText: 'Зарегистрируйтесь сегодня и начните свой путь к безопасному вождению',
       ctaButtonText: 'Зарегистрироваться',
       cards: [
-        { id: 1,
-        title: 'Категория A',
-        description: 'Описание категории A...',
-        image: require('@/assets/img/category_a.png')
-        },
-        { id: 2,
-        title: 'Категория B',
-        description: 'Описание категории A...',
-        image: require('@/assets/img/automat_pic.png')
-        },
-        { id: 3,
-        title: 'Категория B',
-        description: 'Описание категории A...',
-        image: require('@/assets/img/category_aa.png')
-        }
-      ]
-
-
+        { id: 1, title: 'Категория A', description: 'Описание категории A...', image: require('@/assets/img/category_a.png') },
+        { id: 2, title: 'Категория B', description: 'Описание категории B...', image: require('@/assets/img/automat_pic.png') },
+        { id: 3, title: 'Категория C', description: 'Описание категории C...', image: require('@/assets/img/category_aa.png') },
+      ],
     };
-
-  }
-}
+  },
+};
 </script>
 
-<style>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 .relativeBg {
   background-image: url('@/assets/img/default_bg.png'); /* Укажите путь к вашему изображению */
@@ -66,75 +50,64 @@ export default {
   background-position: center;
 }
 
-
-
-
-.cards {
-  display: flex;
-  gap: 20px 10px;
-  align-items: stretch;
-  justify-content: center;
-  flex-wrap: wrap;
+.hero-section {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #ffebcd;
+  border: 5px solid #000;
+  border-radius: 15px;
+  box-shadow: 10px 10px 0 #000;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.card {
-  display: flex;
-  flex-direction: row;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  width: 250px;
-  height: auto;
-  overflow: hidden;
+.welcome-text {
+  color: #d32f2f;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Permanent Marker', cursive;
 }
 
-.card-content {
-  flex: 1;
-  padding: 20px 15px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #333;
-
+.welcome-text code {
+  background-color: #ffeb3b;
+  color: #000;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ffd700;
 }
 
-.card-image {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  position: relative;
+.hero-title {
+  margin-top: 1.5rem;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1976d2;
+  font-family: 'Lobster', cursive;
 }
 
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  clip-path: polygon(0px 0%, 100% 0%, 100% 100%, 0px 100%);
+.hero-title .confidence {
+  text-decoration: underline;
+  color: #d32f2f;
 }
 
-.card h3 {
-  font-size: 19px;
-  margin: 0px 0px 0px;
+.description {
+  margin-top: 2rem;
+  color: #4caf50;
+  font-size: 1.25rem;
+  font-family: 'Lobster', cursive;
 }
 
-.card p {
-  font-size: 14px;
-  color: #e1e5ec;
-  margin-bottom: 20px;
-}
-
-.card a {
-  font-size: 13px;
-  color: #00ff00;
+.register-link {
+  color: #ff5722;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Lobster', cursive;
+  transition: color 0.3s ease;
 }
 
+.register-link:hover {
+  text-decoration: underline;
+  color: #e64a19;
+}
 </style>
