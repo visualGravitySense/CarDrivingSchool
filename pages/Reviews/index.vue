@@ -8,6 +8,7 @@
   </header>
 
   <links/>
+  <projects/>
 
 
 
@@ -18,8 +19,10 @@
 <script>
 
 import links from '~/components/Links.vue';
+import projects from '~/components/Projects.vue';
+
 export default {
-  components: { links },
+  components: { links, projects },
   name: 'IndexPage'
 }
 </script>
