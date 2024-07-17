@@ -1,34 +1,20 @@
 <template>
+
   <div class="about-page bg-gray-100">
     <!-- Главная секция -->
-    <section class="main-section">
-      <h1>О нашей автошколе</h1>
-      <p>{{ history }}</p>
-      <h2>Миссия и ценности</h2>
-      <p>{{ mission }}</p>
-      <video src="path/to/director-video.mp4" controls></video>
-    </section>
+    <aboutHero/>
 
     <!-- Секция "Команда" -->
-    <section class="team-section">
-      <h2>Наша команда</h2>
-      <div class="instructors">
-      <!-- Информация о преподавателях -->
+    <aboutUs/>
 
-        <instructorsList :instructors="instructors" /><br>
 
-      </div>
-      <div class="interviews">
-        <h2>Интервью с инструкторами</h2>
-        <div v-for="interview in interviews" :key="interview.id">
-          <h3>{{ interview.title }}</h3>
-          <p>{{ interview.content }}</p>
-        </div>
-      </div>
-    </section>
+
+
 
     <!-- Секция "Учебный процесс" -->
+
     <section class="learning-process-section">
+
       <h2>Учебный процесс</h2>
       <h3>Программа обучения</h3>
       <p>{{ program }}</p>
@@ -83,21 +69,17 @@
 
 <script>
 import instructorsList from '~/components/Instructors/InstructorsList.vue';
+import aboutHero from '~/components/aboutHero.vue';
+import aboutUs from '~/components/AboutUs.vue';
 
 export default {
-components: { instructorsList},
+components: { instructorsList, aboutHero, aboutUs },
   data() {
     return {
+
       history: 'Краткая история автошколы...',
       mission: 'Миссия и ценности...',
-      instructors: [
-        { id: 1, name: 'Инструктор 1', bio: 'Краткая биография...' },
-        { id: 2, name: 'Инструктор 2', bio: 'Краткая биография...' }
-      ],
-      interviews: [
-        { id: 1, title: 'Интервью с Инструктором 1', content: 'Текст интервью...' },
-        { id: 2, title: 'Интервью с Инструктором 2', content: 'Текст интервью...' }
-      ],
+
       program: 'Описание программы обучения...',
       advantages: [
         'Преимущество 1',
@@ -125,7 +107,9 @@ components: { instructorsList},
       socialMedia: [
         { platform: 'Facebook', link: 'https://facebook.com' },
         { platform: 'Instagram', link: 'https://instagram.com' }
-      ]
+      ],
+
+
     };
   }
 }
@@ -133,7 +117,7 @@ components: { instructorsList},
 
 <style scoped>
 .about-page {
-  padding: 20px;
+
 }
 
 section {
