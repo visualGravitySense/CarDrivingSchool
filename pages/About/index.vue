@@ -1,10 +1,43 @@
 <template>
-  <div class="about-page bg-retro">
+  <div class="about-page">
     <!-- Главная секция -->
-    <aboutHero/>
 
-    <!-- Секция "Команда" -->
-    <aboutUs/>
+
+        <div class="hero-section">
+          <div class="hero-text">
+            <p class="welcome-text">
+              <code>Добро пожаловать в автошколу Виктория</code>
+            </p>
+            <h1 class="hero-title">
+              Научитесь водить с
+              <span class="confidence">уверенностью</span>
+            </h1>
+            <p class="description">
+              Профессиональные инструктора и гибкий график занятий.
+              <a href="" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>
+            </p>
+          </div>
+
+          <div class="hero-image">
+            <img src="@/assets/img/about-hero.jpg" alt="Hero Image">
+          </div>
+      </div>
+
+
+    <!-- Секция "О нашей автошколе" -->
+    <section>
+      <div>
+        <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">
+          {{ title }} <span class="confidence">Viktorija</span>
+        </h2>
+        <p class="pt-4 text-gray-800 border-t border-dashed">
+          <code class="bg-yellow-100 text-xl p-1 rounded border">{{ topic }}</code>
+        </p>
+        <p class="mt-3 text-gray-600">
+          {{ paragraph }}
+        </p>
+      </div>
+    </section>
 
     <!-- Секция "Учебный процесс" -->
     <section class="learning-process-section">
@@ -60,6 +93,8 @@
   </div>
 </template>
 
+
+
 <script>
 import instructorsList from '~/components/Instructors/InstructorsList.vue';
 import aboutHero from '~/components/aboutHero.vue';
@@ -69,6 +104,11 @@ export default {
   components: { instructorsList, aboutHero, aboutUs },
   data() {
     return {
+
+      title: "О нашей автошколе",
+      topic: "Ведущая автошкола в Таллине с 18-летним опытом работы",
+      paragraph: "Мы гордимся высоким уровнем обучения, который обеспечивается опытными и квалифицированными инструкторами. Наша автошкола предлагает современные методы обучения, включая теоретические занятия и практическое вождение, чтобы подготовить студентов к безопасному и уверенному управлению автомобилем. Присоединяйтесь к нам и получите водительские права!",
+
       history: 'Краткая история автошколы...',
       mission: 'Миссия и ценности...',
       program: 'Описание программы обучения...',
@@ -105,31 +145,100 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rochester&family=Roboto+Slab:wght@400;700&display=swap');
+
+.hero-section {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 40px; */
+  background-color: #f8f9fa; /* Светлый фон для контраста */
+  gap: 20px; /* Расстояние между текстом и изображением */
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 75%;
+  text-align: left;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 25%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* Округление углов изображения */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень для добавления глубины */
+}
+
+.welcome-text {
+  font-size: 1.2rem;
+  color: #333; /* Темный цвет для контраста */
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700; /* Более жирный шрифт для выделения */
+  color: #222; /* Темный цвет заголовка */
+  margin-bottom: 16px;
+}
+
+.confidence {
+  color: #007bff; /* Яркий цвет для выделения */
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #555; /* Более светлый цвет для описания */
+}
+
+.register-link {
+  color: #007bff; /* Цвет ссылки */
+  font-weight: 600; /* Жирное начертание ссылки */
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+
 
 .about-page {
-  background-color: #f5e6c8; /* Пастельный цвет для фона */
-  font-family: 'Crimson Text', serif;
+  /* background-color: #faf3e0;  Легкий кремовый фон */
+  font-family: 'Roboto Slab', serif;
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 10px 10px 0 #000;
+  border-radius: 10px;
   max-width: 1200px;
   margin: 0 auto;
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
 }
 
 section {
   margin-bottom: 40px;
-  background-color: #fff;
-  border: 3px solid #000;
+  background-color: #ffffff;
+  border: 2px solid #e0b14f;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 5px 5px 0 #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 h2, h3 {
-  font-family: 'Pacifico', cursive;
-  color: #d32f2f; /* Красный цвет для заголовков */
-  text-shadow: 2px 2px 0 #000; /* Тень для заголовков */
+  font-family: 'Rochester', cursive;
+  color: #d32f2f;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
 }
 
@@ -139,11 +248,17 @@ ul {
 }
 
 li {
-  background: #e0d4a3;
-  border: 2px dashed #000;
+  background: #ffebcd;
+  border: 2px dashed #d32f2f;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+li:hover {
+  background-color: #f5deb3;
+  transform: scale(1.02);
 }
 
 p, li {
@@ -154,14 +269,16 @@ p, li {
 .social-media a {
   display: inline-block;
   margin-right: 15px;
-  color: #3182ce; /* Синий цвет для ссылок */
+  color: #3182ce;
   text-decoration: none;
   font-weight: bold;
   text-shadow: 1px 1px 0 #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-media a:hover {
-  color: #d32f2f; /* Красный цвет при наведении */
+  color: #d32f2f;
+  transform: scale(1.1);
 }
 
 #map {
@@ -169,7 +286,7 @@ p, li {
   background: #ccc;
   border: 2px solid #000;
   border-radius: 10px;
-  box-shadow: 5px 5px 0 #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .instructors, .interviews, .success-stories, .reviews, .certificates, .partners, .social-media {
@@ -181,4 +298,5 @@ p, li {
   flex: 1 1 45%;
   margin: 10px;
 }
+
 </style>
