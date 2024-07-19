@@ -1,11 +1,16 @@
 <!-- Hero Block for Main Page -->
 <template>
 
-  <div class="relativeBg flex items-center justify-center min-h-screen bg-cover bg-center">
+  <div class="relative flex items-center justify-center bg-cover bg-center">
 
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 
-      <Promo/>
+      <Promo welcomeMessage="Добро пожаловать в нашу автошколу!"
+         mainTitle='Научитесь водить с '
+        mainTitleAccent='уверенностью'
+        subtitle='Профессиональные инструктора и гибкий график занятий.'
+        ctaText=' сегодня и начните свой путь к безопасному вождению.'
+        ctaButtonText='Зарегистрируйтесь'  />
       <CategoriesList :admin=true :cards="cards"/>
 
     </div>
@@ -28,11 +33,19 @@ export default {
   name: 'Viktoria',
   data() {
     return {
+
+
+
       welcomeMessage: 'Добро пожаловать в нашу автошколу!',
-      mainTitle: 'Научитесь водить с уверенностью',
-      subtitle: 'Профессиональные инструктора и гибкий график занятий',
-      ctaText: 'Зарегистрируйтесь сегодня и начните свой путь к безопасному вождению',
-      ctaButtonText: 'Зарегистрироваться',
+      mainTitle: 'Научитесь водить с ',
+      mainTitleAccent: 'уверенностью',
+      subtitle: 'Профессиональные инструктора и гибкий график занятий.',
+      ctaText: ' сегодня и начните свой путь к безопасному вождению.',
+      ctaButtonText: 'Зарегистрируйтесь',
+
+
+
+
       cards: [
         { id: 1,
         title: 'Категория A',

@@ -9,7 +9,7 @@
       <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
 
 
-      <Intro title="О нашей автошколе" topic="Ведущая автошкола в Таллине с 18-летним опытом работы" paragraph="Мы гордимся высоким уровнем обучения, который обеспечивается опытными и квалифицированными инструкторами. Наша автошкола предлагает современные методы обучения, включая теоретические занятия и практическое вождение, чтобы подготовить студентов к безопасному и уверенному управлению автомобилем. Присоединяйтесь к нам и получите водительские права!"/><br>
+      <aboutIntro title="О нашей автошколе" topic="Ведущая автошкола в Таллине с 18-летним опытом работы" paragraph="Мы гордимся высоким уровнем обучения, который обеспечивается опытными и квалифицированными инструкторами. Наша автошкола предлагает современные методы обучения, включая теоретические занятия и практическое вождение, чтобы подготовить студентов к безопасному и уверенному управлению автомобилем. Присоединяйтесь к нам и получите водительские права!"/><br>
         <!-- <Gift/><br> -->
 
         <!-- <register @submit="onSubmt" />-->
@@ -44,7 +44,7 @@
 <script>
 import Gift from '~/components/Gift.vue';
 import register from '~/components/Register.vue';
-import Intro from '~/components/UI/Intro.vue';
+import aboutIntro from '~/components/UI/AboutIntro.vue';
 import promotionsList from '~/components/Promotions/PromotionsList.vue';
 export default {
   data () {
@@ -60,7 +60,7 @@ export default {
     }
   },
   components: {
-    Gift, Intro, register, promotionsList
+    Gift, aboutIntro, register, promotionsList
   },
   methods: {
     onSubmit (user) {

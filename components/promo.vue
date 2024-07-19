@@ -9,16 +9,15 @@
       <div class="hero-section">
 
           <p class="welcome-text">
-            <code>Добро пожаловать в автошколу Виктория</code>
+            <code> {{ welcomeMessage }} </code>
           </p>
 
           <h1 class="hero-title">
-            Научитесь водить с
-            <span class="confidence">уверенностью</span>
+            {{ mainTitle }}
+            <span class="confidence">{{ mainTitleAccent }}</span>
           </h1>
           <p class="description">
-            Профессиональные инструктора и гибкий график занятий.
-            <a href="" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>
+            {{ subtitle }} <a href="" target="_blank" class="register-link">{{ ctaButtonText }}</a> {{ ctaText }}<br>
           </p>
 
 
@@ -35,6 +34,19 @@
 
 
 export default {
+  props: {
+
+    welcomeMessage: {
+      type: String,
+      requried: true },
+    mainTitle: ' ',
+    mainTitleAccent: ' ',
+    subtitle: ' ',
+    ctaText: ' ',
+    ctaButtonText: ' ',
+
+
+  },
   components: {
 
   },
@@ -44,17 +56,7 @@ export default {
 //    }
   },
   name: 'Viktoria',
-  data() {
-    return {
-      welcomeMessage: 'Добро пожаловать в нашу автошколу!',
-      mainTitle: 'Научитесь водить с уверенностью',
-      subtitle: 'Профессиональные инструктора и гибкий график занятий',
-      ctaText: 'Зарегистрируйтесь сегодня и начните свой путь к безопасному вождению',
-      ctaButtonText: 'Зарегистрироваться',
 
-    };
-
-  }
 }
 </script>
 

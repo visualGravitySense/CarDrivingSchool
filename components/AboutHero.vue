@@ -40,6 +40,7 @@ export default {
 </script>
 
 
+
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
@@ -52,13 +53,8 @@ export default {
 
 .hero-section {
   padding: 3rem 2rem;
-  text-align: center;
-  background-color: #ffebcd;
-  border: 5px solid #000;
-  border-radius: 15px;
-  box-shadow: 10px 10px 0 #000;
-  max-width: 800px;
-  margin: 0 auto;
+  text-align: left;
+  
 }
 
 .welcome-text {

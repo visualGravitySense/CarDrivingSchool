@@ -1,20 +1,13 @@
 <template>
-
-  <div class="about-page bg-gray-100">
+  <div class="about-page bg-retro">
     <!-- Главная секция -->
     <aboutHero/>
 
     <!-- Секция "Команда" -->
     <aboutUs/>
 
-
-
-
-
     <!-- Секция "Учебный процесс" -->
-
     <section class="learning-process-section">
-
       <h2>Учебный процесс</h2>
       <h3>Программа обучения</h3>
       <p>{{ program }}</p>
@@ -73,13 +66,11 @@ import aboutHero from '~/components/aboutHero.vue';
 import aboutUs from '~/components/AboutUs.vue';
 
 export default {
-components: { instructorsList, aboutHero, aboutUs },
+  components: { instructorsList, aboutHero, aboutUs },
   data() {
     return {
-
       history: 'Краткая история автошколы...',
       mission: 'Миссия и ценности...',
-
       program: 'Описание программы обучения...',
       advantages: [
         'Преимущество 1',
@@ -108,29 +99,77 @@ components: { instructorsList, aboutHero, aboutUs },
         { platform: 'Facebook', link: 'https://facebook.com' },
         { platform: 'Instagram', link: 'https://instagram.com' }
       ],
-
-
     };
   }
 }
 </script>
 
 <style scoped>
-.about-page {
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Pacifico&display=swap');
 
+.about-page {
+  background-color: #f5e6c8; /* Пастельный цвет для фона */
+  font-family: 'Crimson Text', serif;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 10px 10px 0 #000;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 section {
   margin-bottom: 40px;
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 5px 5px 0 #000;
 }
 
-h1, h2, h3 {
-  margin: 20px 0;
+h2, h3 {
+  font-family: 'Pacifico', cursive;
+  color: #d32f2f; /* Красный цвет для заголовков */
+  text-shadow: 2px 2px 0 #000; /* Тень для заголовков */
+  margin-bottom: 20px;
 }
 
-video {
-  width: 100%;
-  max-width: 600px;
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #e0d4a3;
+  border: 2px dashed #000;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+p, li {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #3182ce; /* Синий цвет для ссылок */
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.social-media a:hover {
+  color: #d32f2f; /* Красный цвет при наведении */
+}
+
+#map {
+  height: 300px;
+  background: #ccc;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 #000;
 }
 
 .instructors, .interviews, .success-stories, .reviews, .certificates, .partners, .social-media {
@@ -141,10 +180,5 @@ video {
 .instructors > div, .interviews > div, .success-stories > div, .reviews > div, .certificates > div, .partners > div, .social-media > a {
   flex: 1 1 45%;
   margin: 10px;
-}
-
-#map {
-  height: 300px;
-  background: #ccc;
 }
 </style>
