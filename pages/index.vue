@@ -69,10 +69,7 @@ export default {
         { id: 1, src: 'path/to/video1.mp4' },
         { id: 2, src: 'path/to/video2.mp4' }
       ],
-      instructors: [
-        { id: 1, name: 'Инструктор 1', bio: 'Биография инструктора 1' },
-        { id: 2, name: 'Инструктор 2', bio: 'Биография инструктора 2' }
-      ],
+      
 
       socialMedia: [
         { platform: 'Facebook', link: 'https://facebook.com' },

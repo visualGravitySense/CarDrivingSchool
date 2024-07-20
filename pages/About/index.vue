@@ -26,35 +26,50 @@
 
     <!-- Секция "О нашей автошколе" -->
     <section>
-      <div>
-        <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">
-          {{ title }} <span class="confidence">Viktorija</span>
-        </h2>
-        <p class="pt-4 text-gray-800 border-t border-dashed">
-          <code class="bg-yellow-100 text-xl p-1 rounded border">{{ topic }}</code>
-        </p>
-        <p class="mt-3 text-gray-600">
-          {{ paragraph }}
-        </p>
+      <div class="about-section">
+        <div class="about-image">
+
+            <img src="@/assets/img/hero-bg.jpg" alt="About Image">
+
+        </div>
+        <div class="about-content">
+          <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">
+            {{ title }} <span class="confidence">Viktorija</span>
+          </h2>
+        <!--  <p class="pt-4 text-gray-800 border-t border-dashed">
+            <code class="bg-yellow-100 text-xl p-1 rounded border">{{ topic }}</code>
+          </p> -->
+          <p class="about-paragraph mt-3 text-gray-600">
+            {{ paragraph }}
+          </p>
+        </div>
       </div>
     </section>
 
+
+
     <!-- Секция "Учебный процесс" -->
+
+
+
     <section class="learning-process-section">
-      <h2>Учебный процесс</h2>
+      <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">Учебный процесс</h2>
       <h3>Программа обучения</h3>
       <p>{{ program }}</p>
       <h3>Преимущества обучения у нас</h3>
-      <ul>
-        <li v-for="advantage in advantages" :key="advantage.id">{{ advantage }}</li>
-      </ul>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+      <instructorsList :instructors="instructors"/>
+      </div>
+
+
       <h3>Процедура сдачи экзаменов</h3>
       <p>{{ examProcedure }}</p>
     </section>
 
     <!-- Секция "Успехи и отзывы" -->
     <section class="success-reviews-section">
-      <h2>Наши достижения</h2>
+      <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">Наши достижения</h2>
       <p>{{ achievements }}</p>
       <h2>Истории успеха учеников</h2>
       <div v-for="successStory in successStories" :key="successStory.id">
@@ -67,7 +82,7 @@
       </div>
     </section>
 
-    <!-- Секция "Сертификаты и лицензии" -->
+    <!-- Секция "Сертификаты и лицензии"
     <section class="certificates-licenses-section">
       <h2>Сертификаты и лицензии</h2>
       <div v-for="certificate in certificates" :key="certificate.id">
@@ -77,11 +92,11 @@
       <div v-for="partner in partners" :key="partner.id">
         <p>{{ partner }}</p>
       </div>
-    </section>
+    </section>-->
 
     <!-- Секция "Контакты" -->
     <section class="contact-section">
-      <h2>Контактная информация</h2>
+      <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">Контактная информация</h2>
       <p>{{ contactInfo }}</p>
       <h2>Карта проезда</h2>
       <div id="map"></div>
@@ -100,11 +115,19 @@ import instructorsList from '~/components/Instructors/InstructorsList.vue';
 import aboutHero from '~/components/aboutHero.vue';
 import aboutUs from '~/components/AboutUs.vue';
 
+
 export default {
-  components: { instructorsList, aboutHero, aboutUs },
+  components: { instructorsList, aboutHero, aboutUs,  },
   data() {
     return {
+      instructors: [
+          { id: 1, name: '1 Инструктор 1', bio: 'Биография инструктора 1', image: require('@/assets/img/promo_1.png') },
+          { id: 2, name: 'Инструктор 2', bio: 'Биография инструктора 2', image: require('@/assets/img/promo_1.png')  },
+          { id: 1, name: 'Инструктор 1', bio: 'Биография инструктора 1', image: require('@/assets/img/promo_1.png')  },
+          { id: 2, name: 'Инструктор 2', bio: 'Биография инструктора 2', image: require('@/assets/img/promo_1.png')  },
+          { id: 1, name: 'Инструктор 1', bio: 'Биография инструктора 1', image: require('@/assets/img/promo_1.png')  },
 
+        ],
       title: "О нашей автошколе",
       topic: "Ведущая автошкола в Таллине с 18-летним опытом работы",
       paragraph: "Мы гордимся высоким уровнем обучения, который обеспечивается опытными и квалифицированными инструкторами. Наша автошкола предлагает современные методы обучения, включая теоретические занятия и практическое вождение, чтобы подготовить студентов к безопасному и уверенному управлению автомобилем. Присоединяйтесь к нам и получите водительские права!",
@@ -223,7 +246,7 @@ export default {
 section {
   margin-bottom: 40px;
   background-color: #ffffff;
-  border: 2px solid #e0b14f;
+  border: 2px solid #e0ddda;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -237,29 +260,11 @@ section:hover {
 
 h2, h3 {
   font-family: 'Rochester', cursive;
-  color: #d32f2f;
+  color: #007bff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: #ffebcd;
-  border: 2px dashed #d32f2f;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-li:hover {
-  background-color: #f5deb3;
-  transform: scale(1.02);
-}
 
 p, li {
   font-size: 1.2rem;
@@ -277,7 +282,7 @@ p, li {
 }
 
 .social-media a:hover {
-  color: #d32f2f;
+  color: #007bff;
   transform: scale(1.1);
 }
 
@@ -298,5 +303,93 @@ p, li {
   flex: 1 1 45%;
   margin: 10px;
 }
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.about-image {
+  flex: 1; /* Занимает 50% ширины */
+  max-width: 50%;
+  padding-right: 20px; /* Отступ справа от изображения */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Округление углов изображения */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для изображения */
+}
+
+.about-content {
+  flex: 1; /* Занимает 50% ширины */
+  max-width: 50%;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333; /* Цвет заголовка */
+  margin-bottom: 16px;
+}
+
+.about-paragraph {
+  font-size: 1rem;
+  font-weight: 100;
+  color: #333; /* Цвет заголовка */
+  /* margin-top: 16px; */
+}
+
+.confidence {
+  color: #007bff; /* Яркий цвет для выделения */
+}
+
+.pt-4 {
+  padding-top: 1rem; /* Отступ сверху */
+}
+
+.text-gray-800 {
+  color: #333; /* Цвет текста */
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.bg-yellow-100 {
+  background-color: #faf089; /* Светлый желтый фон */
+}
+
+.text-xl {
+  font-size: 1.25rem; /* Размер шрифта */
+}
+
+.p-1 {
+  padding: 0.25rem; /* Отступы */
+}
+
+.rounded {
+  border-radius: 0.375rem; /* Округление углов */
+}
+
+.border {
+  border-width: 1px;
+}
+
+.mt-3 {
+  margin-top: 0.75rem; /* Отступ сверху */
+}
+
+.text-gray-600 {
+  color: #4a5568; /* Светлый цвет текста */
+}
+
 
 </style>
