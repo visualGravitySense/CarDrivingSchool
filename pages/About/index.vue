@@ -70,16 +70,29 @@
     <!-- Секция "Успехи и отзывы" -->
     <section class="success-reviews-section">
       <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">Наши достижения</h2>
-      <p>{{ achievements }}</p>
-      <h2>Истории успеха учеников</h2>
-      <div v-for="successStory in successStories" :key="successStory.id">
-        <h3>{{ successStory.title }}</h3>
-        <p>{{ successStory.content }}</p>
+
+      <div class="success-stories-container">
+        <div v-for="successStory in successStories" :key="successStory.id" class="success-story-item">
+          <h3>{{ successStory.title }}</h3>
+          <p>{{ successStory.content }}</p>
+        </div>
       </div>
+
       <h2>Отзывы учеников</h2>
-      <div v-for="review in reviews" :key="review.id">
-        <p>{{ review }}</p>
+
+      <div class="reviews-container">
+        <div v-for="review in reviews" :key="review.id" class="review-item">
+          <img :src="review.image" alt="Reviewer Image" class="review-image" />
+          <div class="review-content">
+            <p class="review-name">{{ review.name }}</p>
+            <p class="review-text">{{ review.text }}</p>
+          </div>
+        </div>
       </div>
+
+      <!--<div v-for="review in reviews" :key="review.id">
+        <p>{{ review }}</p>
+      </div>-->
     </section>
 
     <!-- Секция "Сертификаты и лицензии"
@@ -94,7 +107,7 @@
       </div>
     </section>-->
 
-    <!-- Секция "Контакты" -->
+    <!-- Секция "Контакты"
     <section class="contact-section">
       <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">Контактная информация</h2>
       <p>{{ contactInfo }}</p>
@@ -104,7 +117,7 @@
       <div class="social-media">
         <a v-for="social in socialMedia" :key="social.platform" :href="social.link">{{ social.platform }}</a>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -142,12 +155,23 @@ export default {
       examProcedure: 'Процедура сдачи экзаменов...',
       achievements: 'Наши достижения...',
       successStories: [
-        { id: 1, title: 'История успеха 1', content: 'Текст истории...' },
-        { id: 2, title: 'История успеха 2', content: 'Текст истории...' }
+        { id: 1, title: 'История успеха 1 История успеха 1 История успеха 1', content: 'Текст истории... Текст истории... Текст истории... Текст истории... Текст истории... Текст истории... Текст истории... Текст истории...' },
+        { id: 2, title: 'История успеха 2 История успеха 2 История успеха 2', content: 'Текст истории... Текст истории... Текст истории... Текст истории... Текст истории... Текст истории... Текст истории...' }
       ],
       reviews: [
-        'Отзыв 1',
-        'Отзыв 2'
+        {
+          id: 1,
+          name: 'Alice Johnson',
+          text: 'This is an amazing product! I would definitely recommend it to my friends.',
+          image: 'https://via.placeholder.com/60' // Замените на URL изображения
+        },
+        {
+          id: 2,
+          name: 'Bob Smith',
+          text: 'Not what I expected, but still decent. The quality is acceptable.',
+          image: 'https://via.placeholder.com/60' // Замените на URL изображения
+        }
+        // Добавьте больше отзывов по необходимости
       ],
       certificates: [
         'Сертификат 1',
@@ -170,6 +194,101 @@ export default {
 <style scoped>
 
 @import url('https://fonts.googleapis.com/css2?family=Rochester&family=Roboto+Slab:wght@400;700&display=swap');
+
+.success-stories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.success-story-item {
+  background: #d9ebff; /* Легкий винтажный фон */
+  border: 1px solid #d6c8b6; /* Светло-коричневая граница для винтажного эффекта */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.success-story-item:hover {
+  background-color: #f2e9e0; /* Цвет при наведении */
+  transform: scale(1.02); /* Легкое увеличение при наведении */
+}
+
+.success-story-item h3 {
+  font-family: 'Georgia', serif; /* Винтажный шрифт */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5a4a41; /* Темный коричневый цвет */
+  margin-bottom: 10px;
+}
+
+.success-story-item p {
+  font-family: 'Times New Roman', serif; /* Винтажный шрифт */
+  font-size: 1rem;
+  color: #6f5e4e; /* Более светлый коричневый цвет */
+  line-height: 1.5; /* Межстрочный интервал для лучшей читаемости */
+}
+
+.success-story-item::before {
+  content: "✦"; /* Декоративный элемент перед заголовком */
+  font-size: 2rem;
+  color: #c79c6b; /* Золотистый цвет */
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+  background: #d9fffa; /* Светлый фон, напоминающий старую бумагу */
+  border: 1px solid #e0c8a0; /* Легкая граница для винтажного эффекта */
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.review-item:hover {
+  background-color: #f2e4d7; /* Цвет при наведении */
+  transform: scale(1.02); /* Увеличение при наведении */
+}
+
+.review-image {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-name {
+  font-family: 'Georgia', serif; /* Винтажный шрифт */
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #4a3f2e; /* Темно-коричневый цвет */
+  margin-bottom: 5px;
+}
+
+.review-text {
+  font-family: 'Times New Roman', serif; /* Винтажный шрифт */
+  font-size: 0.95rem;
+  color: #6f5e4e; /* Более светлый коричневый цвет */
+}
 
 .hero-section {
 
