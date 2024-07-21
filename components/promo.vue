@@ -72,7 +72,7 @@ export default {
 
 .hero-section {
 
-  padding: 3rem 2rem;
+  padding: 9rem 2rem;
   text-align: center;
 
 }
@@ -102,7 +102,7 @@ export default {
 
 .hero-title .confidence {
   text-decoration: underline;
-  color: #3182ce;
+  color: #007bff;
 }
 
 .description {
@@ -112,7 +112,7 @@ export default {
 }
 
 .register-link {
-  color: #ffff00;
+  color: #00ff00;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -120,7 +120,7 @@ export default {
 
 .register-link:hover {
   text-decoration: underline;
-  color: #2f855a;
+  color: #ff5200;
 }
 
 </style>

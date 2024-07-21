@@ -8,11 +8,12 @@
     <!-- Преимущества обучения -->
     <Benefits/>
 
-
     <gallery/>
+
 
     <!-- Отзывы учеников
     <section class="testimonials">
+
       <h2>Отзывы учеников</h2>
       <div class="testimonial" v-for="review in reviews" :key="review.id">
         <p>{{ review.text }}</p>
@@ -25,6 +26,7 @@
 
     <!-- Ссылки на социальные сети -->
     <section class="social-media">
+
       <h2>Мы в социальных сетях</h2>
       <div class="social-links">
         <a v-for="social in socialMedia" :key="social.platform" :href="social.link">{{ social.platform }}</a>
@@ -45,10 +47,10 @@
 
 <script>
 import instructorsList from '~/components/Instructors/InstructorsList.vue';
-
+import gallery from '~/components/Gallery.vue';
 
 export default {
-  components: { instructorsList,  },
+  components: { instructorsList, gallery  },
 
   data() {
 
@@ -69,7 +71,7 @@ export default {
         { id: 1, src: 'path/to/video1.mp4' },
         { id: 2, src: 'path/to/video2.mp4' }
       ],
-      
+
 
       socialMedia: [
         { platform: 'Facebook', link: 'https://facebook.com' },
@@ -97,8 +99,6 @@ export default {
 .home-page {
 
 }
-
-
 
 
 .hero-banner h1 {
@@ -150,12 +150,13 @@ ul {
 .gallery, .videos, .social-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* Centers the block horizontally */
 }
 
 .gallery img, .videos video {
   width: 100%;
   max-width: 200px;
-  margin: 10px;
+/*  margin: 10px; */
 }
 
 .social-links a {

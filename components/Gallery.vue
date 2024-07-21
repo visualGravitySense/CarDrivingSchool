@@ -57,16 +57,19 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .container {
   max-width: 1200px;
 }
+
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
+  justify-content: start; /* Ensures there is no right margin */
 }
+
 
 .gallery-item {
   position: relative;
@@ -80,6 +83,3 @@ export default {
 .gallery-item img {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
-.gallery-item img:hover {
-  transfor

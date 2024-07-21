@@ -1,20 +1,27 @@
 <!-- Hero Block for Main Page -->
 <template>
 
+<div class="bg-gray-100">
+<Promo welcomeMessage="Добро пожаловать в нашу автошколу!"
+   mainTitle='Научитесь водить с '
+  mainTitleAccent='уверенностью'
+  subtitle='Профессиональные инструктора и гибкий график занятий.'
+  ctaText=' сегодня и начните свой путь к безопасному вождению.'
+  ctaButtonText='Зарегистрируйтесь'  />
+
+
+
   <div class="relative flex items-center justify-center bg-cover bg-center">
 
-    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 
-      <Promo welcomeMessage="Добро пожаловать в нашу автошколу!"
-         mainTitle='Научитесь водить с '
-        mainTitleAccent='уверенностью'
-        subtitle='Профессиональные инструктора и гибкий график занятий.'
-        ctaText=' сегодня и начните свой путь к безопасному вождению.'
-        ctaButtonText='Зарегистрируйтесь'  />
+
+    <div class="mx-auto sm:px-6 lg:px-8">
+
       <CategoriesList :admin=true :cards="cards"/>
 
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -73,11 +80,9 @@ export default {
 
 <style>
 
-.relativeBg {
-  background-image: url('@/assets/img/default_bg.png'); /* Укажите путь к вашему изображению */
-  background-size: cover;
-  background-position: center;
-}
+
+
+
 
 
 
@@ -139,13 +144,13 @@ export default {
 
 .card p {
   font-size: 14px;
-  color: #e1e5ec;
+
   margin-bottom: 20px;
 }
 
 .card a {
   font-size: 13px;
-  color: #00ff00;
+  color: #007bff;
   text-decoration: none;
   font-weight: bold;
 }

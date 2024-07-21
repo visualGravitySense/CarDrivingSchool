@@ -65,14 +65,14 @@ export default {
   flex-direction: column; /* Чтобы содержимое располагалось вертикально */
 
   max-width: calc(33.333% - 20px); /* Гарантирует, что ширина не превышает 1/3 контейнера */
-  max-height: 400px; /* Уменьшенная фиксированная высота */
+  /*max-height: 400px;  Уменьшенная фиксированная высота */
 
 
 
 }
 
 .in-li:hover {
-  background-color: #f5deb3;
+  background-color: #f3f9ff;
   transform: scale(1.02);
 }
 

@@ -3,10 +3,10 @@
   <nuxt-link :to="/services/+card.id" class="card transform transition hover:scale-105 hover:shadow-xl">
 
     <div class="overflow-hidden shadow p-4">
-      <h3 class="text-white leading-7 font-semibold">
+      <h3 class=" leading-7 font-semibold">
         {{ card.title }}
       </h3>
-      <p class="text-white-600">
+      <p class="text-gray-400">
         {{ card.description }}
       </p>
       <a href="/courses">Узнать больше</a>

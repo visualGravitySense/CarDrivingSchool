@@ -26,14 +26,14 @@
 
     <!-- Секция "О нашей автошколе" -->
     <section>
-      <div class="about-section">
+      <div class="hero-section">
         <div class="about-image">
 
             <img src="@/assets/img/hero-bg.jpg" alt="About Image">
 
         </div>
         <div class="about-content">
-          <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">
+          <h2 class="hero-title mt-10 text-2xl leading-7 font-semibold">
             {{ title }} <span class="confidence">Viktorija</span>
           </h2>
         <!--  <p class="pt-4 text-gray-800 border-t border-dashed">
@@ -203,7 +203,7 @@ export default {
 }
 
 .success-story-item {
-  background: #d9ebff; /* Легкий винтажный фон */
+  background: #f4f9ff; /* Легкий винтажный фон */
   border: 1px solid #d6c8b6; /* Светло-коричневая граница для винтажного эффекта */
   border-radius: 8px;
   padding: 20px;
@@ -250,7 +250,7 @@ export default {
 .review-item {
   display: flex;
   align-items: center;
-  background: #d9fffa; /* Светлый фон, напоминающий старую бумагу */
+  background: #ecf2f2; /* Светлый фон, напоминающий старую бумагу */
   border: 1px solid #e0c8a0; /* Легкая граница для винтажного эффекта */
   border-radius: 8px;
   padding: 15px;

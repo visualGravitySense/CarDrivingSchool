@@ -57,6 +57,7 @@ export default {
 }
 
 .social-icons {
+  margin-left: 20px; /* Adjust this value as needed */
   display: flex;
   flex-direction: column;
   gap: 20px;
