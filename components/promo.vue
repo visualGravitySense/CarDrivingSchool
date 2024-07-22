@@ -1,5 +1,5 @@
 <template>
-  <div class="hero-section">
+  <div class="relativeBg hero-section">
 
       <p class="welcome-text">
         <code>Добро пожаловать в автошколу Виктория</code>
@@ -35,7 +35,7 @@ data () {
 <style>
 .hero-section {
 
-  padding: 3rem 2rem;
+  padding: 9rem 2rem;
   text-align: center;
 
 }
@@ -85,4 +85,11 @@ data () {
   text-decoration: underline;
   color: #2f855a;
 }
+
+.relativeBg {
+  background-image: url('@/assets/img/default_bg.png'); /* Укажите путь к вашему изображению */
+  background-size: cover;
+  background-position: center;
+}
+
 </style>

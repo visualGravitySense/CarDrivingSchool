@@ -2,7 +2,7 @@
 <template>
 
 <div class="bg-gray-100">
-<Promo welcomeMessage="Добро пожаловать в нашу автошколу!"
+<promo welcomeMessage="Добро пожаловать в нашу автошколу!"
    mainTitle='Научитесь водить с '
   mainTitleAccent='уверенностью'
   subtitle='Профессиональные инструктора и гибкий график занятий.'

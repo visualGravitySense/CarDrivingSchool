@@ -5,7 +5,7 @@
     </a>
 
     <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">
-      {{ title }} <span class="confidence">Виктория</span>
+      {{ title }} <span class="confidence">Viktorija</span>
     </h2>
 
     <p class="pt-4 text-gray-800 border-t border-dashed">
@@ -14,7 +14,7 @@
 
     <p class="mt-3 text-gray-600">
       {{ paragraph }}
-    </p><br>
+    </p>
   </div>
 </template>
 

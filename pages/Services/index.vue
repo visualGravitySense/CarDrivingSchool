@@ -4,7 +4,7 @@
 
     <!-- Заголовок и введение -->
 
-    <div class="relative flex flex-col items-top justify-center bg-gray-100 sm:items-center sm:pt-0">
+    <div class="relativeB flex flex-col items-top justify-center bg-gray-100 sm:items-center sm:pt-0">
 
       <Promo welcomeMessage="Добро пожаловать в нашу автошколу!"
          mainTitle='Научитесь водить с '
@@ -14,19 +14,15 @@
          ctaButtonText='Зарегистрируйтесь'  />
 
 
-
-
-
     <!-- Блоки по категориям водительских прав -->
 
-      <Intro class="intro-section mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6"
+      <Intro class="intro-section mt-8  p-6"
         title="Наши услуги"
         topic="Мы предлагаем обучение вождению по следующим категориям:"
         paragraph="Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text. Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text"/><br>
 
-
+      <div class="categories-wrapper ">
         <section v-for="category in categories" :key="category.id" class="category-section">
-
 
           <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
             <h2 class="text-2xl leading-7 font-semibold">
@@ -37,23 +33,29 @@
               {{ category.description }}
               </p></br>
 
-            <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
-              To get started, remove <code class="bg-gray-100 text-sm p-1 rounded border">components/Tutorial.vue</code> and start coding in <code class="bg-gray-100 text-sm p-1 rounded border">pages/index.vue</code>. Have fun!
-            </p>
-
             <p>{{ category.program }}</p>
             <h3>Требования к ученикам</h3>
             <p>{{ category.requirements }}</p>
 
             <ul>
-              <li v-for="advantage in category.advantages" :key="advantage">{{ advantage }}</li>
+            <li v-for="advantage in category.advantages" :key="advantage">{{ advantage }}</li>
             </ul>
+
+            <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
+              To get started, remove <code class="bg-gray-100 text-sm p-1 rounded border">components/Tutorial.vue</code> and start coding in <code class="bg-gray-100 text-sm p-1 rounded border">pages/index.vue</code>. Have fun!
+            </p>
+
 
           </div>
 
       </section>
 
     </div>
+
+
+
+
+  </div>
 
     <!-- Дополнительные информационные блоки -->
     <section class="faq-section">
@@ -251,9 +253,11 @@
 <script>
 import Intro from '~/components/UI/Intro.vue';
 import category from '~/components/Category.vue';
+import promo from '~/components/Promo.vue';
+import CategoryHolder from '~/components/CategoryHolder.vue';
 export default {
   components: {
-    Intro, category
+    Intro, category, CategoryHolder
   },
   data() {
     return {
@@ -470,14 +474,55 @@ form button:hover {
   background: #ccc;
 }
 
-.intro-section, .faq-section, .category-section, .reviews-section,
+.intro-section, .faq-section, .reviews-section,
   .signup-process-section, .pricing-section, .discounts-section,
   .materials-section {
   padding: 20px;
   margin: 20px;
 }
 
+.categories-wrapper {
+  /* display: flex;
+  flex-wrap: wrap; */
+  gap: 16px;
+}
+.category-section {
+  /* display: flex;
+  flex-direction: column; */
+}
 
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.about-image {
+  flex: 1; /* Занимает 50% ширины */
+  max-width: 50%;
+  text-align: left;
+}
+
+.about-content {
+  flex: 1; /* Занимает 50% ширины */
+  max-width: 50%;
+  text-align: left;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333; /* Цвет заголовка */
+  margin-bottom: 16px;
+}
+
+.about-paragraph {
+  font-size: 1rem;
+  font-weight: 100;
+  color: #333; /* Цвет заголовка */
+  /* margin-top: 16px; */
+}
 
 
 </style>
