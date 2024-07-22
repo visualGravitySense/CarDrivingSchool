@@ -1,24 +1,59 @@
 <template>
+
   <div class="services-page">
+
     <!-- Заголовок и введение -->
-    <section class="intro-section">
-      <h1>Наши услуги</h1>
-      <p>Мы предлагаем обучение вождению по следующим категориям:</p>
-    </section>
+
+    <div class="relative flex flex-col items-top justify-center bg-gray-100 sm:items-center sm:pt-0">
+
+      <Promo welcomeMessage="Добро пожаловать в нашу автошколу!"
+         mainTitle='Научитесь водить с '
+         mainTitleAccent='уверенностью'
+         subtitle='Профессиональные инструктора и гибкий график занятий.'
+         ctaText=' сегодня и начните свой путь к безопасному вождению.'
+         ctaButtonText='Зарегистрируйтесь'  />
+
+
+
+
 
     <!-- Блоки по категориям водительских прав -->
-    <section v-for="category in categories" :key="category.id" class="category-section">
-      <h2>{{ category.title }}</h2>
-      <p>{{ category.description }}</p>
-      <h3>Преимущества</h3>
-      <ul>
-        <li v-for="advantage in category.advantages" :key="advantage">{{ advantage }}</li>
-      </ul>
-      <h3>Программа обучения</h3>
-      <p>{{ category.program }}</p>
-      <h3>Требования к ученикам</h3>
-      <p>{{ category.requirements }}</p>
-    </section>
+
+      <Intro class="intro-section mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6"
+        title="Наши услуги"
+        topic="Мы предлагаем обучение вождению по следующим категориям:"
+        paragraph="Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text. Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text"/><br>
+
+
+        <section v-for="category in categories" :key="category.id" class="category-section">
+
+
+          <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
+            <h2 class="text-2xl leading-7 font-semibold">
+              {{ category.title }}
+            </h2>
+
+            <p class="mt-3 text-gray-600">
+              {{ category.description }}
+              </p></br>
+
+            <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
+              To get started, remove <code class="bg-gray-100 text-sm p-1 rounded border">components/Tutorial.vue</code> and start coding in <code class="bg-gray-100 text-sm p-1 rounded border">pages/index.vue</code>. Have fun!
+            </p>
+
+            <p>{{ category.program }}</p>
+            <h3>Требования к ученикам</h3>
+            <p>{{ category.requirements }}</p>
+
+            <ul>
+              <li v-for="advantage in category.advantages" :key="advantage">{{ advantage }}</li>
+            </ul>
+
+          </div>
+
+      </section>
+
+    </div>
 
     <!-- Дополнительные информационные блоки -->
     <section class="faq-section">
@@ -214,7 +249,12 @@
 </template>
 
 <script>
+import Intro from '~/components/UI/Intro.vue';
+import category from '~/components/Category.vue';
 export default {
+  components: {
+    Intro, category
+  },
   data() {
     return {
       categories: [
@@ -348,9 +388,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .services-page {
-  padding: 20px;
+
 }
 
 section {
@@ -429,4 +469,15 @@ form button:hover {
   height: 300px;
   background: #ccc;
 }
+
+.intro-section, .faq-section, .category-section, .reviews-section,
+  .signup-process-section, .pricing-section, .discounts-section,
+  .materials-section {
+  padding: 20px;
+  margin: 20px;
+}
+
+
+
+
 </style>

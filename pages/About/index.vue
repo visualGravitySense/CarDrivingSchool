@@ -295,7 +295,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 40px; */
+  padding: 40px; 
   background-color: #f8f9fa; /* Светлый фон для контраста */
   gap: 20px; /* Расстояние между текстом и изображением */
 }
@@ -446,6 +446,7 @@ p, li {
 .about-content {
   flex: 1; /* Занимает 50% ширины */
   max-width: 50%;
+  text-align: left;
 }
 
 .about-title {

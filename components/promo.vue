@@ -1,78 +1,41 @@
 <template>
+  <div class="hero-section">
 
-  <div class="relativeBg flex items-center justify-center min-h-80vh bg-cover bg-center">
+      <p class="welcome-text">
+        <code>Добро пожаловать в автошколу Виктория</code>
+      </p>
 
-    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
-
-
-
-      <div class="hero-section">
-
-          <p class="welcome-text">
-            <code> {{ welcomeMessage }} </code>
-          </p>
-
-          <h1 class="hero-title">
-            {{ mainTitle }}
-            <span class="confidence">{{ mainTitleAccent }}</span>
-          </h1>
-          <p class="description">
-            {{ subtitle }} <a href="" target="_blank" class="register-link">{{ ctaButtonText }}</a> {{ ctaText }}<br>
-          </p>
-
-
-
-        </div>
-
+      <h1 class="hero-title">
+        Научитесь водить с
+        <span class="confidence">уверенностью</span>
+      </h1>
+      <p class="description">
+        Профессиональные инструктора и гибкий график занятий.
+        <a href="" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>
+      </p>
 
     </div>
-  </div>
+
 </template>
 
 <script>
-
-
-
 export default {
-  props: {
+components: {
 
-    welcomeMessage: {
-      type: String,
-      requried: true },
-    mainTitle: ' ',
-    mainTitleAccent: ' ',
-    subtitle: ' ',
-    ctaText: ' ',
-    ctaButtonText: ' ',
+},
+data () {
+  return {
 
-
-  },
-  components: {
-
-  },
-  computed: {
-//    postsLoaded () {
-//    return this.$store.getters.getPostsLoaded
-//    }
-  },
-  name: 'Viktoria',
-
+  }
+},
+  name: 'Promo'
 }
 </script>
 
 <style>
-
-.relativeBg {
-  background-image: url('@/assets/img/default_bg.png'); /* Укажите путь к вашему изображению */
-  background-size: cover;
-  background-position: center;
-}
-
-
-
 .hero-section {
 
-  padding: 9rem 2rem;
+  padding: 3rem 2rem;
   text-align: center;
 
 }
@@ -102,7 +65,7 @@ export default {
 
 .hero-title .confidence {
   text-decoration: underline;
-  color: #007bff;
+  color: #3182ce;
 }
 
 .description {
@@ -112,7 +75,7 @@ export default {
 }
 
 .register-link {
-  color: #00ff00;
+  color: #ffff00;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -120,7 +83,6 @@ export default {
 
 .register-link:hover {
   text-decoration: underline;
-  color: #ff5200;
+  color: #2f855a;
 }
-
 </style>
