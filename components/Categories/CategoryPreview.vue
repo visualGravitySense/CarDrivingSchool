@@ -9,7 +9,7 @@
       <p class="text-gray-400">
         {{ card.description }}
       </p>
-      <a href="/courses">Узнать больше</a>
+      <a href="">Узнать больше</a>
     </div>
 
     <div class="card-image">

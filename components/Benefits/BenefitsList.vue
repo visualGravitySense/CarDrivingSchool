@@ -27,10 +27,10 @@ components: {
   data() {
     return {
       benefits: [
-        { id: 'A', title: 'Категория A', image: 'http://localhost:3000/_nuxt/assets/img/car1.jpg', description: 'Описание категории A... Описание категории A... Описание категории A... Описание' },
-        { id: 'A1', title: 'Категория A1', image: 'http://localhost:3000/_nuxt/assets/img/car1.jpg', description: 'Описание категории A1... Описание категории A... Описание категории A... Описание' },
-        { id: 'A2', title: 'Категория A2', image: 'http://localhost:3000/_nuxt/assets/img/car1.jpg', description: 'Описание категории A2... Описание категории A...Описание категории A... Описание' },
-        { id: 'AM', title: 'Категория AM', image: 'http://localhost:3000/_nuxt/assets/img/car1.jpg', description: 'Описание категории AM... Описание категории A...Описание категории A... ' },
+        { id: 'A', title: 'Профессиональные инструктора', image: require('@/assets/img/advancedCars.jpg'), description: 'Индивидуальный подход: Персонализированные методы обучения, учитывающие особенности каждого ученика.' },
+        { id: 'A1', title: 'Современные автомобили', image: require('@/assets/img/profInstructors.jpg'), description: 'Автомобили последнего поколения, оснащенные современными системами безопасности.' },
+        { id: 'A2', title: 'Доступные цены', image: require('@/assets/img/priceGood.jpg'), description: 'Пакетные предложения: Специальные предложения и скидки на комплексные курсы обучения.' },
+        { id: 'AM', title: 'Отличная репутация', image: require('@/assets/img/perfectReputation.jpg'), description: 'Положительные отзывы: Высокие оценки от выпускников и положительные отзывы в интернете.' },
 
       ]
 

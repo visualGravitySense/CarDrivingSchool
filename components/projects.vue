@@ -1,6 +1,6 @@
 <template>
   <section class="projects">
-    <h2>Projects</h2>
+    <h2>Отзывы</h2>
     <div class="project" v-for="project in projects" :key="project.title">
       <div class="project-header">
         <span>{{ project.date }}</span>
@@ -19,9 +19,9 @@ export default {
   data() {
     return {
       projects: [
-        { date: '2020-04-08', title: 'Possimus', description: 'Description for Possimus project...' },
-        { date: '2020-04-09', title: 'Dolorum Ullam Totam', description: 'Description for Dolorum Ullam Totam project...' },
-        { date: '2020-04-08', title: 'Possimus', description: 'Description for Possimus project...' },
+        { date: '2020-04-08', title: 'DriverLux', description: '"Инструкторы очень профессиональны и терпеливы. Благодаря их обучению, я сдал экзамен с первого раза!"' },
+        { date: '2020-04-09', title: 'Totem', description: 'Отличная автошкола с удобным расписанием и современными автомобилями.' },
+        { date: '2020-04-08', title: 'Possimus', description: 'Положительные отзывы в социальных сетях и форумах показывают высокий уровень удовлетворенности наших учеников.' },
         { date: '2020-04-09', title: 'Dolorum Ullam Totam', description: 'Description for Dolorum Ullam Totam project...' },
         { date: '2020-04-08', title: 'Possimus', description: 'Description for Possimus project...' },
         { date: '2020-04-09', title: 'Dolorum Ullam Totam', description: 'Description for Dolorum Ullam Totam project...' },

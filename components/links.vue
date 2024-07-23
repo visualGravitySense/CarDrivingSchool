@@ -13,10 +13,10 @@ export default {
   data() {
     return {
       links: [
-        { text: 'Blog', href: '#' },
-        { text: 'Projects', href: '#' },
-        { text: 'About', href: '#' },
-        { text: 'Contact', href: '#' },
+        { text: 'Отзывы учеников', href: '#' },
+        { text: 'Отзывы в сети', href: '#' },
+        { text: 'Новости и обновления', href: '#' },
+
       ]
     };
   }

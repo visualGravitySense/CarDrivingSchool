@@ -1,91 +1,85 @@
 <template>
   <div class="relative flex items-top justify-center sm:items-center sm:pt-0">
-
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 
-      <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
+      <div class="flex flex-wrap md:flex-nowrap justify-between gap-6">
 
+        <div class="commentHolder bg-white overflow-hidden shadow sm:rounded-lg p-6 w-full md:w-1/2">
+          <div class="container">
+            <h3 class="mt-3 text-2xl leading-7 font-semibold">
+            Нам важно ваше мнение. Поделитесь своими впечатлениями и помогите нам стать лучше!
+            </h3>
+          </div>
+        </div>
 
+        <div class="bg-white overflow-hidden shadow sm:rounded-lg p-6 w-full md:w-1/2">
           <form @submit.prevent="onSubmit" class="contact-form">
             <div class="container">
               <h3 class="mt-3 text-2xl leading-7 font-semibold">
                 Комментарий
               </h3>
-              
-              <AppInput type="text" id="name" v-model="comment.name" required > Имя </AppInput>
+              <AppInput type="text" id="name" v-model="comment.name" required> Имя<br> </AppInput>
             </div>
             <div class="container">
-
-              <AppInput id="content" v-model="comment.content" required > Комментарий </AppInput>
+              <AppInput id="content" v-model="comment.content" required> Комментарий<br> </AppInput>
             </div>
-
-
             <div class="container">
               <!-- Message -->
-
               <Message v-if="message" :message="message" />
-
               <AppButton type="submit">Отправить</AppButton>
-
             </div>
-
           </form>
-
+        </div>
 
       </div>
-
     </div>
   </div>
 </template>
 
 <script>
 export default {
-
   data() {
     return {
       message: null,
       comment: {
         name: '',
         content: '',
-
       }
     };
   },
   methods: {
-    onSubmit () {
+    onSubmit() {
       this.$store.dispatch('addComment', {
         postId: this.postId,
         publish: false,
         ...this.comment
       })
-        .then(()=>{
+        .then(() => {
           this.message = "Submited!"
           // Reset
           this.comment.name = ''
           this.comment.content = ''
         })
-        .catch(e=>{console.log(e)})
+        .catch(e => { console.log(e) })
     }
   }
 };
 </script>
 
-<style >
-
+<style>
 form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
   margin: auto;
 }
-div {
 
-}
 label {
   margin-bottom: 0.5em;
   color: #333333;
   font-weight: bold;
 }
+
 input {
   padding: 0.5em;
   font-size: 1em;
@@ -112,6 +106,31 @@ textarea {
   transition: background-color 0.3s;
 }
 
+.commentHolder {
+  background-image: url('@/assets/img/about-1.jpg');
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: white; /* Ensure text is readable on dark background */
+  overflow: hidden; /* Hide any overflow content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 10px; /* Add rounded corners */
+  padding: 1.5rem; /* Add padding inside the box */
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center align horizontally */
+  align-items: center; /* Center align vertically */
+}
 
+.commentHolder .container {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+  padding: 1rem;
+  border-radius: 5px; /* Optional: rounded corners for the inner container */
+}
+
+.commentHolder h3 {
+  color: white; /* Ensure the header is readable */
+  margin-top: 0; /* Remove any default top margin */
+  text-align: center; /* Center align the text */
+}
 
 </style>

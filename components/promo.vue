@@ -65,7 +65,7 @@ data () {
 
 .hero-title .confidence {
   text-decoration: underline;
-  color: #3182ce;
+  color: #007bff;
 }
 
 .description {
@@ -75,7 +75,7 @@ data () {
 }
 
 .register-link {
-  color: #ffff00;
+  color: #41de73;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -83,7 +83,7 @@ data () {
 
 .register-link:hover {
   text-decoration: underline;
-  color: #2f855a;
+  color: #ff5200;
 }
 
 .relativeBg {
