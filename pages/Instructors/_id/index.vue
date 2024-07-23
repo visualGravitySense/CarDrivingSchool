@@ -34,10 +34,10 @@ export default {
       instructor: {
         id: 1,
         title: 'Instuctor Title 1',
-        descr: 'Instructor Description small tekst ',
-        content: 'Instructor CONTENT, need chande to Markdown or HTML. Promotion CONTENT, need chande to Markdown or HTML',
-        img: require('@/assets/img/car1.jpg'),
+        descr: 'Instructor Description small tekst Instructor Description small tekst, Instructor Description small tekst, Instructor Description small tekst Instructor Description small tekst, Instructor Description small tekst. Instructor Description small tekst Instructor Description small tekst, Instructor Description small tekst, Instructor Description small tekst Instructor Description small tekst, Instructor Description small tekst.',
+        content: 'Instructor CONTENT, need chande to Markdown or HTML. Promotion CONTENT, need chande to Markdown or HTML. Instructor CONTENT, need chande to Markdown or HTML. Promotion CONTENT, need chande to Markdown or HTML. Instructor CONTENT, need chande to Markdown or HTML. Promotion CONTENT, need chande to Markdown or HTML.',
 
+        img: require('@/assets/img/instructors/instructor_1.jpg'),
       },
       comments: [
         {

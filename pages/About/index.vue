@@ -11,10 +11,10 @@
               Научитесь водить<br> с
               <span class="confidence">уверенностью</span>
             </h1>
-            <p class="description">
+            <!--<p class="description">
               Профессиональные инструктора и гибкий график занятий.<br>
               <a href="" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>
-            </p>
+            </p>-->
           </header>
 
 
@@ -129,11 +129,11 @@ export default {
   data() {
     return {
       instructors: [
-          { id: 1, name: '1 Инструктор 1', bio: 'Биография инструктора 1', image: require('@/assets/img/promo_1.png') },
-          { id: 2, name: 'Инструктор 2', bio: 'Биография инструктора 2', image: require('@/assets/img/promo_1.png')  },
-          { id: 1, name: 'Инструктор 1', bio: 'Биография инструктора 1', image: require('@/assets/img/promo_1.png')  },
-          { id: 2, name: 'Инструктор 2', bio: 'Биография инструктора 2', image: require('@/assets/img/promo_1.png')  },
-          { id: 1, name: 'Инструктор 1', bio: 'Биография инструктора 1', image: require('@/assets/img/promo_1.png')  },
+          { id: 1, name: 'Igor Nagorskii', bio: 'Биография инструктора 1', image: require('@/assets/img/instructors/instructor_1.jpg') },
+          { id: 2, name: 'Maksim Fedorenko', bio: 'Биография инструктора 2', image: require('@/assets/img/instructors/instructor_2.jpg')  },
+          { id: 1, name: 'Ivan Skorobogatov', bio: 'Биография инструктора 1', image: require('@/assets/img/instructors/instructor_4.jpg')  },
+          { id: 2, name: 'Stanislav Zigadlo', bio: 'Биография инструктора 2', image: require('@/assets/img/instructors/instructor_3.jpg')  },
+          { id: 1, name: 'Andrei Naan', bio: 'Биография инструктора 1', image: require('@/assets/img/promo_1.png')  },
 
         ],
       title: "О нашей автошколе",

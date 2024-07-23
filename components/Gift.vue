@@ -46,9 +46,9 @@ export default {
   methods: {
     onSubmit (certificate) {
     this.$store.dispatch('addGift', certificate)
-      .then(()=>{
+      /*.then(()=>{
         this.$router.push('/admin')
-      })
+      })*/
       // Генерация уникального кода сертификата
       const uniqueCode = Math.random().toString(36).substr(2, 9).toUpperCase();
       this.certificate = {

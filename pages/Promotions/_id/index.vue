@@ -1,14 +1,11 @@
 <template>
-  <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
+  <section class="relative items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
 
-    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
-
-      <promotion :promotion="promotion" />
       <div class="flex justify-center pt-4 space-x-2">
-
+        <promotion :promotion="promotion" />
       </div>
-    </div>
-  </div>
+
+  </section>
 </template>
 
 <script>
@@ -29,3 +26,9 @@ export default {
     name: 'LandingPage'
   }
 </script>
+
+<style scoped>
+
+
+
+</style>

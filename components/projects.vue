@@ -1,14 +1,14 @@
 <template>
   <section class="projects">
     <h2>Отзывы</h2>
-    <div class="project" v-for="project in projects" :key="project.title">
+    <div class="project transform transition hover:scale-105 hover:shadow-xl" v-for="project in projects" :key="project.title">
       <div class="project-header">
         <span>{{ project.date }}</span>
       </div>
       <div class="project-body">
-        <h3>{{ project.title }}</h3>
+        <h3 class="text-2xl font-semibold text-black">{{ project.title }}</h3>
         <p>{{ project.description }}</p>
-        <button>View project</button>
+        <button>Комментировать</button>
       </div>
     </div>
   </section>
@@ -44,8 +44,8 @@ export default {
   box-shadow: 5px 5px 0 #000;
 }
 .project-header {
-  background: #ccc;
-  padding: 5px;
+  background: #cd3dfc;
+  padding: 10px;
 }
 .project-body h3 {
   margin: 0 0 10px;
@@ -55,8 +55,8 @@ export default {
 }
 .project-body button {
   padding: 10px 20px;
-  background: #000;
-  color: #fff;
+  background: #9dff00;
+  color: #141313;
   border: none;
   cursor: pointer;
 }

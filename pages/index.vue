@@ -5,6 +5,8 @@
 
     <About/>
 
+    <gift/>
+
     <!-- Преимущества обучения -->
     <Benefits/>
 
@@ -48,9 +50,9 @@
 <script>
 import instructorsList from '~/components/Instructors/InstructorsList.vue';
 import gallery from '~/components/Gallery.vue';
-
+import gift from '~/components/Gift.vue';
 export default {
-  components: { instructorsList, gallery  },
+  components: { instructorsList, gallery, gift  },
 
   data() {
 

@@ -2,7 +2,7 @@
 
   <section class="relative items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
 
-    <header class="header reviewsBg">
+    <header class="header categoryBg">
       <p class="welcome-text">
         <code>Добро пожаловать в автошколу Виктория</code>
       </p>
@@ -156,11 +156,13 @@ export default {
   color: #ff5200;
 }
 
-.reviewsBg {
-
-  background-image: url('@/assets/img/about-1.jpg'); /* Укажите путь к вашему изображению */
+.categoryBg {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Полупрозрачный черный градиент */
+    url('@/assets/img/about-1.jpg'); /* Укажите путь к вашему изображению */
   background-size: cover;
   background-position: center;
 }
+
 
 </style>
