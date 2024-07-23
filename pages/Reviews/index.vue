@@ -1,10 +1,10 @@
 <template>
   <div>
 
-  <header class="header">
-    <h1>Hello.<br>I'm Mac.</h1>
-    <p>I'm a free retro WebFlow template made by <a href="https://webflow.com">Mackenzie Child</a>.</p>
-    <button>Clone me on Webflow</button>
+  <header class="header reviewsBg">
+    <h1>Отзывы<br>учеников</h1>
+    <p>Узнайте, что говорят о нас те, кто уже прошел обучение в<br> нашей автошколе. Ваше мнение важно для нас!</p>
+    <button>Оставить отзыв</button>
   </header>
 
   <links/>
@@ -29,6 +29,7 @@ export default {
 
 <style>
 .header {
+  
   text-align: center;
   padding: 20px;
   background: #f1f1f1;
@@ -43,12 +44,19 @@ export default {
 }
 .header button {
   padding: 10px 20px;
-  background: #000;
+  background: #4165de;
   color: #fff;
   border: none;
   cursor: pointer;
 }
 .header a {
   color: #000;
+}
+
+.reviewsBg {
+
+  background-image: url('@/assets/img/anti-1.jpg'); /* Укажите путь к вашему изображению */
+  background-size: cover;
+  background-position: center;
 }
 </style>

@@ -2,16 +2,24 @@
 
   <div class="services-page">
 
+    <header class="header reviewsBg">
+      <Intro class="intro-section mt-8  p-6"
+        title="Наши услуги"
+        topic="Мы предлагаем обучение вождению по следующим категориям:"
+        paragraph="Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text. Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text"/><br>
+
+    </header>
+
     <!-- Заголовок и введение -->
 
     <div class="relativeB flex flex-col items-top justify-center bg-gray-100 sm:items-center sm:pt-0">
 
-      <Promo welcomeMessage="Добро пожаловать в нашу автошколу!"
+      <!--<Promo welcomeMessage="Добро пожаловать в нашу автошколу!"
          mainTitle='Научитесь водить с '
          mainTitleAccent='уверенностью'
          subtitle='Профессиональные инструктора и гибкий график занятий.'
          ctaText=' сегодня и начните свой путь к безопасному вождению.'
-         ctaButtonText='Зарегистрируйтесь'  />
+         ctaButtonText='Зарегистрируйтесь'  />-->
 
 
     <!-- Блоки по категориям водительских прав -->
@@ -22,31 +30,38 @@
         paragraph="Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text. Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text"/><br>
 
       <div class="categories-wrapper ">
-        <section v-for="category in categories" :key="category.id" class="category-section">
+        <section v-for="category in categories" :key="category.id" class="category-section ">
 
-          <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
-            <h2 class="text-2xl leading-7 font-semibold">
-              {{ category.title }}
-            </h2>
+          <div class="hero-section">
+            <div class="hero-text">
+              <p class="welcome-text">
+                <code>Добро пожаловать в автошколу Виктория</code>
+              </p>
+              <h1 class="hero-title">
+                {{ category.title }}
 
-            <p class="mt-3 text-gray-600">
-              {{ category.description }}
-              </p></br>
+              </h1>
+              <p class="">
+                {{ category.description }}
 
-            <p>{{ category.program }}</p>
-            <h3>Требования к ученикам</h3>
-            <p>{{ category.requirements }}</p>
+              </p><br>
+              <p>{{ category.program }}</p><br>
 
-            <ul>
-            <li v-for="advantage in category.advantages" :key="advantage">{{ advantage }}</li>
-            </ul>
+              <p>{{ category.requirements }}</p>
 
-            <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
-              To get started, remove <code class="bg-gray-100 text-sm p-1 rounded border">components/Tutorial.vue</code> and start coding in <code class="bg-gray-100 text-sm p-1 rounded border">pages/index.vue</code>. Have fun!
-            </p>
+              <ul>
+                <li v-for="advantage in category.advantages" :key="advantage">{{ advantage }}</li>
+              </ul>
+            </div>
 
 
-          </div>
+
+            <div class="hero-image transform transition hover:scale-105 hover:shadow-xl">
+              <img src="@/assets/img/about-hero.jpg" alt="Hero Image">
+            </div>
+        </div>
+
+
 
       </section>
 
@@ -257,7 +272,7 @@ import promo from '~/components/Promo.vue';
 import CategoryHolder from '~/components/CategoryHolder.vue';
 export default {
   components: {
-    Intro, category, CategoryHolder
+    Intro, category, CategoryHolder, promo
   },
   data() {
     return {
@@ -392,7 +407,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .services-page {
 
 }
@@ -522,6 +537,79 @@ form button:hover {
   font-weight: 100;
   color: #333; /* Цвет заголовка */
   /* margin-top: 16px; */
+}
+
+.hero-section {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #f8f9fa; /* Светлый фон для контраста */
+  gap: 20px; /* Расстояние между текстом и изображением */
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 75%;
+  text-align: left;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 25%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* Округление углов изображения */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень для добавления глубины */
+}
+
+.welcome-text {
+  font-size: 1.2rem;
+  color: #333; /* Темный цвет для контраста */
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700; /* Более жирный шрифт для выделения */
+  color: #222; /* Темный цвет заголовка */
+  margin-bottom: 16px;
+}
+
+.header {
+
+  text-align: center;
+  padding: 20px;
+  background: #f1f1f1;
+  border-bottom: 2px solid #000;
+}
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+.header p {
+  margin: 10px 0;
+}
+.header button {
+  padding: 10px 20px;
+  background: #4165de;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.header a {
+  color: #000;
+}
+
+.reviewsBg {
+
+  background-image: url('@/assets/img/retro-hero.png'); /* Укажите путь к вашему изображению */
+  background-size: cover;
+  background-position: center;
 }
 
 

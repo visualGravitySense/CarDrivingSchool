@@ -1,13 +1,11 @@
-<!-- Please remove this file from your project -->
+<!-- Services projects page -->
 <template>
 
   <div class="container">
 
     <category :category="category"/>
 
-    <newComment/>
 
-    <comments :comments="comments" />
 
 
 
@@ -33,12 +31,12 @@ export default {
   data () {
     return {
       category:
-        { id: 1,
-          title: 'Категория A',
-          description: 'Описание категории A...',
-          image: require('@/assets/img/car1.jpg'), // Adjust this path as necessary
-          intro: 'This is the test intro ...',
-          content: 'We recommend you take a look at the ...' },
+      { id: 1,
+        title: 'Категория B',
+        description: 'Описание категории B',
+        image: require('@/assets/img/car1.jpg'), // Adjust this path as necessary
+        intro: 'Испытайте радость вождения на курсах категории B!',
+        content: 'Стоимость базового курса составляет 840 €, включая теорию и 28 обязательных часов вождения на учебном автомобиле с механической коробкой передач. Первоначальный взнос составляет 140 € (160 € за теоретический курс и 700 € за практическое обучение в рамках онлайн-обучения). Курс на автомобиле с автоматической коробкой передач стоит 840 €. Возможна гибкая система оплаты в рассрочку.' },
       comments: [
         {
           name: 'Commentor Name 1',

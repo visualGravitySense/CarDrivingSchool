@@ -3,25 +3,20 @@
     <!-- Главная секция -->
 
 
-        <div class="hero-section">
-          <div class="hero-text">
+          <header class="header reviewsBg">
             <p class="welcome-text">
               <code>Добро пожаловать в автошколу Виктория</code>
             </p>
             <h1 class="hero-title">
-              Научитесь водить с
+              Научитесь водить<br> с
               <span class="confidence">уверенностью</span>
             </h1>
             <p class="description">
-              Профессиональные инструктора и гибкий график занятий.
+              Профессиональные инструктора и гибкий график занятий.<br>
               <a href="" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>
             </p>
-          </div>
+          </header>
 
-          <div class="hero-image">
-            <img src="@/assets/img/about-hero.jpg" alt="Hero Image">
-          </div>
-      </div>
 
 
     <!-- Секция "О нашей автошколе" -->
@@ -295,7 +290,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px; 
+  padding: 40px;
   background-color: #f8f9fa; /* Светлый фон для контраста */
   gap: 20px; /* Расстояние между текстом и изображением */
 }
@@ -509,6 +504,38 @@ p, li {
 
 .text-gray-600 {
   color: #4a5568; /* Светлый цвет текста */
+}
+
+.header {
+  padding: 9rem 2rem;
+  text-align: center;
+
+  background: #f1f1f1;
+  border-bottom: 2px solid #000;
+}
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+.header p {
+  margin: 10px 0;
+}
+.header button {
+  padding: 10px 20px;
+  background: #4165de;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.header a {
+  color: #000;
+}
+
+.reviewsBg {
+
+  background-image: url('@/assets/img/retro-hero.png'); /* Укажите путь к вашему изображению */
+  background-size: cover;
+  background-position: center;
 }
 
 
