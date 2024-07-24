@@ -27,23 +27,23 @@
 
 
     <!-- Ссылки на социальные сети -->
-    <section class="social-media">
+    <!-- <section class="social-media">
 
       <h2>Мы в социальных сетях</h2>
       <div class="social-links">
         <a v-for="social in socialMedia" :key="social.platform" :href="social.link">{{ social.platform }}</a>
       </div>
-    </section>
+    </section> -->
 
     <!-- Форма подписки на новости -->
-    <section class="newsletter">
+    <!-- <section class="newsletter">
       <h2>Подпишитесь на новости</h2>
       <form @submit.prevent="subscribeNewsletter">
         <label for="email">Email:</label>
         <input class="bg-gray-100" type="email" id="email" v-model="newsletterEmail" required />
         <button type="submit">Подписаться</button>
       </form>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -98,10 +98,6 @@ export default {
 </script>
 
 <style>
-.home-page {
-
-}
-
 
 .hero-banner h1 {
   font-size: 2.5em;

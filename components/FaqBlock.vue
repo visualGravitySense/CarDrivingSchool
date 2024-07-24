@@ -1,0 +1,67 @@
+<template>
+    <section class="projects">
+      <!-- <h2>Ответы</h2> -->
+      <div class="project transform transition hover:scale-105 hover:shadow-xl" v-for="project in projects" :key="project.title">
+        <div class="project-header">
+          <span>{{ project.date }}</span>
+        </div>
+        <div class="project-body">
+          <h3 class="text-2xl font-semibold text-black">{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <button>Комментировать</button>
+        </div>
+      </div>
+    </section>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        projects: [
+          { date: '2020-04-08', title: 'DriverLux', description: '"Инструкторы очень профессиональны и терпеливы. Благодаря их обучению, я сдал экзамен с первого раза!"' },
+          { date: '2020-04-09', title: 'Totem', description: 'Отличная автошкола с удобным расписанием и современными автомобилями.' },
+          { date: '2020-04-08', title: 'Possimus', description: 'Положительные отзывы в социальных сетях и форумах показывают высокий уровень удовлетворенности наших учеников.' },
+          { date: '2020-04-09', title: 'Dolorum Ullam Totam', description: 'Description for Dolorum Ullam Totam project...' },
+          { date: '2020-04-08', title: 'Possimus', description: 'Description for Possimus project...' },
+          { date: '2020-04-09', title: 'Dolorum Ullam Totam', description: 'Description for Dolorum Ullam Totam project...' },
+        ]
+      };
+    }
+  };
+  </script>
+  
+  <style scoped>
+  .projects {
+    background: #e1e1e1;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца */
+    gap: 20px; /* Отступы между блоками */
+  }
+  .project {
+    background: #fff;
+    border: 2px solid #000;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 0 #000;
+  }
+  .project-header {
+    background: #3df7f7;
+    padding: 10px;
+  }
+  .project-body h3 {
+    margin: 0 0 10px;
+  }
+  .project-body p {
+    margin: 0 0 10px;
+  }
+  .project-body button {
+    padding: 10px 20px;
+    background: #ff9500;
+    color: #141313;
+    border: none;
+    cursor: pointer;
+  }
+  </style>
+  

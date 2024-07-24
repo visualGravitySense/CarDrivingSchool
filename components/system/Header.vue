@@ -40,7 +40,7 @@ export default {
         { title: 'Services', url: '/services' },
         { title: 'Reviews', url: '/reviews' },
         { title: 'Faq', url: '/faq' },
-        { title: 'Promotions', url: '/promotions' },
+        // { title: 'Promotions', url: '/promotions' },
         { title: 'Contact', url: '/contact' },
       ],
       isMenuOpen: false
