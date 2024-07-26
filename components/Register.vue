@@ -1,33 +1,45 @@
 <template>
-  <form @submit.prevent class="contact-form">
-    <div class="container">
-      <h3 class="mt-3 text-2xl leading-7 font-semibold">
-        Регистрация на курс
-      </h3>
-      <label for="name">Имя:</label>
-      <AppInput type="text" id="name" v-model="user.name" required > </AppInput>
-    </div>
-    <div class="container">
-      <label for="email">Электронная почта:</label>
-      <AppInput type="email" id="email" v-model="user.email" required > </AppInput>
-    </div>
-    <div class="container">
-      <label for="phone">Телефон:</label>
-      <AppInput type="tel" id="phone" v-model="user.phone" required > </AppInput>
-    </div>
-    <div class="container">
-      <label for="dob">Дата рождения:</label>
-      <AppInput type="date" id="dob" v-model="user.dob" required > </AppInput>
-    </div>
-    <div class="controls">
 
+  <div>
+    <h3 class="mt-3 text-2xl leading-7 font-semibold">
+        Регистрация в школу
+  </h3><br><br>
+
+  <form @submit.prevent class="contact-form">
+    
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Имя:</label>
+        <AppInput type="text" id="name" v-model="user.name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Электронная почта:</label>
+        <AppInput type="email" id="email" v-model="user.email" required />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Телефон:</label>
+        <AppInput type="tel" id="phone" v-model="user.phone" required />
+      </div>
+      <div class="form-group">
+        <label for="dob">Дата рождения:</label>
+        <AppInput type="date" id="dob" v-model="user.dob" required />
+      </div>
+    </div>
+
+    <div class="controls">
       <AppButton @click="onSubmit"> Регистрация </AppButton>
 
       <!-- Message -->
-
       <Message v-if="message" :message="message" />
     </div>
   </form>
+
+  </div>
+
+
 </template>
 
 <script>
@@ -63,9 +75,7 @@ form {
   max-width: 400px;
   margin: auto;
 }
-div {
 
-}
 label {
   margin-bottom: 0.5em;
   color: #333333;
@@ -90,6 +100,55 @@ button:hover {
   background-color: #0056b3;
 }
 
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between columns */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 45%; /* Ensures inputs are not too small */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.controls AppButton {
+  margin-top: 10px;
+}
+
+.message {
+  margin-top: 10px;
+  text-align: center;
+  color: #28a745; /* Green color for success message */
+}
 
 </style>

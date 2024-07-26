@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style>
+<style >
 .header {
 
   text-align: center;
@@ -55,10 +55,9 @@ export default {
 
 .reviewsBg {
 
-  background-image: url('@/assets/img/retro-hero.jpg'); /* Укажите путь к вашему изображению */
+  background-image: url('@/assets/img/anti-hero.jpg'); /* Укажите путь к вашему изображению */
   background-size: cover;
   background-position: center;
-  background-color: rgba(255, 255, 255, 0.5); /* Белый цвет с прозрачностью 20% */
-  background-blend-mode: overlay; /* Смешивание изображения с фоном */
+  
 }
 </style>

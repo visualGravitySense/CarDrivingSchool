@@ -3,7 +3,7 @@
     <!-- Главная секция -->
 
 
-          <header class="header reviewsBg">
+          <header class="header contactBg">
             <p class="welcome-text">
               <code>Добро пожаловать в автошколу Виктория</code>
             </p>
@@ -39,17 +39,28 @@
             {{ paragraph }}
           </p><br>
 
-              <!-- Секция "Сертификаты и лицензии" -->
-            <section class="certificates-licenses-section">
-              <h2>Сертификаты и лицензии</h2>
-              <div v-for="certificate in certificates" :key="certificate.id">
-                <p>{{ certificate }}</p>
+              <!-- Секция "Наши партнеры" -->
+            <div class="certificates-licenses-section">
+              <h2>Наши партнеры</h2>
+              <div class="logos-container">
+                <img src="/liikluslab_logo.webp" alt="Liikluslab Logo" class="partner-logo">
+                <img src="/teooria_logo.png" alt="Teooria Logo" class="partner-logo">
               </div>
+
+              <div class="logos-container">
+                <img src="/maanteeamet-logo.png" alt="Maanteamet Logo" class="partner-logo">
+                <img src="/creditinfo_logo.png" alt="Credit Info Logo" class="partner-logo">
+              </div>
+
+              
+              <!-- <div v-for="certificate in certificates" :key="certificate.id">
+                <p>{{ certificate }}</p>
+              </div> -->
               <!-- <h2>Партнеры и спонсоры</h2>
               <div v-for="partner in partners" :key="partner.id">
                 <p>{{ partner }}</p>
               </div> -->
-            </section>
+            </div>
             
         </div>
       </div>
@@ -107,13 +118,58 @@
     <!-- Секция "Контакты" -->
     <section class="contact-section">
       <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">Контактная информация</h2>
-      <p>{{ contactInfo }}</p>
+      <!-- <p>{{ contactInfo }}</p> -->
+      <div class="contact-info">
+        <!-- <h2>Контактная информация</h2> -->
+
+        <div class="containerContact">
+          <div class="contact-details">
+            <p class="contact-item"><strong class="title">Viktorija Autokool OÜ</strong></p>
+            <p class="contact-item address">
+              Jaama 1a (2 этаж)<br>
+              Nõmme (центр)<br>
+              Tallinn, 11615
+            </p>
+            <p class="contact-item phone">
+              <strong>Телефон:</strong> 
+              <a href="tel:+37253464508">+372 53464508</a>
+            </p>
+            <p class="contact-item email">
+              <strong>Email:</strong> 
+              <a href="mailto:info@viktorijaautokool.ee">info@viktorijaautokool.ee</a>
+            </p>
+          </div>
+
+        <div class="contact-banner">
+          <h2>Начни свой успешный путь Автошколe Виктория в Нымме!</h2>
+          <p>
+            Присоединяйтесь к автошколе «Виктория Нымме» и получите профессиональное обучение вождению на современных автомобилях под руководством опытных инструкторов. Станьте уверенным лидером благодаря индивидуальному подходу и поддержке. Зарегистрируйтесь сейчас и начните увлекательное путешествие к мастерству и безопасности!
+          </p>
+        </div>
+
+        </div>
+        
+
+      </div>
+
       <h2>Карта проезда</h2>
-      <div id="map"></div>
-      <h2>Мы в социальных сетях</h2>
+      <!--<div id="map"></div> -->
+
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.079174631084!2d24.65821631507086!3d59.40751918192897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4693b0b2e3c8053b%3A0x4fae3e3837f8de64!2sJaama%201a%2C%20N%C3%B5mme%2C%20Tallinn%2C%2011615!5e0!3m2!1sen!2see!4v1618076923441!5m2!1sen!2see" 
+          width="100%" 
+          height="300" 
+          style="border:0; border-radius: 10px;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- <h2>Мы в социальных сетях</h2>
       <div class="social-media">
         <a v-for="social in socialMedia" :key="social.platform" :href="social.link">{{ social.platform }}</a>
-      </div>
+      </div> -->
     </section> 
   </div>
 </template>
@@ -141,7 +197,7 @@ export default {
         ],
       title: "О нашей автошколе",
       topic: "Ведущая автошкола в Таллине с 18-летним опытом работы",
-      paragraph: "Мы гордимся высоким уровнем обучения, который обеспечивается опытными и квалифицированными инструкторами. Наша автошкола предлагает современные методы обучения, включая теоретические занятия и практическое вождение, чтобы подготовить студентов к безопасному и уверенному управлению автомобилем. Присоединяйтесь к нам и получите водительские права!",
+      paragraph: "Автошкола Виктория предлагает и электронное обучение! Цена курса категории B в электронном формате на сайте liikluslab.ee составляет 840 €. Зарегистрироваться можно на нашем сайте www.viktorijaautokool.ee, а также на www.liikluslab.ee или www.teooria.ee.",
 
       history: 'Краткая история автошколы...',
       mission: 'Миссия и ценности...',
@@ -534,12 +590,129 @@ p, li {
   color: #000;
 }
 
-.reviewsBg {
+.contactBg {
 
   background-image: url('@/assets/img/retro-hero.png'); /* Укажите путь к вашему изображению */
   background-size: cover;
   background-position: center;
 }
 
+.partner-logo {
+  margin-top: 10px;
+  width: 200px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.logos-container {
+  display: flex;
+  justify-content: flex-start; /* Default to left alignment */
+  align-items: center;
+  gap: 20px; /* Adjust the gap between the images as needed */
+  margin-top: 10px;
+}
+
+/* Center logos if there are multiple images */
+.logos-container:has(.partner-logo + .partner-logo) {
+  justify-content: center;
+}
+
+.partner-logo {
+  width: 200px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.contact-banner {
+  background-color: #f2fff0;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* margin: 20px auto; */
+  max-width: 600px;
+}
+
+.contact-banner h2 {
+  color: #004080;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.contact-banner p {
+  color: #333333;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.containerContact {
+  display: flex;
+  justify-content: space-between; /* Space between the blocks */
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px; /* Space between the blocks */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin: 20px;
+}
+
+
+.contact-details {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  /* margin: 20px auto; */
+  border: 1px solid #e0e0e0; /* Add a subtle border for a refined look */
+}
+
+.contact-item {
+  margin-bottom: 15px;
+  color: #333333;
+  font-family: 'Arial', sans-serif;
+}
+
+.contact-item a {
+  color: #007bff; /* Bright blue for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.title {
+  font-size: 1.5em; /* Larger size for the title */
+  color: #004080; /* Dark blue for the title */
+  margin-bottom: 10px;
+}
+
+.address {
+  font-size: 1.1em;
+  color: #555555; /* Slightly lighter gray for the address */
+}
+
+.phone {
+  font-size: 1.2em;
+}
+
+.email {
+  font-size: 1.2em;
+}
+
+.contact-item strong {
+  color: #333333; /* Dark gray for labels */
+  font-weight: 600; /* Slightly bolder text for labels */
+}
+
+.map-container {
+  margin-top: 20px;
+}
+
+.map-container iframe {
+  height: 300px;
+  background: #ccc;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 </style>

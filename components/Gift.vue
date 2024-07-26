@@ -1,6 +1,10 @@
 <template>
   <div class="gift-certificate">
-    <h2>Создать подарочный сертификат</h2>
+    
+    
+    
+    <h2 class="certificate-heading">Создать подарочный сертификат</h2>
+    
     <form @submit.prevent>
       <div>
         <!-- <label for="amount">Сумма:</label> -->
@@ -70,6 +74,8 @@ export default {
 .gift-certificate {
   max-width: 800px;
   margin: auto;
+  margin-top: 42px;
+  margin-bottom: 42px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -79,6 +85,8 @@ export default {
   flex-direction: column;
   align-items: center; /* Центрирование по горизонтали */
   text-align: center; /* Центрирование текста */
+
+  
 }
 
 .certificate {
@@ -171,6 +179,8 @@ form div {
 
   transition: background-color 0.3s;
 }
+
+
 
 
 </style>

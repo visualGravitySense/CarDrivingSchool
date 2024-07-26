@@ -2,11 +2,11 @@
 
   <div class="services-page">
 
-    <header class="header reviewsBg">
-      <Intro class="intro-section mt-8  p-6"
-        title="Наши услуги"
-        topic="Мы предлагаем обучение вождению по следующим категориям:"
-        paragraph="Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text. Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text"/><br>
+    <header class="header servicesBg">
+      <Intro class="intro-services mt-8  p-6"
+        title="Станьте уверенным водителем с автошколой"
+        topic="Ваш путь к безопасному вождению!"
+        paragraph=""/><br>
 
     </header>
 
@@ -24,34 +24,55 @@
 
     <!-- Блоки по категориям водительских прав -->
 
-      <Intro class="intro-section mt-8  p-6"
+      <!-- <Intro class="intro-section mt-8  p-6"
         title="Наши услуги"
         topic="Мы предлагаем обучение вождению по следующим категориям:"
-        paragraph="Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text. Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text"/><br>
+        paragraph="Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text. Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text"/><br> -->
 
       <div class="categories-wrapper ">
         <section v-for="category in categories" :key="category.id" class="category-section ">
 
           <div class="hero-section">
             <div class="hero-text">
-              <p class="welcome-text">
-                <code>Добро пожаловать в автошколу Виктория</code>
-              </p>
+              <!-- <p class="welcome-text">
+                <code>Добро пожаловать в автошколу Viktorija</code>
+              </p> -->
               <h1 class="hero-title">
                 {{ category.title }}
 
               </h1>
               <p class="">
                 {{ category.description }}
-
+ 
               </p><br>
               <p>{{ category.program }}</p><br>
 
               <p>{{ category.requirements }}</p>
 
-              <ul>
+              <!-- <ul>
                 <li v-for="advantage in category.advantages" :key="advantage">{{ advantage }}</li>
-              </ul>
+              </ul> -->
+
+              <div class="banner">
+                <h2>Расписание следующих уроков</h2>
+                <ul class="advantages-list ">
+                  <li v-for="advantage in category.advantages" :key="advantage" class="transform transition hover:scale-105 hover:shadow-xl">{{ advantage }}</li>
+                </ul>
+                <!-- <div class="schedule">
+                  <h3>Расписание следующих уроков</h3>
+                  <ul class="schedule-list">
+                    <li>Теоретическое занятие: Понедельник, 18:00 - 20:00</li>
+                    <li>Практическое занятие: Вторник, 10:00 - 12:00</li>
+                    <li>Теоретическое занятие: Среда, 18:00 - 20:00</li>
+                    <li>Практическое занятие: Четверг, 14:00 - 16:00</li>
+                    <li>Теоретическое занятие: Пятница, 18:00 - 20:00</li>
+                  </ul>
+                </div> -->
+              </div>
+              <br>
+
+              <AppButton class="btnInfo transform transition hover:scale-105 hover:shadow-xl">Зарегистрироваться</AppButton>
+
             </div>
 
 
@@ -73,71 +94,72 @@
   </div>
 
     <!-- Дополнительные информационные блоки -->
-    <section class="faq-section">
+
+    <!-- <section class="faq-section">
       <h2>Часто задаваемые вопросы (FAQ)</h2>
       <div v-for="faq in faqs" :key="faq.id">
         <h3>{{ faq.question }}</h3>
         <p>{{ faq.answer }}</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="reviews-section">
+    <!-- <section class="reviews-section">
       <h2>Отзывы учеников</h2>
       <div v-for="review in reviews" :key="review.id">
         <p>{{ review.text }}</p>
         <p><strong>- {{ review.author }}</strong></p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="signup-process-section">
+    <!-- <section class="signup-process-section">
       <h2>Процесс записи на курсы</h2>
       <p>{{ signupProcess }}</p>
-    </section>
+    </section> -->
 
-    <section class="pricing-section">
+    <!-- <section class="pricing-section">
       <h2>Стоимость обучения</h2>
       <p>{{ pricing }}</p>
-    </section>
+    </section> -->
 
-    <section class="discounts-section">
+    <!-- <section class="discounts-section">
       <h2>Акции и скидки</h2>
       <div v-for="discount in discounts" :key="discount.id">
         <h3>{{ discount.title }}</h3>
         <p>{{ discount.description }}</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="gallery-section">
+    <!-- <section class="gallery-section">
       <h2>Фото галерея учебного процесса</h2>
       <div class="gallery">
         <img v-for="photo in gallery" :src="photo.src" :alt="photo.alt" :key="photo.id" />
       </div>
-    </section>
+    </section> -->
 
-    <section class="video-lessons-section">
+    <!-- <section class="video-lessons-section">
       <h2>Видео уроки и примеры занятий</h2>
       <div class="videos">
         <video v-for="video in videos" :src="video.src" controls :key="video.id"></video>
       </div>
-    </section>
+    </section> -->
 
-    <section class="instructors-section">
+    <!-- <section class="instructors-section">
       <h2>Информация о преподавателях</h2>
       <div v-for="instructor in instructors" :key="instructor.id">
         <h3>{{ instructor.name }}</h3>
         <p>{{ instructor.bio }}</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="success-stories-section">
+    <!-- <section class="success-stories-section">
       <h2>Истории успеха учеников</h2>
       <div v-for="successStory in successStories" :key="successStory.id">
         <h3>{{ successStory.title }}</h3>
         <p>{{ successStory.content }}</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="contact-form-section">
+    <!-- <section class="contact-form-section">
       <h2>Обратная связь и контактная форма</h2>
       <form @submit.prevent="submitForm">
         <label for="name">Имя:</label>
@@ -151,117 +173,117 @@
 
         <button type="submit">Отправить</button>
       </form>
-    </section>
+    </section> -->
 
-    <section class="schedule-section">
+    <!-- <section class="schedule-section">
       <h2>График занятий</h2>
       <p>{{ schedule }}</p>
-    </section>
+    </section> -->
 
-    <section class="materials-section">
+    <!-- <section class="materials-section">
       <h2>Учебные материалы и пособия</h2>
       <div v-for="material in materials" :key="material.id">
         <h3>{{ material.title }}</h3>
         <p>{{ material.description }}</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="licenses-section">
+    <!-- <section class="licenses-section">
       <h2>Лицензии и сертификаты</h2>
       <div v-for="license in licenses" :key="license.id">
         <p>{{ license.description }}</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="partners-section">
+    <!-- <section class="partners-section">
       <h2>Партнеры и спонсоры</h2>
       <div v-for="partner in partners" :key="partner.id">
         <p>{{ partner.name }}</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="privacy-policy-section">
+    <!-- <section class="privacy-policy-section">
       <h2>Политика конфиденциальности</h2>
       <p>{{ privacyPolicy }}</p>
-    </section>
+    </section> -->
 
-    <section class="refund-policy-section">
+    <!-- <section class="refund-policy-section">
       <h2>Условия возврата и отмены</h2>
       <p>{{ refundPolicy }}</p>
-    </section>
+    </section> -->
 
-    <section class="safety-policy-section">
+    <!-- <section class="safety-policy-section">
       <h2>Политика безопасности</h2>
       <p>{{ safetyPolicy }}</p>
-    </section>
+    </section> -->
 
-    <section class="vehicles-section">
+    <!-- <section class="vehicles-section">
       <h2>Информация о транспортных средствах</h2>
       <div v-for="vehicle in vehicles" :key="vehicle.id">
         <h3>{{ vehicle.name }}</h3>
         <p>{{ vehicle.description }}</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="exam-statistics-section">
+    <!-- <section class="exam-statistics-section">
       <h2>Статистика успешной сдачи экзаменов</h2>
       <p>{{ examStatistics }}</p>
-    </section>
+    </section> -->
 
-    <section class="location-map-section">
+    <!-- <section class="location-map-section">
       <h2>Карта проезда и информация о местоположении</h2>
       <div id="map"></div>
-    </section>
+    </section> -->
 
-    <section class="post-course-support-section">
+    <!-- <section class="post-course-support-section">
       <h2>Поддержка учеников после окончания курсов</h2>
       <p>{{ postCourseSupport }}</p>
-    </section>
+    </section> -->
 
-    <section class="driving-tips-section">
+    <!-- <section class="driving-tips-section">
       <h2>Советы для начинающих водителей</h2>
       <div v-for="tip in drivingTips" :key="tip.id">
         <h3>{{ tip.title }}</h3>
         <p>{{ tip.content }}</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="mobile-app-section">
+    <!-- <section class="mobile-app-section">
       <h2>Мобильное приложение автошколы</h2>
       <p>{{ mobileAppInfo }}</p>
-    </section>
+    </section> -->
 
-    <section class="careers-section">
+    <!-- <section class="careers-section">
       <h2>Вакансии и работа у нас</h2>
       <div v-for="job in jobs" :key="job.id">
         <h3>{{ job.title }}</h3>
         <p>{{ job.description }}</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="blog-section">
+    <!-- <section class="blog-section">
       <h2>Блог автошколы</h2>
       <div v-for="post in blogPosts" :key="post.id">
         <h3>{{ post.title }}</h3>
         <p>{{ post.excerpt }}</p>
         <a :href="post.link">Читать далее</a>
       </div>
-    </section>
+    </section> -->
 
-    <section class="news-updates-section">
+    <!-- <section class="news-updates-section">
       <h2>Новости и обновления</h2>
       <div v-for="news in newsUpdates" :key="news.id">
         <h3>{{ news.title }}</h3>
         <p>{{ news.content }}</p>
       </div>
-    </section>
+    </section> -->
 
-    <section class="social-media-section">
+    <!-- <section class="social-media-section">
       <h2>Мы в социальных сетях</h2>
       <div class="social-media">
         <a v-for="social in socialMedia" :key="social.platform" :href="social.link">{{ social.platform }}</a>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -278,44 +300,62 @@ export default {
     return {
       categories: [
         {
+          id: 'B',
+          title: 'Категория B',
+          description: 'Получение водительских прав категории B с автошколой Viktorija — это уверенность в себе за рулем, безопасность на дороге и свобода передвижения. Начните свое обучение уже сегодня и станьте уверенным водителем с нами!',
+          advantages: ['29.07.24', '05.08.24', '12.08.24', '26.08.24', '18.07.24 (На русском)'],
+          program: 'Дорога к успеху начинается с автошколой Viktorija',
+          requirements: ''
+        },
+        {
           id: 'A',
           title: 'Категория A',
           description: 'Описание категории A...',
-          advantages: ['Преимущество 1', 'Преимущество 2'],
+          advantages: ['19.07.24 kell 08:00', '26.07.24 kell 07:45'],
           program: 'Программа обучения для категории A...',
-          requirements: 'Требования для категории A...'
+          requirements: ' '
         },
-        {
-          id: 'A1',
-          title: 'Категория A1',
-          description: 'Описание категории A1...',
-          advantages: ['Преимущество 1', 'Преимущество 2'],
-          program: 'Программа обучения для категории A1...',
-          requirements: 'Требования для категории A1...'
-        },
-        {
-          id: 'A2',
-          title: 'Категория A2',
-          description: 'Описание категории A2...',
-          advantages: ['Преимущество 1', 'Преимущество 2'],
-          program: 'Программа обучения для категории A2...',
-          requirements: 'Требования для категории A2...'
-        },
+        // {
+        //   id: 'A1',
+        //   title: 'Категория A1',
+        //   description: 'Описание категории A1...',
+        //   advantages: ['Преимущество 1', 'Преимущество 2'],
+        //   program: 'Программа обучения для категории A1...',
+        //   requirements: 'Требования для категории A1...'
+        // },
+        // {
+        //   id: 'A2',
+        //   title: 'Категория A2',
+        //   description: 'Описание категории A2...',
+        //   advantages: ['Преимущество 1', 'Преимущество 2'],
+        //   program: 'Программа обучения для категории A2...',
+        //   requirements: 'Требования для категории A2...'
+        // },
+       
         {
           id: 'AM',
           title: 'Категория AM',
           description: 'Описание категории AM...',
-          advantages: ['Преимущество 1', 'Преимущество 2'],
+          advantages: ['19.07.24 kell 08:00', '26.07.24 kell 07:45'],
           program: 'Программа обучения для категории AM...',
-          requirements: 'Требования для категории AM...'
+          requirements: ' '
+        },
+        
+        {
+          id: 'winter',
+          title: 'Зимнее вождение, вождение в темное время суток',
+          description: 'Описание категории AM...',
+          advantages: ['19.07.24 kell 08:00', '26.07.24 kell 07:45'],
+          program: 'Программа обучения для категории AM...',
+          requirements: ' '
         },
         {
-          id: 'B',
-          title: 'Категория B',
+          id: 'medic',
+          title: 'Курсы первой медицинской помощи',
           description: 'Описание категории B...',
-          advantages: ['Преимущество 1', 'Преимущество 2'],
+          advantages: ['19.07.24 kell 08:00', '26.07.24 kell 07:45'],
           program: 'Программа обучения для категории B...',
-          requirements: 'Требования для категории B...'
+          requirements: ' '
         }
       ],
       faqs: [
@@ -408,9 +448,7 @@ export default {
 </script>
 
 <style scoped>
-.services-page {
 
-}
 
 section {
   margin-bottom: 40px;
@@ -496,15 +534,14 @@ form button:hover {
   margin: 20px;
 }
 
+
+
 .categories-wrapper {
   /* display: flex;
   flex-wrap: wrap; */
   gap: 16px;
 }
-.category-section {
-  /* display: flex;
-  flex-direction: column; */
-}
+
 
 .about-section {
   display: flex;
@@ -605,11 +642,141 @@ form button:hover {
   color: #000;
 }
 
-.reviewsBg {
-
-  background-image: url('@/assets/img/retro-hero.png'); /* Укажите путь к вашему изображению */
+.servicesBg {
+  position: relative; /* Это необходимо для псевдоэлемента */
+  background-image: url('@/assets/img/category_a.png'); /* Укажите путь к вашему изображению */
   background-size: cover;
   background-position: center;
+  overflow: hidden; /* Чтобы убедиться, что псевдоэлемент не выходит за пределы контейнера */
+}
+
+.servicesBg::before {
+  content: ""; /* Необходим для псевдоэлемента */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55); /* Черный цвет с 50% прозрачностью */
+  z-index: 1; /* Убедитесь, что слой находится над фоном */
+}
+
+.servicesBg > * {
+  position: relative; /* Чтобы содержимое находилось выше псевдоэлемента */
+  z-index: 2; /* Содержимое должно быть выше слоя с затемнением */
+}
+
+.intro-services {
+  position: relative; /* Это необходимо для псевдоэлемента */
+  /* background: rgba(0, 0, 0, 0.7);  Темный фон с 70% непрозрачностью */
+  color: #fff; /* Белый текст для контраста с темным фоном */
+  /*padding: 2rem;  Отступы вокруг содержимого */
+  /*border-radius: 8px;  Скругленные углы */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  Легкая тень для придания объема */
+}
+
+.intro-services h1,
+.intro-services h2,
+.intro-services h3,
+.intro-services h4,
+.intro-services h5,
+.intro-services h6 {
+  color: #fff; /* Белый цвет заголовков */
+  margin-top: 0; /* Удаление верхнего отступа у заголовков */
+  margin-bottom: 1rem; /* Нижний отступ для заголовков */
+}
+
+.intro-services p {
+  color: #ffffff; /* Светло-серый цвет для основного текста */
+  line-height: 1.6; /* Увеличение интерлиньяж для лучшей читаемости */
+  margin-bottom: 1rem; /* Нижний отступ для абзацев */
+}
+
+.intro-services a {
+  color: #1e90ff; /* Синий цвет для ссылок */
+  text-decoration: underline; /* Подчеркивание ссылок */
+}
+
+.intro-services a:hover {
+  color: #ff4500; /* Цвет ссылок при наведении */
+  text-decoration: none; /* Убирает подчеркивание при наведении */
+}
+
+.banner {
+  background-color: #cbd1df; /* Темно-синий фон */
+  color: #121212; /* Белый цвет текста */
+  padding: 1rem; /* Уменьшенный отступ */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px; /* Уменьшенная максимальная ширина */
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 1.5rem; /* Уменьшенный размер шрифта */
+  margin-bottom: 0.5rem; /* Уменьшенный нижний отступ */
+}
+
+.advantages-list, .schedule-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Расстояние между элементами */
+}
+
+.advantages-list li, .schedule-list li {
+  background: #8fb1fb; /* Синий фон для пунктов списка */
+  color: #0a0a0a;
+  margin: 0.25rem 0; /* Уменьшенный отступ между строками списка */
+  padding: 0.5rem; /* Уменьшенный внутренний отступ */
+  border-radius: 5px;
+  font-size: 1rem; /* Стандартный размер шрифта */
+  flex: 1 1 calc(50% - 0.5rem); /* Ширина элемента списка - половина ширины контейнера с учетом отступа */
+  box-sizing: border-box;
+}
+
+.schedule {
+  margin-top: 1rem; /* Уменьшенный отступ сверху */
+}
+
+.schedule h3 {
+  font-size: 1.25rem; /* Уменьшенный размер шрифта */
+  margin-bottom: 0.5rem; /* Уменьшенный нижний отступ */
+}
+
+.schedule-list li {
+  background: #3b82f6; /* Светло-синий фон для расписания */
+}
+
+@media (min-width: 600px) {
+  .banner {
+    padding: 1.5rem; /* Немного увеличенный отступ для больших экранов */
+  }
+  
+  .banner h2 {
+    font-size: 2rem; /* Увеличенный размер шрифта для больших экранов */
+  }
+
+  .schedule h3 {
+    font-size: 1.75rem; /* Увеличенный размер шрифта для больших экранов */
+  }
+
+  .advantages-list li, .schedule-list li {
+    font-size: 1.1rem; /* Немного увеличенный размер шрифта для больших экранов */
+  }
+}
+
+.btnInfo {
+  background-color: #4165de;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+
+  transition: background-color 0.3s;
 }
 
 

@@ -3,7 +3,7 @@
     <!-- Главная секция -->
 
 
-          <header class="header reviewsBg">
+          <header class="header aboutBg">
             <p class="welcome-text">
               <code>Добро пожаловать в автошколу Виктория</code>
             </p>
@@ -531,7 +531,7 @@ p, li {
   color: #000;
 }
 
-.reviewsBg {
+.aboutBg {
 
   background-image: url('@/assets/img/retro-hero.png'); /* Укажите путь к вашему изображению */
   background-size: cover;
