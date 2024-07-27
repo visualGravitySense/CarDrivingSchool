@@ -3,11 +3,17 @@
   <div class="services-page">
 
     <header class="header servicesBg">
-      <Intro class="intro-services mt-8  p-6"
-        title="Станьте уверенным водителем с автошколой"
-        topic="Ваш путь к безопасному вождению!"
-        paragraph=""/><br>
-
+      <p class="welcome-text">
+        <code>Добро пожаловать в автошколу Viktorija</code>
+      </p>
+      <h1 class="hero-title">
+        Мы готовим<br> 
+        <span class="confidence">лидеров</span> на дороге!
+      </h1>
+      <!--<p class="description">
+        Профессиональные инструктора и гибкий график занятий.<br>
+        <a href="" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>
+      </p>-->
     </header>
 
     <!-- Заголовок и введение -->
@@ -47,7 +53,14 @@
               </p><br>
               <p>{{ category.program }}</p><br>
 
+              <p>Для записи на курсы необходимо предоставить следующие документы:</p>
               <p>{{ category.requirements }}</p>
+              <ul class="advantages-list ">
+                  <li v-for="requirement in category.requirements" 
+                    :key="requirement" 
+                    class="transform transition hover:scale-105 hover:shadow-xl">
+                    {{ requirement }}</li>
+                </ul>
 
               <!-- <ul>
                 <li v-for="advantage in category.advantages" :key="advantage">{{ advantage }}</li>
@@ -71,7 +84,7 @@
               </div>
               <br>
 
-              <AppButton class="btnInfo transform transition hover:scale-105 hover:shadow-xl">Зарегистрироваться</AppButton>
+              <AppButton class="btnInfo transform transition hover:scale-105 hover:shadow-xl">Узнать больше</AppButton>
 
             </div>
 
@@ -302,10 +315,10 @@ export default {
         {
           id: 'B',
           title: 'Категория B',
-          description: 'Получение водительских прав категории B с автошколой Viktorija — это уверенность в себе за рулем, безопасность на дороге и свобода передвижения. Начните свое обучение уже сегодня и станьте уверенным водителем с нами!',
+          description: 'Категория B — это одна из самых популярных категорий водительских прав, позволяющая управлять легковыми автомобилями. Она предназначена для тех, кто хочет управлять личным или арендованным транспортом, предназначенным для перевозки пассажиров и грузов в пределах допустимых норм.',
           advantages: ['29.07.24', '05.08.24', '12.08.24', '26.08.24', '18.07.24 (На русском)'],
-          program: 'Дорога к успеху начинается с автошколой Viktorija',
-          requirements: ''
+          program: 'Наша программа включает теоретическую подготовку с обучением в классах и на онлайн-платформе, практические занятия с опытными инструкторами на современных автомобилях, гибкий график уроков, индивидуальный подход и всестороннюю поддержку на всех этапах обучения и подготовки к экзаменам.',
+          requirements: ['Документ, удостоверяющий личность (паспорт или ID-карта)' ,'Медицинская справка, на категорию «В».']
         },
         {
           id: 'A',
@@ -313,7 +326,7 @@ export default {
           description: 'Описание категории A...',
           advantages: ['19.07.24 kell 08:00', '26.07.24 kell 07:45'],
           program: 'Программа обучения для категории A...',
-          requirements: ' '
+          requirements: ['Документ, удостоверяющий личность (паспорт или ID-карта)' ,'Медицинская справка, на категорию «В».'],
         },
         // {
         //   id: 'A1',
@@ -642,28 +655,36 @@ form button:hover {
   color: #000;
 }
 
+.header {
+  padding: 9rem 2rem;
+  text-align: center;
+
+  /* background: #f1f1f1; */
+  border-bottom: 2px solid #8f8f8f;
+}
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+.header p {
+  margin: 10px 0;
+}
+.header button {
+  padding: 10px 20px;
+  background: #4165de;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.header a {
+  color: #000;
+}
+
 .servicesBg {
-  position: relative; /* Это необходимо для псевдоэлемента */
-  background-image: url('@/assets/img/category_a.png'); /* Укажите путь к вашему изображению */
+
+  background-image: url('@/assets/img/retro-hero.png'); /* Укажите путь к вашему изображению */
   background-size: cover;
   background-position: center;
-  overflow: hidden; /* Чтобы убедиться, что псевдоэлемент не выходит за пределы контейнера */
-}
-
-.servicesBg::before {
-  content: ""; /* Необходим для псевдоэлемента */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55); /* Черный цвет с 50% прозрачностью */
-  z-index: 1; /* Убедитесь, что слой находится над фоном */
-}
-
-.servicesBg > * {
-  position: relative; /* Чтобы содержимое находилось выше псевдоэлемента */
-  z-index: 2; /* Содержимое должно быть выше слоя с затемнением */
 }
 
 .intro-services {

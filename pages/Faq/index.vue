@@ -5,7 +5,7 @@
     <h1>Ответы на часто <br>задаваемые вопросы </h1>
     <p>Тут собраны ответы которые часто<br> 
       спрашивают при выборе автошколы</p>
-    <button>Задать вопрос</button>
+    <AppButton class="project transform transition hover:scale-105 hover:shadow-xl">Задать вопрос</AppButton>
   </header>
 
 

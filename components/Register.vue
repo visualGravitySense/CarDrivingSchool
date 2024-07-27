@@ -3,7 +3,9 @@
   <div>
     <h3 class="mt-3 text-2xl leading-7 font-semibold">
         Регистрация в школу
-  </h3><br><br>
+  </h3><br>
+  <p>Оставьте заявку на обучение прямо сейчас!</p>  
+  <br>
 
   <form @submit.prevent class="contact-form">
     

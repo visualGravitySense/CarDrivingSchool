@@ -4,7 +4,7 @@
   <header class="header reviewsBg">
     <h1>Отзывы<br>учеников</h1>
     <p>Узнайте, что говорят о нас те, кто уже прошел обучение в<br> нашей автошколе. Ваше мнение важно для нас!</p>
-    <button>Оставить отзыв</button>
+    <AppButton class="project transform transition hover:scale-105 hover:shadow-xl">Оставить отзыв</AppButton>
   </header>
 
   <links/>
