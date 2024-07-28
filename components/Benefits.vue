@@ -8,7 +8,9 @@
 
       <div class="mt-8 overflow-hidden  sm:rounded-lg p-6">
 
-        <Intro title="Benefits about our CarSchool" topic="This is intro paragraph for intro in benefits" paragraph="Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text. Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text"/><br>
+        <Intro title="Ваша дорога к успеху начинается здесь в автошколе " 
+        topic="Почему выбирают нас" 
+        paragraph="Мы предлагаем обучение с профессиональными инструкторами, которые используют персонализированные методы для эффективного освоения вождения. Учитесь на современных автомобилях с передовыми системами безопасности, получая максимум комфорта и уверенности. Наши пакетные предложения и скидки делают обучение доступным и выгодным. Отличные отзывы наших выпускников подтверждают высокое качество нашего сервиса."/><br>
 
         <!-- <Gift/><br> -->
 
