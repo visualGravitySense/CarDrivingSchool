@@ -6,10 +6,10 @@
       <p class="welcome-text">
         <code>Добро пожаловать в автошколу Viktorija</code>
       </p>
-      <h1 class="hero-title text-white-600">
+      <h3 class="hero-title text-white-600">
         Мы готовим<br> 
-        <span class="confidence">лидеров</span> на дороге!
-      </h1>
+        <span class="confidence">лидеров</span> на дороге !
+      </h3>
       <!--<p class="description">
         Профессиональные инструктора и гибкий график занятий.<br>
         <a href="" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>

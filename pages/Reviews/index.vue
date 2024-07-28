@@ -38,6 +38,7 @@ export default {
 .header h1 {
   font-size: 3em;
   margin: 0;
+  color: #222;
 }
 .header p {
   margin: 10px 0;
@@ -55,7 +56,7 @@ export default {
 
 .reviewsBg {
 
-  background-image: url('@/assets/img/anti-hero.jpg'); /* Укажите путь к вашему изображению */
+  background-image: url('@/assets/img/retro-review.jpg'); /* Укажите путь к вашему изображению */
   background-size: cover;
   background-position: center;
   

@@ -21,7 +21,7 @@
 
     <!-- Секция "О нашей автошколе" -->
     <section class="contact-section">
-      <div class="hero-section">
+      <div class="hero-about">
         <div class="about-content">
           <h2 class="hero-title mt-10 text-2xl leading-7 font-semibold">
             {{ title }} <span class="confidence">Viktorija</span>
@@ -33,7 +33,7 @@
           <p class="about-paragraph mt-3 text-gray-600">
             {{ paragraph }}
           </p>
-        </div>
+        </div><br>
         <div class="about-image">
           <img src="@/assets/img/hero-bg.jpg" alt="About Image">
         </div>
@@ -278,14 +278,14 @@ export default {
   color: #4a3f2e; /* Темно-коричневый цвет */
   margin-bottom: 5px;
 }
-
+ 
 .review-text {
   font-family: 'Times New Roman', serif; /* Винтажный шрифт */
   font-size: 0.95rem;
   color: #6f5e4e; /* Более светлый коричневый цвет */
 }
 
-.hero-section {
+.hero-about {
   display: flex;
   flex-direction: column; /* Stack items vertically */
 }
