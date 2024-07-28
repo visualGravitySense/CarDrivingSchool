@@ -29,7 +29,7 @@
 
         </div>
         <div class="about-content">
-          <h2 class="hero-title mt-10 text-2xl leading-7 font-semibold">
+          <h2 class="hero-title text-gray-600 mt-10 text-2xl leading-7 font-semibold">
             {{ title }} <span class="confidence">Viktorija</span>
           </h2>
         <!--  <p class="pt-4 text-gray-800 border-t border-dashed">
@@ -41,15 +41,15 @@
 
               <!-- Секция "Наши партнеры" -->
             <div class="certificates-licenses-section">
-              <h2>Наши партнеры</h2>
+              <h2 class="text-gray-600">Наши партнеры</h2>
               <div class="logos-container">
-                <img src="/liikluslab_logo.webp" alt="Liikluslab Logo" class="partner-logo">
-                <img src="/teooria_logo.png" alt="Teooria Logo" class="partner-logo">
+                <img src="/liikluslab_logo.webp" alt="Liikluslab Logo" class="transform transition hover:scale-105 hover:shadow-xl partner-logo">
+                <img src="/teooria_logo.png" alt="Teooria Logo" class="transform transition hover:scale-105 hover:shadow-xl partner-logo">
               </div>
 
               <div class="logos-container">
-                <img src="/maanteeamet-logo.png" alt="Maanteamet Logo" class="partner-logo">
-                <img src="/creditinfo_logo.png" alt="Credit Info Logo" class="partner-logo">
+                <img src="/maanteeamet-logo.png" alt="Maanteamet Logo" class="transform transition hover:scale-105 hover:shadow-xl partner-logo">
+                <img src="/creditinfo_logo.png" alt="Credit Info Logo" class="transform transition hover:scale-105 hover:shadow-xl partner-logo">
               </div>
 
               
@@ -141,7 +141,7 @@
           </div>
 
         <div class="contact-banner">
-          <h2>Начни свой успешный путь Автошколе<br> Viktorija в Нымме!</h2>
+          <h2 class="text-gray-600">Начни свой успешный путь Автошколе<br> Viktorija в Нымме!</h2>
           <p>
             Присоединяйтесь к автошколе Viktorija и получите профессиональное обучение вождению на современных автомобилях под руководством опытных инструкторов. Станьте уверенным лидером благодаря индивидуальному подходу и поддержке. Зарегистрируйтесь сейчас и начните увлекательное путешествие к мастерству и безопасности!
           </p>
@@ -152,7 +152,7 @@
 
       </div>
 
-      <h2>Карта проезда</h2>
+      <h2 class="text-gray-600">Карта проезда</h2>
       <!--<div id="map"></div> -->
 
       <div class="map-container">
@@ -381,7 +381,7 @@ export default {
 .hero-title {
   font-size: 2.5rem;
   font-weight: 700; /* Более жирный шрифт для выделения */
-  color: #222; /* Темный цвет заголовка */
+  color: #eeeeee; /* Темный цвет заголовка */
   margin-bottom: 16px;
 }
 
@@ -590,17 +590,43 @@ p, li {
   color: #000;
 }
 
+.hero-title-black {
+  font-size: 2.5rem;
+  font-weight: 700; /* Более жирный шрифт для выделения */
+  color: #222; /* Темный цвет заголовка */
+  margin-bottom: 16px;
+}
+ 
 .contactBg {
-
-  background-image: url('@/assets/img/retro-hero.png'); /* Укажите путь к вашему изображению */
+  position: relative; /* Ensure the container is positioned relatively */
+  background-image: url('@/assets/img/retro_contact.jpg'); /* Specify the path to your image */
   background-size: cover;
   background-position: center;
 }
+
+.contactBg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black with 50% opacity */
+  z-index: 1; /* Ensure the overlay is on top */
+}
+
+/* Ensure any content within .contactBg is above the overlay */
+.contactBg > * {
+  position: relative;
+  z-index: 2;
+}
+
 
 .partner-logo {
   margin-top: 10px;
   width: 200px; /* Adjust width as needed */
   height: auto; /* Maintain aspect ratio */
+  
 }
 
 .logos-container {
@@ -609,7 +635,10 @@ p, li {
   align-items: center;
   gap: 20px; /* Adjust the gap between the images as needed */
   margin-top: 10px;
+  
 }
+
+
 
 /* Center logos if there are multiple images */
 .logos-container:has(.partner-logo + .partner-logo) {
@@ -632,7 +661,7 @@ p, li {
 }
 
 .contact-banner h2 {
-  color: #004080;
+  /* color: #004080; */
   margin-bottom: 20px;
   font-size: 1.8em;
 }

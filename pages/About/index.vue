@@ -20,26 +20,26 @@
 
 
     <!-- Секция "О нашей автошколе" -->
-    <section class="">
+    <section class="contact-section">
       <div class="hero-section">
-        <div class="about-image">
-
-            <img src="@/assets/img/hero-bg.jpg" alt="About Image">
-
-        </div>
         <div class="about-content">
           <h2 class="hero-title mt-10 text-2xl leading-7 font-semibold">
             {{ title }} <span class="confidence">Viktorija</span>
           </h2>
-        <!--  <p class="pt-4 text-gray-800 border-t border-dashed">
+          <!-- Uncomment if needed -->
+          <!-- <p class="pt-4 text-gray-800 border-t border-dashed">
             <code class="bg-yellow-100 text-xl p-1 rounded border">{{ topic }}</code>
           </p> -->
           <p class="about-paragraph mt-3 text-gray-600">
             {{ paragraph }}
           </p>
         </div>
+        <div class="about-image">
+          <img src="@/assets/img/hero-bg.jpg" alt="About Image">
+        </div>
       </div>
     </section>
+
 
 
 
@@ -286,13 +286,8 @@ export default {
 }
 
 .hero-section {
-
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px;
-  background-color: #f8f9fa; /* Светлый фон для контраста */
-  gap: 20px; /* Расстояние между текстом и изображением */
+  flex-direction: column; /* Stack items vertically */
 }
 
 .hero-text {
@@ -425,23 +420,18 @@ p, li {
   padding: 40px;
 }
 
-.about-image {
-  flex: 1; /* Занимает 50% ширины */
-  max-width: 50%;
-  padding-right: 20px; /* Отступ справа от изображения */
+.contact-section {
+  width: 100%;
 }
+
 
 .about-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px; /* Округление углов изображения */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для изображения */
+  width: 100%; /* Ensure image takes full width */
+  height: auto; /* Maintain aspect ratio */
 }
 
-.about-content {
-  flex: 1; /* Занимает 50% ширины */
-  max-width: 50%;
-  text-align: left;
+.about-content, .about-image {
+  width: 100%; /* Ensure both sections take full width */
 }
 
 .about-title {
@@ -533,7 +523,7 @@ p, li {
 
 .aboutBg {
 
-  background-image: url('@/assets/img/retro-hero.png'); /* Укажите путь к вашему изображению */
+  background-image: url('@/assets/img/retro-2.jpg'); /* Укажите путь к вашему изображению */
   background-size: cover;
   background-position: center;
 }

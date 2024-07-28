@@ -6,7 +6,7 @@
       <p class="welcome-text">
         <code>Добро пожаловать в автошколу Viktorija</code>
       </p>
-      <h1 class="hero-title">
+      <h1 class="hero-title text-white-600">
         Мы готовим<br> 
         <span class="confidence">лидеров</span> на дороге!
       </h1>
@@ -43,7 +43,7 @@
               <!-- <p class="welcome-text">
                 <code>Добро пожаловать в автошколу Viktorija</code>
               </p> -->
-              <h1 class="hero-title">
+              <h1 class="service-title">
                 {{ category.title }}
 
               </h1>
@@ -635,6 +635,13 @@ form button:hover {
 .hero-title {
   font-size: 2.5rem;
   font-weight: 700; /* Более жирный шрифт для выделения */
+  /* color: #222;  Темный цвет заголовка */
+  margin-bottom: 16px;
+}
+
+.service-title {
+  font-size: 2.5rem;
+  font-weight: 700; /* Более жирный шрифт для выделения */
   color: #222; /* Темный цвет заголовка */
   margin-bottom: 16px;
 }
@@ -690,11 +697,30 @@ form button:hover {
 }
 
 .servicesBg {
-
-  background-image: url('@/assets/img/retro-hero.png'); /* Укажите путь к вашему изображению */
+  position: relative; /* Ensure the container is positioned relatively */
+  background-image: url('@/assets/img/car-3.jpg'); /* Specify the path to your image */
   background-size: cover;
   background-position: center;
 }
+
+.servicesBg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black with 50% opacity */
+  z-index: 1; /* Ensure the overlay is on top */
+}
+
+/* Ensure any content within .contactBg is above the overlay */
+.servicesBg > * {
+  position: relative;
+  z-index: 2;
+}
+
+
 
 .intro-services {
   position: relative; /* Это необходимо для псевдоэлемента */
