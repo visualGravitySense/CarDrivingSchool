@@ -8,30 +8,7 @@
         <p class="mt-4 pt-4 text-gray-800">Идеальный подарок для тех, кто мечтает стать уверенным водителем. Этот сертификат предоставляет возможность пройти курс обучения у лучших инструкторов, на современных автомобилях и по доступной цене. Сделайте особенный подарок, который откроет новые горизонты и подарит уверенность за рулём!</p>
         <br>
 
-        <div class="custom-component">
-          <!-- Блок с SVG картинкой -->
-          <div class="image-block">
-            <svg width="50" height="50" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="#4CAF50">
-              <!-- Руль автомобиля -->
-              <circle cx="32" cy="32" r="28" stroke="#4CAF50" stroke-width="4" fill="none"/>
-              <circle cx="32" cy="32" r="14" stroke="#4CAF50" stroke-width="4" fill="none"/>
-              <line x1="32" y1="4" x2="32" y2="60" stroke="#4CAF50" stroke-width="4"/>
-              <line x1="4" y1="32" x2="60" y2="32" stroke="#4CAF50" stroke-width="4"/>
-              
-              <!-- Место для текста -->
-              <text x="32" y="36" font-family="Arial" font-size="8" text-anchor="middle" fill="#4CAF50">ЛОГО</text>
-            </svg>
-          </div>
-
-          <!-- Блок с текстами в ряд -->
-          <data class="text-block">
-            <p class="green-text"><b>Уверенность на дороге: </b>Подарите свободу и уверенность за рулём, открывая новые возможности.</p>
-            <!-- <p>Text random</p> -->
-            <!-- <p class="orange-text"><b>Это текст с оранжевым цветом</b></p> -->
-          
-          </data>          
-            
-        </div>
+        
 
         <div class="custom-component">
           <!-- Блок с SVG картинкой -->
@@ -58,7 +35,7 @@
           
           </data>          
             
-        </div>
+        </div><br>
 
         <div class="custom-component">
           <!-- Блок с SVG картинкой -->

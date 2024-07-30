@@ -35,7 +35,7 @@
           </p>
         </div><br>
         <div class="about-image">
-          <img src="@/assets/img/hero-bg.jpg" alt="About Image">
+          <img src="@/assets/img/about_default.jpg" alt="About Image">
         </div>
       </div>
     </section>
@@ -45,20 +45,18 @@
 
     <!-- Секция "Учебный процесс" -->
 
-
-
     <section class="learning-process-section">
       <h2 class="about-title mt-10 text-2xl leading-7 font-semibold">Учебный процесс</h2>
-      <h3>Программа обучения</h3>
+      <h3 class="text-xl">Программа обучения</h3>
       <p>{{ program }}</p><br>
-      <h3>Наши инструкторы:</h3>
+      <h3 class="text-xl">Наши инструкторы:</h3>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
       <instructorsList :instructors="instructors"/>
       </div>
 
       <br><br>
-      <h3>Процедура сдачи экзаменов</h3>
+      <h3 class="text-xl">Процедура сдачи экзаменов</h3>
       <p>{{ examProcedure }}</p>
     </section>
 
@@ -129,11 +127,11 @@ export default {
   data() {
     return {
       instructors: [
-          { id: 1, name: 'Igor Nagorskii', bio: 'Биография инструктора 1', image: require('@/assets/img/instructors/instructor_1.jpg') },
-          { id: 2, name: 'Maksim Fedorenko', bio: 'Биография инструктора 2', image: require('@/assets/img/instructors/instructor_2.jpg')  },
-          { id: 1, name: 'Ivan Skorobogatov', bio: 'Биография инструктора 1', image: require('@/assets/img/instructors/instructor_4.jpg')  },
-          { id: 2, name: 'Stanislav Zigadlo', bio: 'Биография инструктора 2', image: require('@/assets/img/instructors/instructor_3.jpg')  },
-          { id: 1, name: 'Andrei Naan', bio: 'Биография инструктора 1', image: require('@/assets/img/promo_1.png')  },
+          { id: 1, name: 'Igor Nagorskii', bio: '', image: require('@/assets/img/instructors/instructor_1.jpg') },
+          { id: 2, name: 'Maksim Fedorenko', bio: '', image: require('@/assets/img/instructors/instructor_2.jpg')  },
+          { id: 1, name: 'Ivan Skorobogatov', bio: '', image: require('@/assets/img/instructors/instructor_4.jpg')  },
+          { id: 2, name: 'Stanislav Zigadlo', bio: '', image: require('@/assets/img/instructors/instructor_3.jpg')  },
+          { id: 1, name: 'Andrei Naan', bio: '', image: require('@/assets/img/promo_1.png')  },
 
         ],
       title: "О нашей автошколе",
