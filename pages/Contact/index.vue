@@ -651,7 +651,7 @@ p, li {
 }
 
 .contact-banner {
-  background-color: #f2fff0;
+  background-color: #86c0ff;
   padding: 30px;
   border-radius: 10px;
   text-align: left;
@@ -661,7 +661,7 @@ p, li {
 }
 
 .contact-banner h2 {
-  /* color: #004080; */
+  color: #070708;
   margin-bottom: 20px;
   font-size: 1.8em;
 }
