@@ -15,7 +15,7 @@
               </li>
             </ul>
             <div class="cta-buttons">
-              <nuxt-link to="/signin" class="signin-button">Log in</nuxt-link>
+              <nuxt-link to="/signin" class="signin-link">Log in</nuxt-link>
               <nuxt-link to="/signup" class="signup-button">Sign up</nuxt-link>
             </div>
           </div>
@@ -119,14 +119,15 @@ export default {
 }
 
 
-.signin-button {
-  background-color: #4165de;
-  color: #fff;
+.signin-link {
+  /* background-color: #4165de; */
+  color: #4165de;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
 
-  transition: background-color 0.3s;
+  /* transition: background-color 0.3s; */
+  transition: color 0.3s;
 }
 
 .signup-button {
@@ -140,9 +141,8 @@ export default {
   transition: background-color 0.3s;
 }
 
-.signup-button:hover,
-.signin-button:hover {
-  background-color: #3652b5;
+.signup-button:hover {
+  background-color: #18875a;
 }
 
 .burger-menu {

@@ -1,10 +1,11 @@
 <template>
 
-  <div>
-    <h3 class="mt-3 text-2xl leading-7 font-semibold">
+  <div class="">
+    <br>
+    <h3 class="register mt-3 text-2xl leading-7 font-semibold">
         Регистрация в школу
   </h3><br>
-  <p>Оставьте заявку на обучение прямо сейчас!</p>  
+  <p class="register">Оставьте заявку заполнив форму</p> 
   <br>
 
   <form @submit.prevent class="contact-form">
@@ -14,21 +15,15 @@
         <label for="name">Имя:</label>
         <AppInput type="text" id="name" v-model="user.name" required />
       </div>
-      <div class="form-group">
-        <label for="email">Электронная почта:</label>
-        <AppInput type="email" id="email" v-model="user.email" required />
-      </div>
+      
     </div>
 
     <div class="form-row">
       <div class="form-group">
-        <label for="phone">Телефон:</label>
-        <AppInput type="tel" id="phone" v-model="user.phone" required />
+        <label for="email">Электронная почта:</label>
+        <AppInput type="email" id="email" v-model="user.email" required />
       </div>
-      <div class="form-group">
-        <label for="dob">Дата рождения:</label>
-        <AppInput type="date" id="dob" v-model="user.dob" required />
-      </div>
+      
     </div>
 
     <div class="controls">
@@ -37,7 +32,7 @@
       <!-- Message -->
       <Message v-if="message" :message="message" />
     </div>
-  </form>
+  </form><br>
 
   </div>
 
@@ -71,6 +66,11 @@ export default {
 </script>
 
 <style >
+
+.register {
+  text-align: center;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -134,7 +134,7 @@ button:hover {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .controls {

@@ -65,12 +65,12 @@
           <div class="form-group">
             <!-- <label for="amount">Сумма:</label> -->
             <AppInput class="form-input " v-model="amount" id="amount" type="number" required> Сумма: </AppInput>
-          </div>
-          <div class="form-group">
 
+            <AppInput class="form-input " v-model="friendName" type="email" id="email" required> Ваш email: </AppInput>
+            
             <AppInput class="form-input " v-model="friendName" type="email" id="email" required> Email друга: </AppInput>
           </div>
-          <AppButton2 class="submit-btn" @click="onSubmit">Создать сертификат</AppButton2>
+          <AppButton2 class="submit-btn" @click="onSubmit">Купить сертификат</AppButton2>
 
           <!-- Message -->
           <Message v-if="message" :message="message" />
@@ -190,7 +190,7 @@ label {
 
 .form-input {
   width: 100%;
-  padding: 10px;
+  /* padding: 10px; */
   /* border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff; */

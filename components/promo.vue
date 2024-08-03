@@ -11,7 +11,7 @@
       </h1>
       <p class="description">
         Профессиональные инструктора и гибкий график занятий.
-        <a href="" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>
+        <a href="/signup/" target="_blank" class="register-link">Зарегистрируйтесь</a> сегодня и начните свой путь к безопасному вождению.<br>
       </p>
 
     </div>
@@ -83,7 +83,7 @@ data () {
 
 .register-link:hover {
   text-decoration: underline;
-  color: #ff5200;
+  color: #0bf455;
 }
 
 .relativeBg {

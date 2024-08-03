@@ -25,7 +25,8 @@
         <div class="about-image">
 
             <!-- <img src="@/assets/img/hero-bg.jpg" alt="About Image"> -->
-             <register/>
+             <!-- <register/> -->
+             <contact/>
 
         </div>
         <div class="about-content">
