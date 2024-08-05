@@ -2,7 +2,7 @@
   <div class="relativeBg hero-section">
 
       <p class="welcome-text">
-        <code>Добро пожаловать в автошколу Виктория</code>
+        <code>Добро пожаловать в автошколу Viktorija</code>
       </p>
 
       <h1 class="hero-title">

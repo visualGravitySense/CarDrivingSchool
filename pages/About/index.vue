@@ -5,7 +5,7 @@
 
           <header class="header aboutBg">
             <p class="welcome-text">
-              <code>Добро пожаловать в автошколу Виктория</code>
+              <code>Добро пожаловать в автошколу Viktorija</code>
             </p>
             <h1 class="hero-title">
               Научитесь водить<br> с
@@ -68,6 +68,8 @@
         <div v-for="successStory in successStories" :key="successStory.id" class="success-story-item">
           <h3>{{ successStory.title }}</h3>
           <p>{{ successStory.content }}</p>
+          <p><b>{{ successStory.author }}</b></p>
+          <img :src="successStory.img" :alt="successStory.author" class="partner-logo">
         </div>
       </div>
 
@@ -127,11 +129,11 @@ export default {
   data() {
     return {
       instructors: [
-          { id: 1, name: 'Igor Nagorskii', bio: '', image: require('@/assets/img/instructors/instructor_1.jpg') },
-          { id: 2, name: 'Maksim Fedorenko', bio: '', image: require('@/assets/img/instructors/instructor_2.jpg')  },
-          { id: 1, name: 'Ivan Skorobogatov', bio: '', image: require('@/assets/img/instructors/instructor_4.jpg')  },
-          { id: 2, name: 'Stanislav Zigadlo', bio: '', image: require('@/assets/img/instructors/instructor_3.jpg')  },
-          { id: 1, name: 'Andrei Naan', bio: '', image: require('@/assets/img/promo_1.png')  },
+          { id: 1, name: 'Игорь Нагорский', bio: 'Основатель и руководитель автошколы "Viktorija", и опытный инструктор.', image: require('@/assets/img/instructors/instructor_1.jpg') },
+          { id: 2, name: 'Максим Федоренко', bio: 'Терпеливый и отзывчивый инструктор с дружелюбным и интерактивным подходом.', image: require('@/assets/img/instructors/instructor_2.jpg')  },
+          { id: 1, name: 'Иван Скоробогатов', bio: 'Опытный, профессиональный инструктор с опытом работы в ARK.', image: require('@/assets/img/instructors/instructor_4.jpg')  },
+          { id: 2, name: 'Станислав Зигадло', bio: 'Выпускник Таллиннской механической школы, опыт преподавания 18 лет.', image: require('@/assets/img/instructors/instructor_3.jpg')  },
+          { id: 1, name: 'Андрей Наан', bio: 'Высококвалифицированный инструктор по категориям B и A с богатым опытом работы.', image: require('@/assets/img/promo_1.png')  },
 
         ],
       title: "О нашей автошколе",
@@ -148,20 +150,21 @@ export default {
       examProcedure: 'Процедура сдачи экзаменов включает два основных этапа: теоретический и практический. На теоретическом экзамене проверяются знания правил дорожного движения и основ безопасности. Практический экзамен оценивает ваши навыки управления автомобилем или мотоциклом в реальных дорожных условиях. Мы предоставляем поддержку и консультации на каждом этапе подготовки, чтобы вы уверенно сдали экзамены и получили водительское удостоверение.',
       achievements: 'Наши достижения...',
       successStories: [
-        { id: 1, title: 'История успеха 1 История успеха 1 История успеха 1', content: 'Текст истории... Текст истории... Текст истории... Текст истории... Текст истории... Текст истории... Текст истории... Текст истории...' },
-        { id: 2, title: 'История успеха 2 История успеха 2 История успеха 2', content: 'Текст истории... Текст истории... Текст истории... Текст истории... Текст истории... Текст истории... Текст истории...' }
+        { id: 1, title: 'Благодарственное письмо', content: 'Автошколе Viktorija за хорошие результаты, высокие оценки и образцовое качество преподавания', author: 'Dr Juri Ess Генеральный директор Liikluslab', img: '/liikluslab_logo.webp'},
+        { id: 2, title: 'Сертификат 2021 года Автошколе Viktorija', content: 'Инструктор по вождению спокоен и конкретен, умеет объяснить, направить и сделать выводы из теории, полученной на уроках.', author: 'Jako Renter Teooria.ee', img: '/teooria_logo.png'}
+        
       ],
       reviews: [
         {
           id: 1,
-          name: 'Alice Johnson',
-          text: 'This is an amazing product! I would definitely recommend it to my friends.',
+          name: 'Taavi.T',
+          text: 'Мне очень понравилось, все были очень дружелюбны!',
           image: 'https://via.placeholder.com/60' // Замените на URL изображения
         },
         {
           id: 2,
-          name: 'Bob Smith',
-          text: 'Not what I expected, but still decent. The quality is acceptable.',
+          name: 'Erik',
+          text: '3 дня назад получил права благодаря автошколе Viktorija Autokool. Преподаватели в школе-настоящие профессионалы, это чувствуется. Мой преподаватель теории и по вождению Игорь Колесник, объяснял всё очень подробно и доступно, поэтому на экзамене проблем не возникло, всё без ошибок. На теории Игорь объяснял нам все возможные ситуации, которые могут возникнуть во время вождения на машине, теоретические вопросы, разбирали ошибки и ситуации. Всё было по доброму, от этого человека исходила уверенность в нас, приятно видеть когда в нас «неуверенных чайников « верят. Вот и началось вождение, сначала Кадриорг, а потом город. Для меня каждый раз вождение это был праздник! Игорь был уверен, что мы все сможем, верил в меня и подбадривал, некоторые моменты не получались, а он настраивал, что всё получится, всё сможем!!! Это самый лучший инструктор! Мастер своего дела! Строгость и доброта в одном человеке! С ним легко осваиваются все трудности, которые были при вождении в машине. Игорь Колесник смог настроить меня в момент мандража, перед экзаменом. Я с этим инструктором сдал все экзамены с первого раза!!!))) И благодаря о таком учении!) От души, спасибо, за такое обучение и подход к своим ученикам!!!',
           image: 'https://via.placeholder.com/60' // Замените на URL изображения
         }
         // Добавьте больше отзывов по необходимости
@@ -187,6 +190,13 @@ export default {
 <style scoped>
 
 @import url('https://fonts.googleapis.com/css2?family=Rochester&family=Roboto+Slab:wght@400;700&display=swap');
+
+.partner-logo {
+  margin-top: 10px;
+  width: 200px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  
+}
 
 .success-stories-container {
   display: flex;
@@ -225,9 +235,9 @@ export default {
 }
 
 .success-story-item::before {
-  content: "✦"; /* Декоративный элемент перед заголовком */
+  content: "✦ ✦ ✦"; /* Декоративный элемент перед заголовком */
   font-size: 2rem;
-  color: #c79c6b; /* Золотистый цвет */
+  color: #3182ce; /* Золотистый цвет */
   display: block;
   text-align: center;
   margin-bottom: 10px;
@@ -243,8 +253,8 @@ export default {
 .review-item {
   display: flex;
   align-items: center;
-  background: #ecf2f2; /* Светлый фон, напоминающий старую бумагу */
-  border: 1px solid #e0c8a0; /* Легкая граница для винтажного эффекта */
+  background: #f4f9ff; /* Светлый фон, напоминающий старую бумагу */
+  border: 1px solid #d6c8b6; /* Легкая граница для винтажного эффекта */
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */

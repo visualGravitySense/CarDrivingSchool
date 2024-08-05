@@ -27,9 +27,9 @@ components: {
   data() {
     return {
       benefits: [
-        { id: 'A', title: 'Профессиональные инструктора', image: require('@/assets/img/advancedCars.jpg'), description: 'Индивидуальный подход: Персонализированные методы обучения, учитывающие особенности каждого ученика.' },
-        { id: 'A1', title: 'Современные автомобили', image: require('@/assets/img/profInstructors.jpg'), description: 'Автомобили последнего поколения, оснащенные современными системами безопасности.' },
-        { id: 'A2', title: 'Доступные цены', image: require('@/assets/img/priceGood.jpg'), description: 'Пакетные предложения: Специальные предложения и скидки на комплексные курсы обучения.' },
+        { id: 'A', title: 'Профессиональные инструктора', image: require('@/assets/img/benefit-instructor.jpg'), description: 'Индивидуальный подход: Персонализированные методы обучения, учитывающие особенности каждого ученика.' },
+        { id: 'A1', title: 'Современные автомобили', image: require('@/assets/img/benefit-car.jpg'), description: 'Автомобили последнего поколения, оснащенные современными системами безопасности.' },
+        { id: 'A2', title: 'Доступные цены', image: require('@/assets/img/benefit-price.jpg'), description: 'Пакетные предложения: Специальные предложения и скидки на комплексные курсы обучения.' },
         { id: 'AM', title: 'Отличная репутация', image: require('@/assets/img/perfectReputation.jpg'), description: 'Положительные отзывы: Высокие оценки от выпускников и положительные отзывы в интернете.' },
 
       ]

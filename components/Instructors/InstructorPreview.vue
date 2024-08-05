@@ -1,8 +1,8 @@
 <template>
 
-    <nuxt-link :to="getLink" class="in-li bg-white overflow-hidden shadow p-4">
-
-      <img :src="instructor.image" alt="Instructor Image" class="instructor-image">
+    <!-- <nuxt-link :to="getLink" class="in-li bg-white overflow-hidden shadow p-4"> -->
+      <div class="in-li bg-white overflow-hidden shadow p-4">
+        <img :src="instructor.image" alt="Instructor Image" class="instructor-image">
 
       <h3 class="in-title leading-7 font-semibold">
         {{ instructor.name }}
@@ -10,8 +10,10 @@
       <p class="in-p text-gray-600">
         {{ instructor.bio }}
       </p>
+      </div>
+      
 
-    </nuxt-link>
+    <!-- </nuxt-link> -->
 
 
 

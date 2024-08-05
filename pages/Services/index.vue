@@ -36,12 +36,13 @@
         paragraph="Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text. Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text Paragraph text"/><br> -->
 
       <div class="categories-wrapper ">
-        <section v-for="category in categories" :key="category.id" class="category-section ">
+        <section v-for="category in categories" :key="category.id" class="category-section" :id="category.id">
 
           <div class="hero-section">
             <!-- {{  category.image  }}
               <img :src="category.image" :alt="category.title"> -->
             <div class="hero-text">
+              
               <!-- <p class="welcome-text">
                 <code>Добро пожаловать в автошколу Viktorija</code>
               </p> -->
@@ -326,6 +327,15 @@ export default {
           image: require('@/assets/img/category-b.jpg')
         },
         {
+          id: 'Au',
+          title: 'Категория B (автомат)',
+          description: 'Категория B — это одна из самых популярных категорий водительских прав, позволяющая управлять легковыми автомобилями с автоматической коробкой передач. Она предназначена для тех, кто хочет управлять личным или арендованным транспортом, предназначенным для перевозки пассажиров и грузов в пределах допустимых норм.',
+          advantages: ['29.07.24', '05.08.24', '12.08.24', '26.08.24', '18.07.24 (На русском)'],
+          program: 'Наша программа включает теоретическую подготовку в классах и на онлайн-платформе, практические занятия с опытными инструкторами на современных автомобилях с автоматической коробкой передач, гибкий график уроков, индивидуальный подход и всестороннюю поддержку на всех этапах обучения и подготовки к экзаменам.',
+          requirements: ['Документ, удостоверяющий личность (паспорт или ID-карта)' ,'Медицинская справка, на категорию «В».'],
+          image: require('@/assets/img/category-b.jpg')
+        },
+        {
           id: 'A',
           title: 'Категория A',
           description: 'Категория A - это обучение на управление мотоциклами. В нашей автошколе мы предлагаем полный курс подготовки для получения водительского удостоверения категории A.',
@@ -334,14 +344,7 @@ export default {
           requirements: ['Документ, удостоверяющий личность (паспорт или ID-карта)' ,'Медицинская справка, на категорию «A».'],
           image: require('@/assets/img/category-a.jpg')
         },
-        // {
-        //   id: 'A1',
-        //   title: 'Категория A1',
-        //   description: 'Описание категории A1...',
-        //   advantages: ['Преимущество 1', 'Преимущество 2'],
-        //   program: 'Программа обучения для категории A1...',
-        //   requirements: 'Требования для категории A1...'
-        // },
+        
         // {
         //   id: 'A2',
         //   title: 'Категория A2',

@@ -5,11 +5,14 @@
   <div>
     <header class="header promotionsBg ">
       <p class="welcome-text">
-        <code>Специальное предложение: Стань профессионалом за рулем уже сегодня!</code>
+        <code> {{ promotion.intro }} </code>
       </p>
-      <h1 class="hero-title">
-        Запишись на курс прямо сейчас и получи <br>
-        <span class="confidence">бесплатное занятие!</span>
+      <h1 class="promo-title">
+        <!-- Запишись на курс прямо сейчас и получи <br> -->
+        <!-- <span class="confidence">бесплатное занятие!</span> -->
+
+        {{ promotion.title }}
+        
       </h1>
       <p class="description">
         Профессиональные инструктора и гибкий график занятий.<br>
@@ -19,27 +22,25 @@
 
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
 
-      <!--<img :src="promotion.img" :alt="promotion.title" />-->
+      <!-- <img :src="promotion.image" :alt="promotion.title" /> -->
 
       <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
 
         <h2 class="text-2xl leading-7 font-semibold">
-          <!--{{ promotion.title }}-->
-          Только до конца месяца в автошколе "Viktorija"
+          {{ promotion.title }}
+          <!-- Только до конца месяца в автошколе "Viktorija" -->
         </h2>
 
         <p class="mt-3 text-gray-600">
-          <!--{{ promotion.descr }}-->
-          Пройди курс обучения вождения и получи дополнительное занятие с профессиональным инструктором абсолютно бесплатно. Не упустите свой шанс научиться водить уверенно и безопасно.
+          {{ promotion.description }}
           <br><br>
-          Мотиватор:
+          {{ promotion.content }}
+          <br><br>
+          
           Не ждите удобного момента – создайте его! Наши опытные инструкторы помогут вам освоить все нюансы вождения, чтобы вы чувствовали себя уверенно на дороге. <br>
         </p></br>
 
-        <p class="mt-3 text-gray-600">
-          <!--{{ promotion.content }}-->
-
-        </p>
+       
 
         <button>ЗАРЕГИСТРИРОВАТЬСЯ</button>
 
@@ -47,19 +48,19 @@
 
 
         <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
-          Еще что-нибудь:
+          
             <code class="bg-gray-100 text-sm p-1 rounded border">
-              Успейте записаться до конца месяца</code>
-              и получите скидку на теоретический курс. Подарите себе свободу передвижения и уверенность за рулем вместе с <code class="bg-gray-100 text-sm p-1 rounded border">автошколой "Виктория"!</code>. Have fun!
+              Условия:</code>
+              {{ promotion.terms }}
         </p>
-      </div>
+      </div> 
 
           <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
-            To get started, remove <code class="bg-gray-100 text-sm p-1 rounded border">components/Tutorial.vue</code> and start coding in <code class="bg-gray-100 text-sm p-1 rounded border">pages/index.vue</code>. Have fun!
-          </p>
+            📞 Для записи звоните: <code class="bg-gray-100 text-sm p-1 rounded border"><a href="tel:+37253464508">+372 53464508</a></code> 🌐 Для дополнительной информации <code class="bg-gray-100 text-sm p-1 rounded border"><a href="mailto:info@viktorijaautokool.ee">info@viktorijaautokool.ee</a></code> 
+          </p><br>
         </div>
 
-      </div></div>
+      </div>
   </section>
 
 </template>
@@ -110,12 +111,15 @@ export default {
 
 .promotionsBg {
 
-
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Полупрозрачный черный градиент */
     url('@/assets/img/about-1.jpg'); /* Укажите путь к вашему изображению */
   background-size: cover;
   background-position: center;
+}
+
+.promo-title {
+  color: #d4d4d4; 
 }
 
 

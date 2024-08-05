@@ -18,6 +18,7 @@
     <div class="mx-auto sm:px-6 lg:px-8">
 
       <CategoriesList :admin=true :cards="cards"/>
+      <br>
 
     </div>
   </div>
@@ -54,19 +55,19 @@ export default {
 
 
       cards: [
-        { id: 1,
-        title: 'Категория A',
-        description: 'Описание категории A...',
-        image: require('@/assets/img/category_a.png')
+        { id: 'B',
+        title: 'Категория B (мануал)',
+        description: '',
+        image: require('@/assets/img/category_a1.png'),
         },
-        { id: 2,
-        title: 'Категория B',
-        description: 'Описание категории A...',
+        { id: 'Au',
+        title: 'Категория B (автомат)',
+        description: '',
         image: require('@/assets/img/automat_pic.png')
         },
-        { id: 3,
-        title: 'Категория B',
-        description: 'Описание категории A...',
+        { id: 'A',
+        title: 'Категория A Мотоцикл',
+        description: '',
         image: require('@/assets/img/category_aa.png')
         }
       ]
